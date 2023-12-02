@@ -6,8 +6,6 @@ class JJK_RESTAURANT_OPERATIONS;
 class RESTAURANT_Gojo;
 class RESTAURANT_Sukuna;
 class HuffTree_AVL;
-// vector<vector<unsigned long long>> pasTri;
-
 //* nhà hàng của sư phụ GOJO
 class RESTAURANT_Gojo{
 	class Tree_BST;
@@ -17,17 +15,7 @@ private:
 
 public:
 	RESTAURANT_Gojo():areaTable(MAXSIZE + 1){
-		// PascalTriangle(10,pasTri);
 	}
-	// void PascalTriangle(int n,vector<vector<unsigned long long>>&dp){
-	// 	for(int i=0;i<=n;i++){
-	// 		dp[i] =  vector<unsigned long long>(i+1,1); //initially all 1 
-	// 		//Now Apply combination logic of adding prev_row and prev_col 
-	// 		for(int j=1;j<i;j++){
-	// 			dp[i][j] = (dp[i-1][j-1] + dp[i-1][j]);
-	// 		}
-	// 	}
-	// }
 	void insertAreaTable(int result)
 	{
 		//* khách mới vô thích chọn khu có ID = result % MAXSIZE + 1 dắt nó tới chỗ đó rồi nén vô cho nhân viên khu đó xử lí
@@ -104,7 +92,7 @@ private:
 					node=node->right;
 				}
 				else if(!node->right){
-					node=node->right;
+					node=node->left;
 				}
 				else{
 					Node* tmp=node->right;
@@ -123,19 +111,22 @@ private:
 		{
 			return node == NULL ? 0 : 1 + CountNode(node->left) + CountNode(node->right);
 		}
-		unsigned long long permutation(int x, int n)
-		{
-			//!TODO TÍNH C(n,x)= x!(n-x)!/n! công thức chỉnh hợp
-			// return (unsigned long long)pasTri[n][x];
-		}
-
-		unsigned long long DFS(Node* node)
+		unsigned long long DFS(Node* node, const vector<vector<long long>> &dp)
 		{
 			if(node == NULL) return 1;
-			int numLeft=CountNode(node->left);
-			//TODO TODO TODO  TODO TODO TODO  đệ quy
-			return permutation(numLeft,numLeft+CountNode(node->right)-1)*DFS(node->left)*DFS(node->right);
-
+			//return C(CountNode(node->left),CountNode(node->right)+CountNode(node->left))*DFS(node->left)*DFS(node->right);
+			int nleft=CountNode(node->left);
+			int nRight=CountNode(node->right);
+			return dp[nleft+nRight][nleft]*DFS(node->left,dp)*DFS(node->right,dp);
+		}
+		void PascalTriangle(int n,vector<vector<long long>>&dp){
+			for(int i=0;i<=n;i++){
+				dp[i] =  vector<long long>(i+1,1); //initially all 1 
+				//Now Apply combination logic of adding prev_row and prev_col 
+				for(int j=1;j<i;j++){
+					dp[i][j] = (dp[i-1][j-1] + dp[i-1][j]);
+				}
+			}
 		}
 		//* nhân viên sẽ liệt kê ra các khách hàng gián điệp để dễ dàng đuổi
 		void remove(){
@@ -143,7 +134,9 @@ private:
 			//* bước 1: đếm số lượng node cần xóa
 			//^ tìm hiểu : https://leetcode.com/problems/number-of-ways-to-reorder-array-to-get-same-bst/
 			//TODO: tính số lượng number
-			unsigned long long number = DFS(root);
+			vector<vector<long long>> dp(queueTime.size()+1);	
+			PascalTriangle(queueTime.size(),dp);
+			unsigned long long number = DFS(root,dp);
 			//*: trường hợp mà postoder cũng tạo ra một cây giống đó thì chỉ có 1 node -> nên không tính
 			if(this->size() == 1) return;
 
@@ -330,6 +323,7 @@ public:
 	void CLEAVE(int num){}
 
 	void HAND(){}
+	
 };
 
 
