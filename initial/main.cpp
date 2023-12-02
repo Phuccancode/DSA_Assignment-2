@@ -1,12 +1,13 @@
 #include "main.h"
-#include "restaurant_MAIN.cpp"
+#include "restaurant.cpp"
+
 
 const int startProgam = 1;
 const int endProgam = 200;
 
 void simulate(string filename)
 {
-	JJK_RESTAURANT_OPERATIONS* NOT_LIKE_CODE = NULL;
+	JJK_RESTAURANT_OPERATIONS* NOT_LIKE_CODE = nullptr;
 
 	//* nhập file
 	ifstream ss(filename);
@@ -124,6 +125,7 @@ void printTestFail(int i)
 	}
 	if (read_solution_you >> s1 || read_solution >> s2)
 	{
+		
 		cout << "fail test " << i << " line " << k << endl;
 	}
 }
@@ -170,7 +172,7 @@ void comparefile(int start, int end)
 	{
 		cout << "percent success : " << (1 - result.size() * 1.0 / (end - start + 1)) * 100 << "%" << endl;
 		cout << "Fail : test [";
-		for (int i = 0; i < result.size() - 1; i++)
+		for (int i = 0; i < (int)result.size() - 1; i++)
 		{
 			cout << result[i] << ", ";
 		}

@@ -2,12 +2,11 @@
 
 
 int MAXSIZE = 0;
-
 class JJK_RESTAURANT_OPERATIONS;
 class RESTAURANT_Gojo;
 class RESTAURANT_Sukuna;
 class HuffTree_AVL;
-
+// vector<vector<unsigned long long>> pasTri;
 
 //* nhà hàng của sư phụ GOJO
 class RESTAURANT_Gojo{
@@ -15,8 +14,20 @@ class RESTAURANT_Gojo{
 private:
 	//* cứ hiểu mỗi phần tử areaTable là các khu ăn trong đó sẽ có 1 nhân viên quản lí thêm vào và xóa ra chủ không cần quản lí mấy này
 	vector<Tree_BST> areaTable;
+
 public:
-	RESTAURANT_Gojo():areaTable(MAXSIZE + 1){}
+	RESTAURANT_Gojo():areaTable(MAXSIZE + 1){
+		// PascalTriangle(10,pasTri);
+	}
+	void PascalTriangle(int n,vector<vector<unsigned long long>>&dp){
+		for(int i=0;i<=n;i++){
+			dp[i] =  vector<unsigned long long>(i+1,1); //initially all 1 
+			//Now Apply combination logic of adding prev_row and prev_col 
+			for(int j=1;j<i;j++){
+				dp[i][j] = (dp[i-1][j-1] + dp[i-1][j]);
+			}
+		}
+	}
 	void insertAreaTable(int result)
 	{
 		//* khách mới vô thích chọn khu có ID = result % MAXSIZE + 1 dắt nó tới chỗ đó rồi nén vô cho nhân viên khu đó xử lí
@@ -43,8 +54,11 @@ private:
 	private:
 		Node* root;	//! cây của khách hàng vị trí khách hàng
 		queue<int> queueTime; //! thời gian khách hàng đến có thể hiểu như là sổ ghi thông tin khách hàng
+		
 	public:
-		Tree_BST():root(nullptr){}
+		Tree_BST():root(nullptr){
+			
+		}
 		int size(){
 			return queueTime.size();
 		}
@@ -53,10 +67,19 @@ private:
 		//* nhân viên được chủ giao cho bố trí khách hàng có result
 		Node* insert_recursive(Node* node, int result)
 		{
-			//TODO TODO TODO  TODO TODO TODO  
+			//TODO TODO TODO  TODO TODO TODO 
+			if(!node) return new Node(result);
+			if(result<node->result){
+				node->left = insert_recursive(node->left,result);
+			} 
+			else{
+				node->right = insert_recursive(node->right, result);
+			}
+			return node;
 		}
 		void insert(int result){
 			root = insert_recursive(root, result);
+			queueTime.push(result);
 		}
 	//^ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -65,19 +88,54 @@ private:
 		Node* remove_recursive(Node* node,int result)
 		{	
 			//TODO TODO TODO  TODO TODO TODO  
+			if(!node) return nullptr;
+			if(result<node->result){
+				node->left=remove_recursive(node->left, result);
+			}
+			else if(result>node->result){
+				node->right=remove_recursive(node->right, result);
+			}
+			if(node->result==result){
+				Node* nodeDel=node;
+				if(!node->left && !node->right){
+					node=nullptr;
+				}
+				else if(!node->left){
+					node=node->right;
+				}
+				else if(!node->right){
+					node=node->right;
+				}
+				else{
+					Node* tmp=node->right;
+					while(tmp->left!=nullptr){
+						tmp=tmp->left;
+					}
+					swap(tmp->result,node->result);
+					node->right=remove_recursive(node->right,result);
+					return node;
+				}
+				delete nodeDel;
+			}
+			return node;
  		}
 		int CountNode(Node* node)
 		{
 			return node == NULL ? 0 : 1 + CountNode(node->left) + CountNode(node->right);
 		}
-		unsigned long long permutationFormula(int x, int n)
+		unsigned long long permutation(int x, int n)
 		{
 			//!TODO TÍNH C(n,x)= x!(n-x)!/n! công thức chỉnh hợp
+			return (unsigned long long)pasTri[n][x];
 		}
+
 		unsigned long long DFS(Node* node)
 		{
 			if(node == NULL) return 1;
+			int numLeft=CountNode(node->left);
 			//TODO TODO TODO  TODO TODO TODO  đệ quy
+			return permutation(numLeft,numLeft+CountNode(node->right)-1)*DFS(node->left)*DFS(node->right);
+
 		}
 		//* nhân viên sẽ liệt kê ra các khách hàng gián điệp để dễ dàng đuổi
 		void remove(){
@@ -249,7 +307,9 @@ private:
 	RESTAURANT_Sukuna heap;
 	
 public:
-
+	JJK_RESTAURANT_OPERATIONS(){
+		
+	}
 	void LAPSE(string name)
 	{
 		
@@ -270,9 +330,6 @@ public:
 	void CLEAVE(int num){}
 
 	void HAND(){}
-
-	
-
 	
 };
 
