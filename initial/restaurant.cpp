@@ -1,5 +1,4 @@
 #include "main.h"
-
 int MAXSIZE = 0;
 
 class JJK_RESTAURANT_OPERATIONS;
@@ -13,19 +12,19 @@ class RESTAURANT_Sukuna
 	class Node;
 
 private:
-	vector<Node *> areaTable; //! nơi lưu trữ các khu vực
-	list<Node *> LRU;		  //!  Least Recently Used này là cơ chế khu vực nào có khác vào nhà hàng lâu nhất
+	vector<Node*> areaTable; //! nơi lưu trữ các khu vực
+	list<Node*> LRU;		  //!  Least Recently Used này là cơ chế khu vực nào có khác vào nhà hàng lâu nhất
 private:
 	//* hàm gợi ý của anh thôi dùng hay không thì tùy các bạn nha -> nên suy nghĩ khác
 	bool Compere(int index1, int index2)
 	{
 	}
-	Node* whoFirst(Node* a, Node* b){
+	Node* whoFirst(Node* a, Node* b) {
 		list<Node*>::iterator it;
-		for(it=LRU.begin();it!=LRU.end();it++){
-			if(*it==a) return a;
-			if(*it==b) return b;
-		}	
+		for (it = LRU.begin(); it != LRU.end(); it++) {
+			if (*it == a) return b;
+			if (*it == b) return a;
+		}
 	}
 	void ReHeap_down(int index)
 	{
@@ -37,29 +36,29 @@ private:
 		int rightChild = 2 * index + 2;
 		int smallest = index;
 
-		if(leftChild < areaTable.size()){
-			if(areaTable[leftChild]->size() < areaTable[smallest]->size()){
+		if (leftChild < areaTable.size()) {
+			if (areaTable[leftChild]->size() < areaTable[smallest]->size()) {
 				smallest = leftChild;
 			}
-			else if(areaTable[leftChild]->size() == areaTable[smallest]->size()){
-				if(whoFirst(areaTable[leftChild],areaTable[smallest])==areaTable[leftChild]){
+			else if (areaTable[leftChild]->size() == areaTable[smallest]->size()) {
+				if (whoFirst(areaTable[leftChild], areaTable[smallest]) == areaTable[leftChild]) {
 					smallest = leftChild;
 				}
 			}
 		}
-		if(rightChild < areaTable.size()){
-			if(areaTable[rightChild]->size() < areaTable[smallest]->size()){
+		if (rightChild < areaTable.size()) {
+			if (areaTable[rightChild]->size() < areaTable[smallest]->size()) {
 				smallest = rightChild;
 			}
-			else if(areaTable[rightChild]->size() == areaTable[smallest]->size()){
-				if(whoFirst(areaTable[rightChild],areaTable[smallest])==areaTable[rightChild]){
+			else if (areaTable[rightChild]->size() == areaTable[smallest]->size()) {
+				if (whoFirst(areaTable[rightChild], areaTable[smallest]) == areaTable[rightChild]) {
 					smallest = rightChild;
 				}
 			}
 		}
-		
-		if(smallest != index){
-			swap(areaTable[index],areaTable[smallest]);
+
+		if (smallest != index) {
+			swap(areaTable[index], areaTable[smallest]);
 			ReHeap_down(smallest);
 		}
 	}
@@ -72,15 +71,15 @@ private:
 		// TODO: nếu 2 thằng bằng nhau thì chọn ra khu nào có khác vào gần nhất
 		// TODO: này xử lí tương tự reheap_down
 		while (index > 0) {
-            int parent = (index - 1) / 2;
-            if (areaTable[index]->size() < areaTable[parent]->size() 
-			|| (areaTable[index]->size()==areaTable[parent]->size() && whoFirst(areaTable[index],areaTable[parent])==areaTable[index])) {
+			int parent = (index - 1) / 2;
+			if (areaTable[index]->size() < areaTable[parent]->size()
+				|| (areaTable[index]->size() == areaTable[parent]->size() && whoFirst(areaTable[index], areaTable[parent]) == areaTable[index])) {
 
-                swap(areaTable[index], areaTable[parent]);
-                index = parent;
-            } 
-            else break;
-        }
+				swap(areaTable[index], areaTable[parent]);
+				index = parent;
+			}
+			else break;
+		}
 	}
 
 	// list<Node*>::iterator findNodeInList(Node* node){
@@ -92,22 +91,24 @@ private:
 	// }
 
 	//* nếu node chưa tồn tại trong LRU thì thêm vô nếu tồn tại thì dịch nó lên đầu danh sách
-	void moveTop(Node *node)
+	void moveTop(Node* node)
 	{
 		// TODO: BƯỚC 1 Tìm vị trí của node trong danh sách
-		list<Node*> ::iterator it = std::find(LRU.begin(),LRU.end(),node);
+		list<Node*> ::iterator it = std::find(LRU.begin(), LRU.end(), node);
 		// TODO: BƯỚC 2 nếu nó tồn tại thì dịch nó lên đầu danh sách, nếu không thì insert ở đầu danh sách
-		if(it!=LRU.end()){
+		if (it != LRU.end()) {
 			LRU.erase(it);
 		}
 		LRU.push_front(node);
-	
+
 	}
 
 	//* xóa một node ra khỏi danh sách liên kết không gần gọi delete nha vì đã dùng bên dưới hàm xóa
-	void removeNode(Node *node)
+	void removeNode(Node* node)
 	{
 		// TODO:
+		list<Node*>::iterator it = find(LRU.begin(), LRU.end(), node);
+		LRU.erase(it);
 	}
 
 public:
@@ -119,8 +120,8 @@ public:
 		//*bước 1: kiểm tra xem heap có đang quản lí khu ID hay không nếu chưa quản lí thì phải thêm ở bước sau
 		int index = -1;
 		// TODO bước 1
-		for(int i=0;i<areaTable.size();i++){
-			if(ID==areaTable[i]->ID) index=i;
+		for (int i = 0; i < areaTable.size(); i++) {
+			if (ID == areaTable[i]->ID) index = i;
 		}
 		//*bước 2: xem thử có khu này trong heap chưa để thêm vô
 		if (index == -1)
@@ -195,7 +196,7 @@ public:
 				++order;
 			}
 			solution << it->ID << "(len=" << it->size() << ",index=" << order << ")"
-					 << " ";
+				<< " ";
 		}
 		solution << "\n";
 
@@ -229,8 +230,14 @@ private:
 		void remove(int number)
 		{
 			// TODO: xóa number khách hàng ở cuối danh sách tương ứng với vô sớm nhất
+			
+			while (number-- && head.size() > 0) {
+				solution << head.back() << " ";
+				head.pop_back();
+			}
 			//^ gợi ý dùng hàm của linklist có sẵn
 			//* thêm solution << head.back() << " "; để in ra
+			// if(head.size()>0) solution << head.back() << " ";
 		}
 		//* print ra number khách hàng mới đến gần nhất theo cơ chế LIFO các khách hàng gần nhất
 		void print(int number)
@@ -287,7 +294,7 @@ private:
 		class Node;
 
 	private:
-		Node *root;			  //! cây của khách hàng vị trí khách hàng
+		Node* root;			  //! cây của khách hàng vị trí khách hàng
 		queue<int> queueTime; //! thời gian khách hàng đến có thể hiểu như là sổ ghi thông tin khách hàng
 
 	public:
@@ -301,7 +308,7 @@ private:
 
 		//^hàm thêm ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 		//* nhân viên được chủ giao cho bố trí khách hàng có result
-		Node *insert_recursive(Node *node, int result)
+		Node* insert_recursive(Node* node, int result)
 		{
 			// TODO TODO TODO  TODO TODO TODO
 			if (!node)
@@ -325,7 +332,7 @@ private:
 
 		//^hàm xóa ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 		//* nhân viên sẽ tới tận nơi đuổi cổ khách hàng gián điệp ra khỏi nhà hàng với result là khách hàng gián điệp
-		Node *remove_recursive(Node *node, int result)
+		Node* remove_recursive(Node* node, int result)
 		{
 			// TODO TODO TODO  TODO TODO TODO
 			if (!node)
@@ -340,7 +347,7 @@ private:
 			}
 			if (node->result == result)
 			{
-				Node *nodeDel = node;
+				Node* nodeDel = node;
 				if (!node->left && !node->right)
 				{
 					node = nullptr;
@@ -355,7 +362,7 @@ private:
 				}
 				else
 				{
-					Node *tmp = node->right;
+					Node* tmp = node->right;
 					while (tmp->left != nullptr)
 					{
 						tmp = tmp->left;
@@ -368,11 +375,11 @@ private:
 			}
 			return node;
 		}
-		int CountNode(Node *node)
+		int CountNode(Node* node)
 		{
 			return node == NULL ? 0 : 1 + CountNode(node->left) + CountNode(node->right);
 		}
-		unsigned long long DFS(Node *node, const vector<vector<long long>> &dp)
+		unsigned long long DFS(Node* node, const vector<vector<long long>>& dp)
 		{
 			if (node == NULL)
 				return 1;
@@ -381,7 +388,7 @@ private:
 			int nRight = CountNode(node->right);
 			return dp[nleft + nRight][nleft] * DFS(node->left, dp) * DFS(node->right, dp);
 		}
-		void PascalTriangle(int n, vector<vector<long long>> &dp)
+		void PascalTriangle(int n, vector<vector<long long>>& dp)
 		{
 			for (int i = 0; i <= n; i++)
 			{
@@ -422,7 +429,7 @@ private:
 
 		//^hàm in ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 		//* hàm này theo trung thứ tự (in-order) thôi không gì khó hết
-		string print_recursive(Node *node)
+		string print_recursive(Node* node)
 		{
 			if (node == nullptr)
 				return "NULL"; //! trường hợp dừng print
@@ -460,8 +467,8 @@ private:
 		{
 		private:
 			int result;
-			Node *left;
-			Node *right;
+			Node* left;
+			Node* right;
 			friend class Tree_BST;
 
 		public:
@@ -475,7 +482,7 @@ class HuffTree_AVL
 	class Node;
 
 private:
-	Node *root;
+	Node* root;
 
 public:
 	int encode(string name)
@@ -492,12 +499,12 @@ private:
 		int weight;
 		char c;
 		int rankingPosition;
-		Node *left;
-		Node *right;
+		Node* left;
+		Node* right;
 		friend class HuffTree_AVL;
 
 	public:
-		Node(int weight, char c, Node *left = nullptr, Node *right = nullptr) : weight(weight), c(c), left(left), right(right) {}
+		Node(int weight, char c, Node* left = nullptr, Node* right = nullptr) : weight(weight), c(c), left(left), right(right) {}
 		bool isLeaf() const { return left == nullptr && right == nullptr; }
 	};
 };

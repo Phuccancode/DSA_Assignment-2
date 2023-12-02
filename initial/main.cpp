@@ -1,7 +1,7 @@
 #include "main.h"
 #include "restaurant.cpp"
 
-const int startProgam = 201;
+const int startProgam = 1;
 const int endProgam = 400;
 
 void simulate(string filename)
