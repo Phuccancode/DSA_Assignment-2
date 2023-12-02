@@ -1,14 +1,12 @@
 #include "main.h"
 #include "restaurant.cpp"
 
-
-const int startProgam = 1;
-const int endProgam = 200;
+const int startProgam = 201;
+const int endProgam = 400;
 
 void simulate(string filename)
 {
-	JJK_RESTAURANT_OPERATIONS* NOT_LIKE_CODE = nullptr;
-
+	solution.flush();
 	//* nhập file
 	ifstream ss(filename);
 	if (ss.fail())
@@ -16,18 +14,18 @@ void simulate(string filename)
 		cout << "ERROR: " << filename << endl;
 		return;
 	}
-	string str, maxsize, name;
-	int num;
-	int i = 1;
+
+	
+	string str, name;
+	int num, i = 1;
+	
+	ss >> str;
+	ss >> MAXSIZE; //* nhập maxsize đầu tiên
+	JJK_RESTAURANT_OPERATIONS* NOT_LIKE_CODE = new JJK_RESTAURANT_OPERATIONS();
+	// //* xử lí file
 	while (ss >> str)
 	{
-		if (str == "MAXSIZE") 	// MAXSIZE <NUM>
-		{
-			ss >> maxsize;
-			MAXSIZE = stoi(maxsize);
-			NOT_LIKE_CODE = new JJK_RESTAURANT_OPERATIONS();
-		}
-		else if (str == "LAPSE") // LAPSE <NAME>
+		if (str == "LAPSE") // LAPSE <NAME>
 		{
 			ss >> name;
 			NOT_LIKE_CODE->LAPSE(name);
@@ -39,11 +37,15 @@ void simulate(string filename)
 		else if (str == "KEITEIKEN") // KEITEIKEN <NUM>
 		{
 			ss >> num;
+			solution << "KEITEIKEN " + to_string(num) +" : LINE " << i << "\n";
 			NOT_LIKE_CODE->KEITEIKEN(num);
+			solution << '\n';
 		}
 		else if (str == "HAND") // HAND
 		{
+			solution << "HAND : LINE " << i << "\n";
 			NOT_LIKE_CODE->HAND();
+			solution << '\n';
 		}		
 		else if (str == "LIMITLESS") // LIMITLESS <NUM>
 		{
@@ -55,11 +57,12 @@ void simulate(string filename)
 		else if (str == "CLEAVE") // CLEAVE <NUM>
 		{
 			ss >> num;
+			solution << "CLEAVE " + to_string(num) +" : LINE " << i << "\n";
 			NOT_LIKE_CODE->CLEAVE(num);
+			solution << '\n';
 		}				
 		i++;
 	}
-
 	delete NOT_LIKE_CODE;
 }
 
@@ -97,35 +100,20 @@ void printTestFail(int i)
 	ifstream read_solution_you(file_solution_you);
 	ifstream read_solution(file_solution);
 	string s1, s2;
-	int k = 1;
+	int k = 0;
 	while (read_solution_you >> s1 && read_solution >> s2)
 	{
+		if(s1 == "CLEAVE" || s1 == "KEITEIKEN") k ++;
 		if (s1 != s2)
 		{
-			cout << "fail test " << i << " line in input" << k << endl;
-			break;
+			cout << "\nfail test " << i << " : line " << k <<" in ouput"  << endl;
+			return;
 		}
-		if (s1 == "LIGHT")
-		{
-			read_solution_you >> s1;
-			read_solution >> s2;
-			read_solution_you >> s1;
-			read_solution >> s2;
-			read_solution_you >> s1;
-			read_solution >> s2;
-		}
-		else if (s1 == "DOMAIN_EXPANSION" || s1 == "REVERSAL")
-		{
-			read_solution_you >> s1;
-			read_solution >> s2;
-			read_solution_you >> s1;
-			read_solution >> s2;
-		}
-		k++;
+		if(s1 == "CLEAVE" || s1 == "Heap" || s1 == "list" || s1 == "customers" || s1 == "KEITEIKEN" || s1 == "remove") 
+			k ++;
 	}
 	if (read_solution_you >> s1 || read_solution >> s2)
 	{
-		
 		cout << "fail test " << i << " line " << k << endl;
 	}
 }
@@ -172,7 +160,7 @@ void comparefile(int start, int end)
 	{
 		cout << "percent success : " << (1 - result.size() * 1.0 / (end - start + 1)) * 100 << "%" << endl;
 		cout << "Fail : test [";
-		for (int i = 0; i < (int)result.size() - 1; i++)
+		for (int i = 0; i < result.size() - 1; i++)
 		{
 			cout << result[i] << ", ";
 		}
@@ -219,12 +207,12 @@ int main(int argc, char *argv[])
 			cout << "\nOK: runs without errors code me !!!!!!!!!\n" << endl;		
 		}
 		else
-		{
-			
+		{	
 			int i = stoi(s);
 			cout << i << " ";
 			solution.open(folder_solution_you + to_string(i) + ".txt");
 			simulate(folder_input + to_string(i) + ".txt");
+			
 			solution.close();
 			cout << "\nOK: runs without errors\n" << endl;
 			comparefile(stoi(s), stoi(s));
