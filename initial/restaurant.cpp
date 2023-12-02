@@ -19,15 +19,15 @@ public:
 	RESTAURANT_Gojo():areaTable(MAXSIZE + 1){
 		// PascalTriangle(10,pasTri);
 	}
-	void PascalTriangle(int n,vector<vector<unsigned long long>>&dp){
-		for(int i=0;i<=n;i++){
-			dp[i] =  vector<unsigned long long>(i+1,1); //initially all 1 
-			//Now Apply combination logic of adding prev_row and prev_col 
-			for(int j=1;j<i;j++){
-				dp[i][j] = (dp[i-1][j-1] + dp[i-1][j]);
-			}
-		}
-	}
+	// void PascalTriangle(int n,vector<vector<unsigned long long>>&dp){
+	// 	for(int i=0;i<=n;i++){
+	// 		dp[i] =  vector<unsigned long long>(i+1,1); //initially all 1 
+	// 		//Now Apply combination logic of adding prev_row and prev_col 
+	// 		for(int j=1;j<i;j++){
+	// 			dp[i][j] = (dp[i-1][j-1] + dp[i-1][j]);
+	// 		}
+	// 	}
+	// }
 	void insertAreaTable(int result)
 	{
 		//* khách mới vô thích chọn khu có ID = result % MAXSIZE + 1 dắt nó tới chỗ đó rồi nén vô cho nhân viên khu đó xử lí
@@ -126,7 +126,7 @@ private:
 		unsigned long long permutation(int x, int n)
 		{
 			//!TODO TÍNH C(n,x)= x!(n-x)!/n! công thức chỉnh hợp
-			return (unsigned long long)pasTri[n][x];
+			// return (unsigned long long)pasTri[n][x];
 		}
 
 		unsigned long long DFS(Node* node)
@@ -330,7 +330,6 @@ public:
 	void CLEAVE(int num){}
 
 	void HAND(){}
-	
 };
 
 
