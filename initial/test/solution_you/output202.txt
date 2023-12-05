@@ -1,32 +1,17 @@
 CLEAVE -10 : LINE 1
 
+LAPSE: LINE 2
 CLEAVE 1 : LINE 3
-Heap : 1(len=1,index=0) 
-Heap : 1 
-list LRU : 1 
-customers in the area ID = 1: 2 
 
+LAPSE: LINE 4
 CLEAVE 1 : LINE 5
-Heap : 1(len=2,index=0) 
-Heap : 1 
-list LRU : 1 
-customers in the area ID = 1: 4 
 
+LAPSE: LINE 6
 CLEAVE 5 : LINE 7
-Heap : 1(len=3,index=0) 
-Heap : 1 
-list LRU : 1 
-customers in the area ID = 1: 6 4 2 
 
+LAPSE: LINE 8
 CLEAVE 4 : LINE 9
-Heap : 1(len=4,index=0) 
-Heap : 1 
-list LRU : 1 
-customers in the area ID = 1: 8 6 4 2 
 
+LAPSE: LINE 10
 CLEAVE 3 : LINE 11
-Heap : 1(len=5,index=0) 
-Heap : 1 
-list LRU : 1 
-customers in the area ID = 1: 10 8 6 
 

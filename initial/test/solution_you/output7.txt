@@ -1,42 +1,32 @@
 LIMITLESS 1 : LINE 1
-EMPTY
+
+LAPSE: LINE 2
 LIMITLESS 1 : LINE 3
-inoder: 1 
-Tree: 1
-Queue: 1 
+
+LAPSE: LINE 4
 LIMITLESS 1 : LINE 5
-inoder: 1 1 
-Tree: 1(NULL,1)
-Queue: 1 1 
+
+LAPSE: LINE 6
 LIMITLESS 1 : LINE 7
-inoder: 1 1 1 
-Tree: 1(NULL,1(NULL,1))
-Queue: 1 1 1 
+
+LAPSE: LINE 8
 LIMITLESS 1 : LINE 9
-inoder: 1 1 1 1 
-Tree: 1(NULL,1(NULL,1(NULL,1)))
-Queue: 1 1 1 1 
+
+LAPSE: LINE 10
 LIMITLESS 1 : LINE 11
-inoder: 1 1 1 1 1 
-Tree: 1(NULL,1(NULL,1(NULL,1(NULL,1))))
-Queue: 1 1 1 1 1 
+
+LAPSE: LINE 12
 LIMITLESS 1 : LINE 13
-inoder: 1 1 1 1 1 1 
-Tree: 1(NULL,1(NULL,1(NULL,1(NULL,1(NULL,1)))))
-Queue: 1 1 1 1 1 1 
+
+LAPSE: LINE 14
 LIMITLESS 1 : LINE 15
-inoder: 1 1 1 1 1 1 1 
-Tree: 1(NULL,1(NULL,1(NULL,1(NULL,1(NULL,1(NULL,1))))))
-Queue: 1 1 1 1 1 1 1 
+
+LAPSE: LINE 16
 LIMITLESS 1 : LINE 17
-inoder: 1 1 1 1 1 1 1 1 
-Tree: 1(NULL,1(NULL,1(NULL,1(NULL,1(NULL,1(NULL,1(NULL,1)))))))
-Queue: 1 1 1 1 1 1 1 1 
+
+LAPSE: LINE 18
 LIMITLESS 1 : LINE 19
-inoder: 1 1 1 1 1 1 1 1 1 
-Tree: 1(NULL,1(NULL,1(NULL,1(NULL,1(NULL,1(NULL,1(NULL,1(NULL,1))))))))
-Queue: 1 1 1 1 1 1 1 1 1 
+
+LAPSE: LINE 20
 LIMITLESS 1 : LINE 21
-inoder: 1 1 1 1 1 1 1 1 1 1 
-Tree: 1(NULL,1(NULL,1(NULL,1(NULL,1(NULL,1(NULL,1(NULL,1(NULL,1(NULL,1)))))))))
-Queue: 1 1 1 1 1 1 1 1 1 1 
+

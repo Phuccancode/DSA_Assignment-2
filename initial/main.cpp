@@ -1,8 +1,16 @@
+/*
+! Võ Tiến ..............
+* Võ Tiến ..............
+~ Võ Tiến ..............
+& Võ Tiến ..............
+TODO Võ Tiến ..............
+*/
+
 #include "main.h"
 #include "restaurant.cpp"
 
-const int startProgam = 1;
-const int endProgam = 400;
+const int startProgam = 401;
+const int endProgam = 600;
 
 void simulate(string filename)
 {
@@ -15,19 +23,20 @@ void simulate(string filename)
 		return;
 	}
 
-	
 	string str, name;
-	int num, i = 1;
-	
+	int num = 1;
+	int i = 1;
+
 	ss >> str;
 	ss >> MAXSIZE; //* nhập maxsize đầu tiên
-	JJK_RESTAURANT_OPERATIONS* NOT_LIKE_CODE = new JJK_RESTAURANT_OPERATIONS();
+	JJK_RESTAURANT_OPERATIONS *NOT_LIKE_CODE = new JJK_RESTAURANT_OPERATIONS();
 	// //* xử lí file
 	while (ss >> str)
 	{
 		if (str == "LAPSE") // LAPSE <NAME>
 		{
 			ss >> name;
+			solution << "LAPSE: LINE " << i << "\n";
 			NOT_LIKE_CODE->LAPSE(name);
 		}
 		else if (str == "KOKUSEN") // KOKUSEN
@@ -37,7 +46,7 @@ void simulate(string filename)
 		else if (str == "KEITEIKEN") // KEITEIKEN <NUM>
 		{
 			ss >> num;
-			solution << "KEITEIKEN " + to_string(num) +" : LINE " << i << "\n";
+			solution << "KEITEIKEN " + to_string(num) + " : LINE " << i << "\n";
 			NOT_LIKE_CODE->KEITEIKEN(num);
 			solution << '\n';
 		}
@@ -46,71 +55,73 @@ void simulate(string filename)
 			solution << "HAND : LINE " << i << "\n";
 			NOT_LIKE_CODE->HAND();
 			solution << '\n';
-		}		
+		}
 		else if (str == "LIMITLESS") // LIMITLESS <NUM>
 		{
 			ss >> num;
-			solution << "LIMITLESS " + to_string(num) +" : LINE " << i << "\n";
+			solution << "LIMITLESS " + to_string(num) + " : LINE " << i << "\n";
 			NOT_LIKE_CODE->LIMITLESS(num);
 			solution << '\n';
-		}		
+		}
 		else if (str == "CLEAVE") // CLEAVE <NUM>
 		{
 			ss >> num;
-			solution << "CLEAVE " + to_string(num) +" : LINE " << i << "\n";
+			solution << "CLEAVE " + to_string(num) + " : LINE " << i << "\n";
 			NOT_LIKE_CODE->CLEAVE(num);
 			solution << '\n';
-		}				
+		}
 		i++;
 	}
 	delete NOT_LIKE_CODE;
 }
 
+void copyFile(const std::string &sourcePath, const std::string &destinationPath)
+{
+	std::ifstream sourceFile(sourcePath, std::ios::binary);
+	std::ofstream destinationFile(destinationPath, std::ios::binary);
 
-void copyFile(const std::string& sourcePath, const std::string& destinationPath) {
-    std::ifstream sourceFile(sourcePath, std::ios::binary);
-    std::ofstream destinationFile(destinationPath, std::ios::binary);
+	if (!sourceFile)
+	{
+		std::cerr << "Error opening source file: " << sourcePath << std::endl;
+		return;
+	}
 
-    if (!sourceFile) {
-        std::cerr << "Error opening source file: " << sourcePath << std::endl;
-        return;
-    }
+	if (!destinationFile)
+	{
+		std::cerr << "Error opening destination file: " << destinationPath << std::endl;
+		return;
+	}
 
-    if (!destinationFile) {
-        std::cerr << "Error opening destination file: " << destinationPath << std::endl;
-        return;
-    }
+	destinationFile << sourceFile.rdbuf();
 
-    destinationFile << sourceFile.rdbuf();
-
-    if (!destinationFile) {
-        std::cerr << "Error copying data from " << sourcePath << " to " << destinationPath << std::endl;
-    }
+	if (!destinationFile)
+	{
+		std::cerr << "Error copying data from " << sourcePath << " to " << destinationPath << std::endl;
+	}
 }
 
 void printTestFail(int i)
 {
-    //copy
-    copyFile("test/solution_you/output" + to_string(i) + ".txt", "test_fail/solution_you.txt");
-    copyFile("test/solution/output" + to_string(i) + ".txt", "test_fail/solution.txt");
-    copyFile("test/input/input" + to_string(i) + ".txt", "test_fail/input_fail.txt");
+	// copy
+	copyFile("test/solution_you/output" + to_string(i) + ".txt", "test_fail/solution_you.txt");
+	copyFile("test/solution/output" + to_string(i) + ".txt", "test_fail/solution.txt");
+	copyFile("test/input/input" + to_string(i) + ".txt", "test_fail/input_fail.txt");
 
 	string file_solution_you = "test/solution_you/output" + to_string(i) + ".txt";
 	string file_solution = "test/solution/output" + to_string(i) + ".txt";
 	ifstream read_solution_you(file_solution_you);
 	ifstream read_solution(file_solution);
 	string s1, s2;
-	int k = 0;
+	int k = 1;
 	while (read_solution_you >> s1 && read_solution >> s2)
 	{
-		if(s1 == "CLEAVE" || s1 == "KEITEIKEN") k ++;
 		if (s1 != s2)
 		{
-			cout << "\nfail test " << i << " : line " << k <<" in ouput"  << endl;
+			cout << "\nfail test " << i << " "
+				 << "https://www.diffchecker.com/text-compare/"; // << " : line " << k <<" in ouput"  << endl;
 			return;
 		}
-		if(s1 == "CLEAVE" || s1 == "Heap" || s1 == "list" || s1 == "customers" || s1 == "KEITEIKEN" || s1 == "remove") 
-			k ++;
+		k++;
 	}
 	if (read_solution_you >> s1 || read_solution >> s2)
 	{
@@ -188,14 +199,14 @@ int main(int argc, char *argv[])
 			solution.close();
 		}
 		cout << "\nOK: runs without errors\n"
-				<< endl;
+			 << endl;
 		comparefile(startProgam, endProgam);
 	}
 	else if (argc == 2)
 	{
 		string s = argv[1];
 		cout << "checking : ";
-		if(s == "me")
+		if (s == "me")
 		{
 			for (int i = startProgam; i <= endProgam; i++)
 			{
@@ -204,17 +215,19 @@ int main(int argc, char *argv[])
 				simulate(folder_input + to_string(i) + ".txt");
 				solution.close();
 			}
-			cout << "\nOK: runs without errors code me !!!!!!!!!\n" << endl;		
+			cout << "\nOK: runs without errors code me !!!!!!!!!\n"
+				 << endl;
 		}
 		else
-		{	
+		{
 			int i = stoi(s);
 			cout << i << " ";
 			solution.open(folder_solution_you + to_string(i) + ".txt");
 			simulate(folder_input + to_string(i) + ".txt");
-			
+
 			solution.close();
-			cout << "\nOK: runs without errors\n" << endl;
+			cout << "\nOK: runs without errors\n"
+				 << endl;
 			comparefile(stoi(s), stoi(s));
 		}
 	}
@@ -231,10 +244,10 @@ int main(int argc, char *argv[])
 			simulate(folder_input + to_string(i) + ".txt");
 			solution.close();
 		}
-		cout << "\nOK: runs without errors\n" << endl;
+		cout << "\nOK: runs without errors\n"
+			 << endl;
 		comparefile(start, end);
 	}
-
 
 	// if (COUNTDELETE == 0)
 	// {

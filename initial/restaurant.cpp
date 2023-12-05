@@ -1,4 +1,13 @@
+/*
+! Võ Tiến ..............
+* Võ Tiến ..............
+~ Võ Tiến ..............
+& Võ Tiến ..............
+TODO Võ Tiến ..............
+*/
+
 #include "main.h"
+
 int MAXSIZE = 0;
 
 class JJK_RESTAURANT_OPERATIONS;
@@ -12,19 +21,20 @@ class RESTAURANT_Sukuna
 	class Node;
 
 private:
-	vector<Node*> areaTable; //! nơi lưu trữ các khu vực
-	list<Node*> LRU;		  //!  Least Recently Used này là cơ chế khu vực nào có khác vào nhà hàng lâu nhất
+	vector<Node *> areaTable; //! nơi lưu trữ các khu vực
+	list<Node *> LRU;		  //!  Least Recently Used này là cơ chế khu vực nào có khác vào nhà hàng lâu nhất
 private:
 	//* hàm gợi ý của anh thôi dùng hay không thì tùy các bạn nha -> nên suy nghĩ khác
-	bool Compere(int index1, int index2)
+	Node *whoFirst(Node *a, Node *b)
 	{
-	}
-	Node* whoFirst(Node* a, Node* b) {
-		list<Node*>::iterator it;
-		for (it = LRU.begin(); it != LRU.end(); it++) {
-			if (*it == a) return b;
-			if (*it == b) return a;
+		for (Node *it : LRU)
+		{
+			if (it == a)
+				return b;
+			if (it == b)
+				return a;
 		}
+		return nullptr;
 	}
 	void ReHeap_down(int index)
 	{
@@ -36,33 +46,41 @@ private:
 		int rightChild = 2 * index + 2;
 		int smallest = index;
 
-		if (leftChild < areaTable.size()) {
-			if (areaTable[leftChild]->size() < areaTable[smallest]->size()) {
+		if (leftChild < areaTable.size())
+		{
+			if (areaTable[leftChild]->size() < areaTable[smallest]->size())
+			{
 				smallest = leftChild;
 			}
-			else if (areaTable[leftChild]->size() == areaTable[smallest]->size()) {
-				if (whoFirst(areaTable[leftChild], areaTable[smallest]) == areaTable[leftChild]) {
+			else if (areaTable[leftChild]->size() == areaTable[smallest]->size())
+			{
+				if (whoFirst(areaTable[leftChild], areaTable[smallest]) == areaTable[leftChild])
+				{
 					smallest = leftChild;
 				}
 			}
 		}
-		if (rightChild < areaTable.size()) {
-			if (areaTable[rightChild]->size() < areaTable[smallest]->size()) {
+		if (rightChild < areaTable.size())
+		{
+			if (areaTable[rightChild]->size() < areaTable[smallest]->size())
+			{
 				smallest = rightChild;
 			}
-			else if (areaTable[rightChild]->size() == areaTable[smallest]->size()) {
-				if (whoFirst(areaTable[rightChild], areaTable[smallest]) == areaTable[rightChild]) {
+			else if (areaTable[rightChild]->size() == areaTable[smallest]->size())
+			{
+				if (whoFirst(areaTable[rightChild], areaTable[smallest]) == areaTable[rightChild])
+				{
 					smallest = rightChild;
 				}
 			}
 		}
 
-		if (smallest != index) {
+		if (smallest != index)
+		{
 			swap(areaTable[index], areaTable[smallest]);
 			ReHeap_down(smallest);
 		}
 	}
-
 
 	void ReHeap_up(int index)
 	{
@@ -70,44 +88,38 @@ private:
 		// TODO: này là min heap nên areaTable[index].size() nào bé hơn thì ở trên
 		// TODO: nếu 2 thằng bằng nhau thì chọn ra khu nào có khác vào gần nhất
 		// TODO: này xử lí tương tự reheap_down
-		while (index > 0) {
+		while (index > 0)
+		{
 			int parent = (index - 1) / 2;
-			if (areaTable[index]->size() < areaTable[parent]->size()
-				|| (areaTable[index]->size() == areaTable[parent]->size() && whoFirst(areaTable[index], areaTable[parent]) == areaTable[index])) {
+			if (areaTable[index]->size() < areaTable[parent]->size() || (areaTable[index]->size() == areaTable[parent]->size() && whoFirst(areaTable[index], areaTable[parent]) == areaTable[index]))
+			{
 
 				swap(areaTable[index], areaTable[parent]);
 				index = parent;
 			}
-			else break;
+			else
+				break;
 		}
 	}
 
-	// list<Node*>::iterator findNodeInList(Node* node){
-	// 	list<Node*>::iterator it;
-	// 	for(it=LRU.begin();it!=LRU.end();it++){
-	// 		if(*it==node) return it;
-	// 	}
-	// 	return it;
-	// }
-
 	//* nếu node chưa tồn tại trong LRU thì thêm vô nếu tồn tại thì dịch nó lên đầu danh sách
-	void moveTop(Node* node)
+	void moveTop(Node *node)
 	{
 		// TODO: BƯỚC 1 Tìm vị trí của node trong danh sách
-		list<Node*> ::iterator it = std::find(LRU.begin(), LRU.end(), node);
+		list<Node *>::iterator it = std::find(LRU.begin(), LRU.end(), node);
 		// TODO: BƯỚC 2 nếu nó tồn tại thì dịch nó lên đầu danh sách, nếu không thì insert ở đầu danh sách
-		if (it != LRU.end()) {
+		if (it != LRU.end())
+		{
 			LRU.erase(it);
 		}
 		LRU.push_front(node);
-
 	}
 
 	//* xóa một node ra khỏi danh sách liên kết không gần gọi delete nha vì đã dùng bên dưới hàm xóa
-	void removeNode(Node* node)
+	void removeNode(Node *node)
 	{
 		// TODO:
-		list<Node*>::iterator it = find(LRU.begin(), LRU.end(), node);
+		list<Node *>::iterator it = find(LRU.begin(), LRU.end(), node);
 		LRU.erase(it);
 	}
 
@@ -120,8 +132,10 @@ public:
 		//*bước 1: kiểm tra xem heap có đang quản lí khu ID hay không nếu chưa quản lí thì phải thêm ở bước sau
 		int index = -1;
 		// TODO bước 1
-		for (int i = 0; i < areaTable.size(); i++) {
-			if (ID == areaTable[i]->ID) index = i;
+		for (int i = 0; i < areaTable.size(); i++)
+		{
+			if (ID == areaTable[i]->ID)
+				index = i;
 		}
 		//*bước 2: xem thử có khu này trong heap chưa để thêm vô
 		if (index == -1)
@@ -196,7 +210,7 @@ public:
 				++order;
 			}
 			solution << it->ID << "(len=" << it->size() << ",index=" << order << ")"
-				<< " ";
+					 << " ";
 		}
 		solution << "\n";
 
@@ -230,8 +244,9 @@ private:
 		void remove(int number)
 		{
 			// TODO: xóa number khách hàng ở cuối danh sách tương ứng với vô sớm nhất
-			
-			while (number-- && head.size() > 0) {
+
+			while (number-- && head.size() > 0)
+			{
 				solution << head.back() << " ";
 				head.pop_back();
 			}
@@ -294,12 +309,24 @@ private:
 		class Node;
 
 	private:
-		Node* root;			  //! cây của khách hàng vị trí khách hàng
+		Node *root;			  //! cây của khách hàng vị trí khách hàng
 		queue<int> queueTime; //! thời gian khách hàng đến có thể hiểu như là sổ ghi thông tin khách hàng
 
 	public:
 		Tree_BST() : root(nullptr)
 		{
+		}
+		~Tree_BST(){
+			DestroyRecursive(root);
+		}
+		void DestroyRecursive(Node* node)
+		{
+    		if (node)
+    		{
+        	DestroyRecursive(node->left);
+        	DestroyRecursive(node->right);
+        	delete node;
+    		}
 		}
 		int size()
 		{
@@ -308,7 +335,7 @@ private:
 
 		//^hàm thêm ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 		//* nhân viên được chủ giao cho bố trí khách hàng có result
-		Node* insert_recursive(Node* node, int result)
+		Node *insert_recursive(Node *node, int result)
 		{
 			// TODO TODO TODO  TODO TODO TODO
 			if (!node)
@@ -332,7 +359,7 @@ private:
 
 		//^hàm xóa ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 		//* nhân viên sẽ tới tận nơi đuổi cổ khách hàng gián điệp ra khỏi nhà hàng với result là khách hàng gián điệp
-		Node* remove_recursive(Node* node, int result)
+		Node *remove_recursive(Node *node, int result)
 		{
 			// TODO TODO TODO  TODO TODO TODO
 			if (!node)
@@ -347,7 +374,7 @@ private:
 			}
 			if (node->result == result)
 			{
-				Node* nodeDel = node;
+				Node *nodeDel = node;
 				if (!node->left && !node->right)
 				{
 					node = nullptr;
@@ -362,7 +389,7 @@ private:
 				}
 				else
 				{
-					Node* tmp = node->right;
+					Node *tmp = node->right;
 					while (tmp->left != nullptr)
 					{
 						tmp = tmp->left;
@@ -375,20 +402,20 @@ private:
 			}
 			return node;
 		}
-		int CountNode(Node* node)
+		int CountNode(Node *node)
 		{
 			return node == NULL ? 0 : 1 + CountNode(node->left) + CountNode(node->right);
 		}
-		unsigned long long DFS(Node* node, const vector<vector<long long>>& dp)
+		unsigned long long DFS(Node *node, const vector<vector<long long>> &dp)
 		{
 			if (node == NULL)
 				return 1;
 			// return C(CountNode(node->left),CountNode(node->right)+CountNode(node->left))*DFS(node->left)*DFS(node->right);
 			int nleft = CountNode(node->left);
 			int nRight = CountNode(node->right);
-			return dp[nleft + nRight][nleft] * DFS(node->left, dp) * DFS(node->right, dp);
+			return (unsigned long long)dp[nleft + nRight][nleft] * DFS(node->left, dp) * DFS(node->right, dp);
 		}
-		void PascalTriangle(int n, vector<vector<long long>>& dp)
+		void PascalTriangle(int n, vector<vector<long long>> &dp)
 		{
 			for (int i = 0; i <= n; i++)
 			{
@@ -429,7 +456,7 @@ private:
 
 		//^hàm in ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 		//* hàm này theo trung thứ tự (in-order) thôi không gì khó hết
-		string print_recursive(Node* node)
+		string print_recursive(Node *node)
 		{
 			if (node == nullptr)
 				return "NULL"; //! trường hợp dừng print
@@ -467,8 +494,8 @@ private:
 		{
 		private:
 			int result;
-			Node* left;
-			Node* right;
+			Node *left;
+			Node *right;
 			friend class Tree_BST;
 
 		public:
@@ -479,34 +506,111 @@ private:
 
 class HuffTree_AVL
 {
-	class Node;
-
-private:
-	Node* root;
 
 public:
-	int encode(string name)
+	char encode(char s, int k)
 	{
-		return stoi(name);
+		if (s >= 65 && s <= 90)
+		{
+			return ((s - 65) + k) % 26 + 65;
+		}
+		else if (s >= 97 && s <= 122)
+		{
+			return ((s - 97) + k) % 26 + 97;
+		}
+		else
+		{
+			return s;
+		}
+	}
+	int lastVal(const vector<int> &v, int start)
+	{
+		while (start < v.size() - 1)
+		{
+			if (v[start] != v[start + 1])
+				return start;
+			start++;
+		}
+		return (int)v.size() - 1;
 	}
 
-	void print() {}
-
-private:
-	class Node
+	bool sameType(char a, char b){
+		return (a >= 65 && a <= 90 && b >= 65 && b <= 90)
+            	|| (a >= 97 && a <= 122 && b >= 97 && b <= 122);
+	}
+	//* đầu vào là 1 chuỗi -> đầu ra chuỗi name đã được mã hóa Caesar và trả về danh sách freq có thứ tự giảm dần
+	vector<pair<char, int>> string_Processing(string &name)
 	{
-	public:
-		int weight;
-		char c;
-		int rankingPosition;
-		Node* left;
-		Node* right;
-		friend class HuffTree_AVL;
+		//* bước 1: liệt kê tuần suất xuất hiện của các kí tự riêng biệt trong tên của khách hàng (phân biệt hoa và thường)
+		//* tạo thành một danh sách theo vị trí của các kí tự vào trước và vào sau
+		//! VD : name = "aDdbaaabbb" -> kết quả bước này: freq_prev = [{a, 4}, {D,1}, {d,1}, {b,4}]
+		// TODO
 
-	public:
-		Node(int weight, char c, Node* left = nullptr, Node* right = nullptr) : weight(weight), c(c), left(left), right(right) {}
-		bool isLeaf() const { return left == nullptr && right == nullptr; }
-	};
+		unordered_map<char, int> mp;
+		for (char &x : name)
+			mp[x]++;
+		int numPair = mp.size();
+		vector<pair<char, int>> freq_prev;
+		for (pair<char, int> x : mp)
+		{
+			freq_prev.push_back(x);
+		}
+
+		//* bước 2: mã hóa Caesar chuỗi name thành chuỗi mới và mã hóa luôn freq_prev
+		//! VD : name = "aDdbaaabbb", freq_prev = [{a, 4}, {D,1}, {d,1}, {b,4}]
+		//! kq : name = "eEefeeefff", freq_prev = [{e,4}, {E,1}, {e,1}, {f,4}]
+		// TODO
+		for (char &x : name)
+			x = encode(x, mp[x]);
+		for (pair<char, int> &x : freq_prev)
+			x.first = encode(x.first, x.second);
+
+		//* bước 3: công dồn freq_prev với các kí tự giống nhau sau khi mã hóa
+		//^ chú ý cộng dồn lên phái đầu ví dụ dưới 'e' có 2 chỗ nên ta chọn đầu vector để giữ lại
+		//! vd freq_prev = [{e,4}, {E,1}, {e,1}, {f,4}] -> kq:  freq = [{e,5}, {E,1}, {f,4}]
+		// TODO
+		mp.clear();
+		for (pair<char, int> x : freq_prev)
+		{
+			mp[x.first] += x.second;
+		}
+		vector<pair<char, int>> freq;
+
+		unordered_map<char, int>::iterator mapIt = mp.begin();
+		for (; mapIt != mp.end(); mapIt++)
+		{
+			freq.push_back({mapIt->first, mapIt->second});
+		}
+		//* bước 4: sort chuỗi freq mới tìm được phía trên theo chiều giảm dần
+		//^ chú ý nếu tuần suất hiện bằng nhau thì kí tự nào lớn hơn thì lớn hơn, kí tự hoa lớn hơn kí tự thường
+		// TODO
+		stable_sort(freq.begin(), freq.end(), [=](const pair<char, int> &a, const pair<char, int> &b) -> bool
+			{
+            	if (a.second > b.second) return true;
+    			if (a.second == b.second) {
+        			if (sameType(a.first,b.first))
+            		return a.first > b.first;
+        			else return a.first < b.first;
+				}
+   				return false; 
+			});
+		return freq;
+	}
+	int encode(string name)
+	{
+
+		if (name.length() < 3)
+			return 1;
+
+		//* bước 1 xử lí chuỗi thu được list để tới phần sau
+		vector<pair<char, int>> freq = this->string_Processing(name);
+
+		solution << "list : ";
+		for (auto i : freq)
+			solution << "{" << i.first << ":" << i.second << "} -> ";
+		solution << "\n";
+		return -1;
+	}
 };
 
 class JJK_RESTAURANT_OPERATIONS
@@ -519,8 +623,10 @@ private:
 public:
 	void LAPSE(string name)
 	{
-		//* mã hóa HuffTree_AVL kế quả là 10 kí tự nhị phân cuối chuyển sang thập phân
+		//* mã hóa HuffTree_AVL kết quả là 10 kí tự nhị phân cuối chuyển sang thập phân
 		int result = New_customers_arrive.encode(name);
+		if (result == -1)
+			return;
 
 		//* phân chia nhà hàng
 		if (result % 2 == 1)
@@ -530,13 +636,13 @@ public:
 	}
 
 	//* xử lí nhà hàng gojo
-	void KOKUSEN() { hash.remove_KOKUSEN(); }
-	void LIMITLESS(int num) { hash.print_LIMITLESS(num); }
+	void KOKUSEN() {}
+	void LIMITLESS(int num) {}
 
 	//* xử lí nhà hàng Sukuna
-	void KEITEIKEN(int num) { heap.remove_KEITEIKEN(num); }
-	void CLEAVE(int num) { heap.print_CLEAVE(num); }
+	void KEITEIKEN(int num) {}
+	void CLEAVE(int num) {}
 
 	//* xử lý HuffTree_AVL
-	void HAND() { New_customers_arrive.print(); }
+	void HAND() {}
 };

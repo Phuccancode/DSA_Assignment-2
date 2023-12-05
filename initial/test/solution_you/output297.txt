@@ -1,177 +1,923 @@
+LAPSE: LINE 1
+list : {0:1} -> {2:1} -> {4:1} -> 
+LAPSE: LINE 2
+list : {3:2} -> {6:1} -> 
+LAPSE: LINE 3
+list : {3:1} -> {8:1} -> {9:1} -> 
+LAPSE: LINE 4
+list : {3:1} -> {4:1} -> {6:1} -> 
+LAPSE: LINE 5
+list : {1:1} -> {2:1} -> {3:1} -> 
+LAPSE: LINE 6
+list : {2:1} -> {4:1} -> {7:1} -> 
+LAPSE: LINE 7
+list : {3:1} -> {5:1} -> {8:1} -> 
+LAPSE: LINE 8
+list : {1:1} -> {6:1} -> {8:1} -> 
+LAPSE: LINE 9
+list : {0:1} -> {1:1} -> {7:1} -> 
+LAPSE: LINE 10
+list : {1:1} -> {3:1} -> {8:1} -> 
+LAPSE: LINE 11
+LAPSE: LINE 12
+list : {0:1} -> {4:1} -> {8:1} -> 
+LAPSE: LINE 13
+list : {2:1} -> {3:1} -> {4:1} -> 
+LAPSE: LINE 14
+list : {1:1} -> {3:1} -> {6:1} -> 
+LAPSE: LINE 15
+list : {4:2} -> {3:1} -> 
+LAPSE: LINE 16
+list : {1:1} -> {4:1} -> {5:1} -> 
+LAPSE: LINE 17
+LAPSE: LINE 18
+list : {2:1} -> {5:1} -> {6:1} -> 
+LAPSE: LINE 19
+list : {4:1} -> {5:1} -> {6:1} -> 
+LAPSE: LINE 20
+list : {1:1} -> {4:1} -> {8:1} -> 
+LAPSE: LINE 21
+list : {1:1} -> {4:1} -> {8:1} -> 
+LAPSE: LINE 22
+list : {6:2} -> {3:1} -> 
+LAPSE: LINE 23
+list : {0:1} -> {2:1} -> {6:1} -> 
+LAPSE: LINE 24
+list : {2:1} -> {4:1} -> {9:1} -> 
+LAPSE: LINE 25
+LAPSE: LINE 26
+LAPSE: LINE 27
+list : {1:1} -> {2:1} -> {6:1} -> 
+LAPSE: LINE 28
+list : {2:1} -> {3:1} -> {4:1} -> 
+LAPSE: LINE 29
+list : {2:2} -> {8:1} -> 
+LAPSE: LINE 30
+list : {2:2} -> {3:1} -> 
+LAPSE: LINE 31
+list : {2:1} -> {3:1} -> {6:1} -> 
+LAPSE: LINE 32
+list : {0:1} -> {1:1} -> {4:1} -> 
+LAPSE: LINE 33
+LAPSE: LINE 34
+list : {1:1} -> {5:1} -> {6:1} -> 
+LAPSE: LINE 35
+list : {0:1} -> {2:1} -> {4:1} -> 
+LAPSE: LINE 36
+LAPSE: LINE 37
+list : {0:1} -> {2:1} -> {3:1} -> 
+LAPSE: LINE 38
+list : {2:1} -> {4:1} -> {7:1} -> 
+LAPSE: LINE 39
+LAPSE: LINE 40
+list : {6:2} -> {3:1} -> 
+LAPSE: LINE 41
+list : {4:1} -> {6:1} -> {7:1} -> 
+LAPSE: LINE 42
+list : {3:1} -> {5:1} -> {6:1} -> 
+LAPSE: LINE 43
+list : {2:1} -> {3:1} -> {9:1} -> 
+LAPSE: LINE 44
+list : {1:1} -> {6:1} -> {8:1} -> 
+LAPSE: LINE 45
+list : {0:1} -> {3:1} -> {6:1} -> 
+LAPSE: LINE 46
+list : {3:1} -> {4:1} -> {5:1} -> 
+LAPSE: LINE 47
+list : {2:1} -> {5:1} -> {8:1} -> 
+LAPSE: LINE 48
+list : {3:1} -> {8:1} -> {9:1} -> 
+LAPSE: LINE 49
+list : {4:2} -> {1:1} -> 
+LAPSE: LINE 50
+list : {0:1} -> {3:1} -> {4:1} -> 
+LAPSE: LINE 51
+list : {2:1} -> {3:1} -> {7:1} -> 
+LAPSE: LINE 52
+list : {1:1} -> {2:1} -> {7:1} -> 
+LAPSE: LINE 53
+list : {3:2} -> {8:1} -> 
+LAPSE: LINE 54
+list : {2:1} -> {7:1} -> {8:1} -> 
+LAPSE: LINE 55
+list : {0:1} -> {2:1} -> {7:1} -> 
+LAPSE: LINE 56
+list : {0:2} -> {3:1} -> 
+LAPSE: LINE 57
+list : {2:2} -> {4:1} -> 
+LAPSE: LINE 58
+list : {3:1} -> {4:1} -> {6:1} -> 
+LAPSE: LINE 59
+LAPSE: LINE 60
+list : {0:1} -> {4:1} -> {5:1} -> 
+LAPSE: LINE 61
+LAPSE: LINE 62
+LAPSE: LINE 63
+list : {4:1} -> {5:1} -> {8:1} -> 
+LAPSE: LINE 64
+list : {4:2} -> {2:1} -> 
+LAPSE: LINE 65
+list : {0:1} -> {3:1} -> {4:1} -> 
+LAPSE: LINE 66
+list : {2:2} -> {0:1} -> 
+LAPSE: LINE 67
+list : {1:1} -> {2:1} -> {8:1} -> 
+LAPSE: LINE 68
+list : {0:1} -> {3:1} -> {4:1} -> 
+LAPSE: LINE 69
+LAPSE: LINE 70
+list : {2:1} -> {3:1} -> {7:1} -> 
+LAPSE: LINE 71
+list : {0:1} -> {3:1} -> {7:1} -> 
+LAPSE: LINE 72
+list : {4:1} -> {6:1} -> {8:1} -> 
+LAPSE: LINE 73
+LAPSE: LINE 74
+list : {0:1} -> {3:1} -> {7:1} -> 
+LAPSE: LINE 75
+LAPSE: LINE 76
+list : {0:1} -> {1:1} -> {4:1} -> 
+LAPSE: LINE 77
+list : {0:1} -> {1:1} -> {4:1} -> 
+LAPSE: LINE 78
+list : {4:1} -> {5:1} -> {8:1} -> 
+LAPSE: LINE 79
+list : {4:1} -> {6:1} -> {9:1} -> 
+LAPSE: LINE 80
+list : {2:2} -> {8:1} -> 
+LAPSE: LINE 81
+list : {2:1} -> {3:1} -> {8:1} -> 
+LAPSE: LINE 82
+list : {2:2} -> {4:1} -> 
+LAPSE: LINE 83
+list : {2:2} -> {8:1} -> 
+LAPSE: LINE 84
+list : {3:1} -> {4:1} -> {6:1} -> 
+LAPSE: LINE 85
+list : {0:1} -> {1:1} -> {2:1} -> 
+LAPSE: LINE 86
+list : {0:1} -> {1:1} -> {2:1} -> 
+LAPSE: LINE 87
+list : {4:2} -> {2:1} -> 
+LAPSE: LINE 88
+list : {2:2} -> {1:1} -> 
+LAPSE: LINE 89
+list : {2:2} -> {6:1} -> 
+LAPSE: LINE 90
+list : {8:2} -> {3:1} -> 
+LAPSE: LINE 91
+LAPSE: LINE 92
+LAPSE: LINE 93
+list : {0:1} -> {1:1} -> {9:1} -> 
+LAPSE: LINE 94
+list : {3:1} -> {8:1} -> {9:1} -> 
+LAPSE: LINE 95
+list : {0:1} -> {4:1} -> {8:1} -> 
+LAPSE: LINE 96
+list : {2:1} -> {4:1} -> {8:1} -> 
+LAPSE: LINE 97
+list : {3:1} -> {5:1} -> {6:1} -> 
+LAPSE: LINE 98
+list : {0:1} -> {1:1} -> {2:1} -> 
+LAPSE: LINE 99
+list : {3:2} -> {0:1} -> 
+LAPSE: LINE 100
+LAPSE: LINE 101
+LAPSE: LINE 102
+list : {6:2} -> {2:1} -> 
+LAPSE: LINE 103
+list : {2:1} -> {4:1} -> {5:1} -> 
+LAPSE: LINE 104
+list : {2:1} -> {6:1} -> {9:1} -> 
+LAPSE: LINE 105
+list : {0:1} -> {2:1} -> {4:1} -> 
+LAPSE: LINE 106
+list : {0:1} -> {1:1} -> {3:1} -> 
+LAPSE: LINE 107
+list : {4:2} -> {6:1} -> 
+LAPSE: LINE 108
+list : {0:1} -> {1:1} -> {3:1} -> 
+LAPSE: LINE 109
+LAPSE: LINE 110
+list : {0:1} -> {2:1} -> {7:1} -> 
+LAPSE: LINE 111
+list : {0:1} -> {1:1} -> {4:1} -> 
+LAPSE: LINE 112
+list : {2:1} -> {4:1} -> {6:1} -> 
+LAPSE: LINE 113
+LAPSE: LINE 114
+list : {1:1} -> {3:1} -> {4:1} -> 
+LAPSE: LINE 115
+list : {2:1} -> {3:1} -> {8:1} -> 
+LAPSE: LINE 116
+list : {1:1} -> {6:1} -> {8:1} -> 
+LAPSE: LINE 117
+list : {0:1} -> {4:1} -> {6:1} -> 
+LAPSE: LINE 118
+list : {0:1} -> {3:1} -> {4:1} -> 
+LAPSE: LINE 119
+LAPSE: LINE 120
+list : {1:1} -> {2:1} -> {8:1} -> 
+LAPSE: LINE 121
+list : {0:1} -> {2:1} -> {3:1} -> 
+LAPSE: LINE 122
+list : {4:2} -> {2:1} -> 
+LAPSE: LINE 123
+list : {2:1} -> {3:1} -> {8:1} -> 
+LAPSE: LINE 124
+list : {3:1} -> {6:1} -> {7:1} -> 
+LAPSE: LINE 125
+list : {3:1} -> {4:1} -> {6:1} -> 
+LAPSE: LINE 126
+list : {2:2} -> {6:1} -> 
+LAPSE: LINE 127
+LAPSE: LINE 128
+list : {3:2} -> {4:1} -> 
+LAPSE: LINE 129
+list : {2:1} -> {3:1} -> {6:1} -> 
+LAPSE: LINE 130
+list : {2:1} -> {4:1} -> {5:1} -> 
+LAPSE: LINE 131
+list : {3:1} -> {8:1} -> {9:1} -> 
+LAPSE: LINE 132
+list : {0:1} -> {2:1} -> {6:1} -> 
+LAPSE: LINE 133
+list : {0:1} -> {3:1} -> {9:1} -> 
+LAPSE: LINE 134
+list : {0:1} -> {1:1} -> {3:1} -> 
+LAPSE: LINE 135
+list : {2:1} -> {6:1} -> {7:1} -> 
+LAPSE: LINE 136
+LAPSE: LINE 137
+list : {4:1} -> {7:1} -> {8:1} -> 
+LAPSE: LINE 138
+LAPSE: LINE 139
+list : {3:2} -> {0:1} -> 
+LAPSE: LINE 140
+list : {2:1} -> {4:1} -> {5:1} -> 
+LAPSE: LINE 141
+list : {2:1} -> {6:1} -> {8:1} -> 
+LAPSE: LINE 142
+list : {1:1} -> {4:1} -> {6:1} -> 
+LAPSE: LINE 143
+list : {2:3} -> 
+LAPSE: LINE 144
+list : {1:1} -> {4:1} -> {8:1} -> 
+LAPSE: LINE 145
+list : {6:2} -> {1:1} -> 
+LAPSE: LINE 146
+list : {2:2} -> {6:1} -> 
+LAPSE: LINE 147
+list : {0:1} -> {1:1} -> {3:1} -> 
+LAPSE: LINE 148
+list : {1:1} -> {2:1} -> {4:1} -> 
+LAPSE: LINE 149
+list : {0:1} -> {1:1} -> {4:1} -> 
+LAPSE: LINE 150
+list : {2:2} -> {8:1} -> 
+LAPSE: LINE 151
+list : {1:1} -> {4:1} -> {8:1} -> 
+LAPSE: LINE 152
+list : {0:1} -> {1:1} -> {4:1} -> 
+LAPSE: LINE 153
+list : {3:1} -> {4:1} -> {6:1} -> 
+LAPSE: LINE 154
+list : {0:1} -> {1:1} -> {6:1} -> 
+LAPSE: LINE 155
+list : {1:1} -> {2:1} -> {3:1} -> 
+LAPSE: LINE 156
+LAPSE: LINE 157
+list : {0:1} -> {4:1} -> {6:1} -> 
+LAPSE: LINE 158
+list : {2:2} -> {4:1} -> 
+LAPSE: LINE 159
+list : {1:1} -> {4:1} -> {8:1} -> 
+LAPSE: LINE 160
+list : {1:1} -> {4:1} -> {6:1} -> 
+LAPSE: LINE 161
+list : {0:1} -> {2:1} -> {3:1} -> 
+LAPSE: LINE 162
+list : {4:1} -> {6:1} -> {8:1} -> 
+LAPSE: LINE 163
+list : {4:2} -> {2:1} -> 
+LAPSE: LINE 164
+list : {0:1} -> {1:1} -> {2:1} -> 
+LAPSE: LINE 165
+list : {1:1} -> {5:1} -> {6:1} -> 
+LAPSE: LINE 166
+list : {2:1} -> {3:1} -> {7:1} -> 
+LAPSE: LINE 167
+LAPSE: LINE 168
+list : {0:1} -> {2:1} -> {3:1} -> 
+LAPSE: LINE 169
+LAPSE: LINE 170
+list : {2:1} -> {3:1} -> {6:1} -> 
 CLEAVE 2 : LINE 171
-Heap : 15(len=11,index=9) 7(len=12,index=6) 5(len=15,index=2) 9(len=15,index=5) 13(len=13,index=3) 11(len=28,index=1) 19(len=17,index=7) 1(len=17,index=4) 17(len=18,index=0) 3(len=24,index=8) 
-Heap : 15 7 5 9 13 11 19 1 17 3 
-list LRU : 17 11 5 13 1 9 7 19 3 15 
-customers in the area ID = 15: 254 34 
-customers in the area ID = 7: 146 406 
-customers in the area ID = 9: 468 148 
-customers in the area ID = 1: 120 40 
-customers in the area ID = 17: 236 56 
-customers in the area ID = 13: 372 132 
-customers in the area ID = 3: 282 142 
-customers in the area ID = 5: 4 424 
-customers in the area ID = 11: 230 230 
-customers in the area ID = 19: 418 478 
 
 KEITEIKEN 1 : LINE 172
-remove customers in the area ID = 15: 154 
 
 CLEAVE 10 : LINE 173
-Heap : 15(len=10,index=9) 7(len=12,index=6) 5(len=15,index=2) 9(len=15,index=5) 13(len=13,index=3) 11(len=28,index=1) 19(len=17,index=7) 1(len=17,index=4) 17(len=18,index=0) 3(len=24,index=8) 
-Heap : 15 7 5 9 13 11 19 1 17 3 
-list LRU : 17 11 5 13 1 9 7 19 3 15 
-customers in the area ID = 15: 254 34 254 334 134 94 414 354 294 14 
-customers in the area ID = 7: 146 406 346 166 286 406 426 266 226 306 
-customers in the area ID = 9: 468 148 148 168 428 408 388 228 328 228 
-customers in the area ID = 1: 120 40 160 140 260 340 40 240 40 300 
-customers in the area ID = 17: 236 56 156 276 436 376 296 356 56 436 
-customers in the area ID = 13: 372 132 452 372 32 172 372 392 52 472 
-customers in the area ID = 3: 282 142 262 222 362 262 382 382 62 42 
-customers in the area ID = 5: 4 424 224 104 164 244 104 464 84 24 
-customers in the area ID = 11: 230 230 310 330 30 130 390 230 90 270 
-customers in the area ID = 19: 418 478 398 58 218 398 458 18 18 458 
 
+LAPSE: LINE 174
+list : {0:2} -> {4:1} -> 
+LAPSE: LINE 175
+list : {1:1} -> {3:1} -> {4:1} -> 
+LAPSE: LINE 176
+list : {2:1} -> {6:1} -> {8:1} -> 
+LAPSE: LINE 177
+list : {0:1} -> {4:1} -> {8:1} -> 
+LAPSE: LINE 178
+LAPSE: LINE 179
+list : {4:1} -> {6:1} -> {8:1} -> 
+LAPSE: LINE 180
+list : {1:1} -> {2:1} -> {3:1} -> 
+LAPSE: LINE 181
+list : {2:1} -> {3:1} -> {6:1} -> 
+LAPSE: LINE 182
+list : {4:2} -> {8:1} -> 
+LAPSE: LINE 183
+list : {4:2} -> {2:1} -> 
+LAPSE: LINE 184
+list : {3:1} -> {4:1} -> {9:1} -> 
+LAPSE: LINE 185
+list : {0:1} -> {1:1} -> {3:1} -> 
+LAPSE: LINE 186
+list : {3:1} -> {6:1} -> {7:1} -> 
+LAPSE: LINE 187
+LAPSE: LINE 188
+list : {0:1} -> {2:1} -> {3:1} -> 
+LAPSE: LINE 189
+list : {1:1} -> {2:1} -> {6:1} -> 
+LAPSE: LINE 190
+list : {4:2} -> {0:1} -> 
+LAPSE: LINE 191
+LAPSE: LINE 192
+list : {1:1} -> {4:1} -> {6:1} -> 
+LAPSE: LINE 193
+list : {2:1} -> {4:1} -> {7:1} -> 
+LAPSE: LINE 194
+list : {0:1} -> {2:1} -> {4:1} -> 
+LAPSE: LINE 195
+list : {0:1} -> {4:1} -> {6:1} -> 
+LAPSE: LINE 196
+list : {0:1} -> {3:1} -> {4:1} -> 
+LAPSE: LINE 197
+LAPSE: LINE 198
+LAPSE: LINE 199
+list : {3:2} -> {4:1} -> 
+LAPSE: LINE 200
+list : {0:1} -> {4:1} -> {6:1} -> 
+LAPSE: LINE 201
+list : {0:2} -> {1:1} -> 
+LAPSE: LINE 202
+list : {4:2} -> {6:1} -> 
+LAPSE: LINE 203
+LAPSE: LINE 204
+list : {4:2} -> {1:1} -> 
+LAPSE: LINE 205
+LAPSE: LINE 206
+list : {2:2} -> {8:1} -> 
+LAPSE: LINE 207
+list : {1:1} -> {2:1} -> {6:1} -> 
+LAPSE: LINE 208
+list : {3:1} -> {4:1} -> {8:1} -> 
+LAPSE: LINE 209
+list : {1:1} -> {8:1} -> {9:1} -> 
+LAPSE: LINE 210
+list : {4:1} -> {5:1} -> {8:1} -> 
+LAPSE: LINE 211
+list : {1:1} -> {2:1} -> {6:1} -> 
+LAPSE: LINE 212
+list : {3:2} -> {4:1} -> 
+LAPSE: LINE 213
+LAPSE: LINE 214
+list : {2:2} -> {0:1} -> 
+LAPSE: LINE 215
+list : {1:1} -> {2:1} -> {4:1} -> 
+LAPSE: LINE 216
+LAPSE: LINE 217
+list : {4:2} -> {3:1} -> 
+LAPSE: LINE 218
+list : {6:2} -> {1:1} -> 
+LAPSE: LINE 219
+list : {3:1} -> {6:1} -> {9:1} -> 
+LAPSE: LINE 220
+list : {2:2} -> {4:1} -> 
 CLEAVE 10 : LINE 221
-Heap : 13(len=15,index=7) 9(len=17,index=9) 5(len=18,index=3) 15(len=19,index=4) 7(len=20,index=2) 11(len=30,index=8) 19(len=22,index=6) 1(len=25,index=5) 17(len=22,index=1) 3(len=28,index=0) 
-Heap : 13 9 5 15 7 11 19 1 17 3 
-list LRU : 3 17 7 5 15 1 19 13 11 9 
-customers in the area ID = 13: 32 132 372 132 452 372 32 172 372 392 
-customers in the area ID = 9: 448 408 468 148 148 168 428 408 388 228 
-customers in the area ID = 15: 14 214 334 94 414 334 274 394 314 254 
-customers in the area ID = 1: 220 100 460 40 420 440 320 400 120 40 
-customers in the area ID = 17: 396 216 376 56 236 56 156 276 436 376 
-customers in the area ID = 7: 166 126 446 406 146 6 486 286 146 406 
-customers in the area ID = 3: 422 162 282 362 282 142 262 222 362 262 
-customers in the area ID = 5: 344 24 244 4 424 224 104 164 244 104 
-customers in the area ID = 11: 430 310 230 230 310 330 30 130 390 230 
-customers in the area ID = 19: 38 458 198 438 18 418 478 398 58 218 
 
 KEITEIKEN 10 : LINE 222
-remove customers in the area ID = 13: 312 472 12 472 52 392 372 172 32 372 
-remove customers in the area ID = 13: 452 132 372 132 32 
-remove customers in the area ID = 9: 168 168 48 128 468 228 328 228 388 408 
-remove customers in the area ID = 9: 428 168 148 148 468 408 448 
-remove customers in the area ID = 5: 364 344 184 184 364 24 84 464 104 244 
-remove customers in the area ID = 5: 164 104 224 424 4 244 24 344 
-remove customers in the area ID = 15: 14 294 354 414 94 134 334 254 34 254 
-remove customers in the area ID = 15: 314 394 274 334 414 94 334 214 14 
-remove customers in the area ID = 7: 366 366 306 226 266 426 406 286 166 346 
-remove customers in the area ID = 7: 406 146 286 486 6 146 406 446 126 166 
 
 CLEAVE 2 : LINE 223
-Heap : 19(len=22,index=3) 17(len=22,index=1) 11(len=30,index=4) 3(len=28,index=0) 1(len=25,index=2) 
-Heap : 19 17 11 3 1 
-list LRU : 3 17 1 19 11 
-customers in the area ID = 19: 38 458 
-customers in the area ID = 17: 396 216 
-customers in the area ID = 3: 422 162 
-customers in the area ID = 1: 220 100 
-customers in the area ID = 11: 430 310 
 
+LAPSE: LINE 224
+LAPSE: LINE 225
+list : {2:1} -> {3:1} -> {4:1} -> 
+LAPSE: LINE 226
+list : {0:1} -> {2:1} -> {7:1} -> 
+LAPSE: LINE 227
+list : {1:1} -> {6:1} -> {8:1} -> 
+LAPSE: LINE 228
+list : {8:2} -> {1:1} -> 
+LAPSE: LINE 229
+list : {0:1} -> {1:1} -> {5:1} -> 
+LAPSE: LINE 230
+list : {1:1} -> {3:1} -> {8:1} -> 
+LAPSE: LINE 231
+list : {1:1} -> {3:1} -> {6:1} -> 
+LAPSE: LINE 232
+list : {4:1} -> {5:1} -> {8:1} -> 
+LAPSE: LINE 233
+LAPSE: LINE 234
+LAPSE: LINE 235
+LAPSE: LINE 236
+list : {3:1} -> {4:1} -> {6:1} -> 
+LAPSE: LINE 237
+list : {0:1} -> {2:1} -> {8:1} -> 
+LAPSE: LINE 238
+LAPSE: LINE 239
+list : {0:1} -> {1:1} -> {3:1} -> 
+LAPSE: LINE 240
+list : {1:1} -> {2:1} -> {3:1} -> 
+LAPSE: LINE 241
+list : {2:1} -> {7:1} -> {8:1} -> 
+LAPSE: LINE 242
+list : {0:1} -> {2:1} -> {4:1} -> 
+LAPSE: LINE 243
+list : {0:1} -> {2:1} -> {5:1} -> 
+LAPSE: LINE 244
+LAPSE: LINE 245
+list : {4:1} -> {6:1} -> {8:1} -> 
+LAPSE: LINE 246
+list : {1:1} -> {2:1} -> {6:1} -> 
+LAPSE: LINE 247
+LAPSE: LINE 248
+list : {6:2} -> {1:1} -> 
+LAPSE: LINE 249
+list : {3:2} -> {4:1} -> 
+LAPSE: LINE 250
+list : {4:2} -> {3:1} -> 
+LAPSE: LINE 251
+LAPSE: LINE 252
+list : {0:2} -> {4:1} -> 
+LAPSE: LINE 253
+list : {1:2} -> {0:1} -> 
+LAPSE: LINE 254
+list : {4:2} -> {1:1} -> 
+LAPSE: LINE 255
+list : {1:1} -> {2:1} -> {6:1} -> 
+LAPSE: LINE 256
+list : {0:1} -> {2:1} -> {7:1} -> 
+LAPSE: LINE 257
+LAPSE: LINE 258
+LAPSE: LINE 259
+list : {0:1} -> {3:1} -> {5:1} -> 
+LAPSE: LINE 260
+list : {2:1} -> {4:1} -> {6:1} -> 
+LAPSE: LINE 261
+LAPSE: LINE 262
+list : {3:1} -> {6:1} -> {7:1} -> 
+LAPSE: LINE 263
+list : {1:1} -> {2:1} -> {8:1} -> 
+LAPSE: LINE 264
+list : {2:1} -> {4:1} -> {9:1} -> 
+LAPSE: LINE 265
+list : {3:1} -> {4:1} -> {6:1} -> 
+LAPSE: LINE 266
+list : {2:1} -> {4:1} -> {9:1} -> 
+LAPSE: LINE 267
+list : {6:2} -> {1:1} -> 
+LAPSE: LINE 268
+list : {0:1} -> {2:1} -> {6:1} -> 
+LAPSE: LINE 269
+list : {2:2} -> {8:1} -> 
+LAPSE: LINE 270
+list : {0:1} -> {2:1} -> {7:1} -> 
+LAPSE: LINE 271
+list : {3:1} -> {4:1} -> {6:1} -> 
+LAPSE: LINE 272
+list : {0:1} -> {2:1} -> {5:1} -> 
+LAPSE: LINE 273
+list : {1:1} -> {4:1} -> {6:1} -> 
+LAPSE: LINE 274
+list : {4:3} -> 
+LAPSE: LINE 275
+list : {2:1} -> {4:1} -> {8:1} -> 
+LAPSE: LINE 276
+list : {4:2} -> {8:1} -> 
+LAPSE: LINE 277
+list : {0:1} -> {1:1} -> {5:1} -> 
+LAPSE: LINE 278
+list : {1:1} -> {2:1} -> {3:1} -> 
+LAPSE: LINE 279
+list : {1:1} -> {6:1} -> {8:1} -> 
+LAPSE: LINE 280
+list : {3:1} -> {4:1} -> {8:1} -> 
+LAPSE: LINE 281
+list : {0:1} -> {2:1} -> {6:1} -> 
+LAPSE: LINE 282
+list : {0:2} -> {3:1} -> 
+LAPSE: LINE 283
+list : {2:1} -> {4:1} -> {7:1} -> 
+LAPSE: LINE 284
+list : {4:1} -> {6:1} -> {8:1} -> 
+LAPSE: LINE 285
+LAPSE: LINE 286
+list : {0:1} -> {1:1} -> {2:1} -> 
+LAPSE: LINE 287
+LAPSE: LINE 288
+list : {3:1} -> {7:1} -> {8:1} -> 
+LAPSE: LINE 289
+list : {0:1} -> {2:1} -> {4:1} -> 
+LAPSE: LINE 290
+list : {1:2} -> {0:1} -> 
+LAPSE: LINE 291
+list : {1:1} -> {6:1} -> {7:1} -> 
+LAPSE: LINE 292
+list : {4:2} -> {2:1} -> 
+LAPSE: LINE 293
+list : {4:3} -> 
+LAPSE: LINE 294
+list : {1:1} -> {2:1} -> {7:1} -> 
+LAPSE: LINE 295
+list : {2:1} -> {4:1} -> {8:1} -> 
+LAPSE: LINE 296
+list : {4:2} -> {0:1} -> 
+LAPSE: LINE 297
+LAPSE: LINE 298
+list : {2:3} -> 
+LAPSE: LINE 299
+list : {4:2} -> {0:1} -> 
+LAPSE: LINE 300
+LAPSE: LINE 301
+LAPSE: LINE 302
+list : {2:2} -> {7:1} -> 
+LAPSE: LINE 303
+list : {2:1} -> {4:1} -> {8:1} -> 
+LAPSE: LINE 304
+list : {0:1} -> {2:1} -> {5:1} -> 
+LAPSE: LINE 305
+list : {2:1} -> {4:1} -> {9:1} -> 
+LAPSE: LINE 306
+LAPSE: LINE 307
+list : {1:1} -> {5:1} -> {8:1} -> 
+LAPSE: LINE 308
+list : {3:1} -> {6:1} -> {9:1} -> 
+LAPSE: LINE 309
+LAPSE: LINE 310
+list : {4:1} -> {6:1} -> {8:1} -> 
+LAPSE: LINE 311
+LAPSE: LINE 312
+list : {4:2} -> {6:1} -> 
+LAPSE: LINE 313
+LAPSE: LINE 314
+list : {0:1} -> {1:1} -> {7:1} -> 
+LAPSE: LINE 315
+list : {0:1} -> {3:1} -> {4:1} -> 
+LAPSE: LINE 316
+list : {3:1} -> {4:1} -> {7:1} -> 
+LAPSE: LINE 317
+LAPSE: LINE 318
+list : {4:2} -> {0:1} -> 
+LAPSE: LINE 319
+list : {2:2} -> {6:1} -> 
+LAPSE: LINE 320
+list : {0:1} -> {1:1} -> {4:1} -> 
+LAPSE: LINE 321
+list : {4:2} -> {2:1} -> 
+LAPSE: LINE 322
+list : {2:1} -> {3:1} -> {4:1} -> 
+LAPSE: LINE 323
+list : {3:1} -> {4:1} -> {5:1} -> 
+LAPSE: LINE 324
+list : {4:1} -> {5:1} -> {8:1} -> 
+LAPSE: LINE 325
+list : {4:1} -> {6:1} -> {8:1} -> 
+LAPSE: LINE 326
+list : {0:1} -> {2:1} -> {8:1} -> 
+LAPSE: LINE 327
+list : {0:1} -> {3:1} -> {7:1} -> 
+LAPSE: LINE 328
+list : {0:1} -> {4:1} -> {9:1} -> 
+LAPSE: LINE 329
+list : {0:1} -> {1:1} -> {4:1} -> 
+LAPSE: LINE 330
+list : {2:2} -> {0:1} -> 
+LAPSE: LINE 331
+list : {3:1} -> {4:1} -> {8:1} -> 
+LAPSE: LINE 332
+LAPSE: LINE 333
+list : {1:1} -> {2:1} -> {6:1} -> 
+LAPSE: LINE 334
+LAPSE: LINE 335
+LAPSE: LINE 336
+list : {2:2} -> {8:1} -> 
+LAPSE: LINE 337
+list : {0:1} -> {3:1} -> {8:1} -> 
+LAPSE: LINE 338
+list : {0:1} -> {2:1} -> {3:1} -> 
+LAPSE: LINE 339
+list : {0:1} -> {1:1} -> {6:1} -> 
+LAPSE: LINE 340
+LAPSE: LINE 341
+list : {4:2} -> {8:1} -> 
+LAPSE: LINE 342
+list : {1:1} -> {3:1} -> {4:1} -> 
+LAPSE: LINE 343
+list : {1:1} -> {3:1} -> {8:1} -> 
+LAPSE: LINE 344
+list : {0:2} -> {1:1} -> 
+LAPSE: LINE 345
+LAPSE: LINE 346
+list : {1:1} -> {3:1} -> {6:1} -> 
 CLEAVE 10 : LINE 347
-Heap : 13(len=9,index=9) 7(len=10,index=6) 9(len=17,index=8) 5(len=12,index=5) 15(len=12,index=4) 11(len=49,index=1) 19(len=33,index=3) 3(len=36,index=7) 17(len=30,index=0) 1(len=42,index=2) 
-Heap : 13 7 9 5 15 11 19 3 17 1 
-list LRU : 17 11 1 19 15 5 7 3 9 13 
-customers in the area ID = 13: 492 272 172 472 312 72 312 72 12 
-customers in the area ID = 7: 106 446 486 166 26 246 166 66 486 186 
-customers in the area ID = 5: 484 304 444 244 204 44 444 164 364 144 
-customers in the area ID = 3: 282 442 262 42 2 222 482 162 422 162 
-customers in the area ID = 17: 136 216 396 176 436 376 216 316 396 216 
-customers in the area ID = 15: 314 74 34 354 234 54 374 294 294 434 
-customers in the area ID = 1: 100 320 380 220 440 80 440 440 120 300 
-customers in the area ID = 9: 68 348 208 468 28 428 28 428 8 468 
-customers in the area ID = 11: 50 410 490 370 410 170 250 70 110 150 
-customers in the area ID = 19: 138 98 458 98 158 378 438 38 278 458 
 
 KEITEIKEN 10 : LINE 348
-remove customers in the area ID = 13: 12 72 312 72 312 472 172 272 492 
-remove customers in the area ID = 7: 186 486 66 166 246 26 166 486 446 106 
-remove customers in the area ID = 5: 324 364 144 364 164 444 44 204 244 444 
-remove customers in the area ID = 5: 304 484 
-remove customers in the area ID = 15: 94 334 434 294 294 374 54 234 354 34 
-remove customers in the area ID = 15: 74 314 
-remove customers in the area ID = 9: 188 88 88 128 228 448 168 468 8 428 
-remove customers in the area ID = 9: 28 428 28 468 208 348 68 
-remove customers in the area ID = 17: 336 136 256 456 156 476 356 496 436 56 
-remove customers in the area ID = 17: 356 296 376 436 276 156 56 236 56 376 
 
 CLEAVE 10 : LINE 349
-Heap : 17(len=10,index=0) 3(len=36,index=4) 19(len=33,index=3) 11(len=49,index=1) 1(len=42,index=2) 
-Heap : 17 3 19 11 1 
-list LRU : 17 11 1 19 3 
-customers in the area ID = 17: 136 216 396 176 436 376 216 316 396 216 
-customers in the area ID = 3: 282 442 262 42 2 222 482 162 422 162 
-customers in the area ID = 11: 50 410 490 370 410 170 250 70 110 150 
-customers in the area ID = 1: 100 320 380 220 440 80 440 440 120 300 
-customers in the area ID = 19: 138 98 458 98 158 378 438 38 278 458 
 
+LAPSE: LINE 350
+list : {0:2} -> {2:1} -> 
+LAPSE: LINE 351
+list : {1:1} -> {8:1} -> {9:1} -> 
+LAPSE: LINE 352
+list : {0:1} -> {2:1} -> {8:1} -> 
+LAPSE: LINE 353
+list : {4:2} -> {6:1} -> 
+LAPSE: LINE 354
+list : {3:1} -> {6:1} -> {9:1} -> 
+LAPSE: LINE 355
+LAPSE: LINE 356
+list : {8:2} -> {1:1} -> 
+LAPSE: LINE 357
+list : {2:1} -> {4:1} -> {9:1} -> 
+LAPSE: LINE 358
+list : {2:1} -> {4:1} -> {8:1} -> 
+LAPSE: LINE 359
+list : {1:2} -> {0:1} -> 
+LAPSE: LINE 360
+list : {2:1} -> {4:1} -> {8:1} -> 
+LAPSE: LINE 361
+LAPSE: LINE 362
+LAPSE: LINE 363
+list : {8:2} -> {3:1} -> 
+LAPSE: LINE 364
+list : {2:1} -> {3:1} -> {7:1} -> 
+LAPSE: LINE 365
+list : {4:2} -> {6:1} -> 
+LAPSE: LINE 366
+LAPSE: LINE 367
+list : {2:1} -> {4:1} -> {5:1} -> 
+LAPSE: LINE 368
+list : {0:1} -> {2:1} -> {4:1} -> 
+LAPSE: LINE 369
+list : {1:1} -> {2:1} -> {3:1} -> 
+LAPSE: LINE 370
+list : {6:2} -> {1:1} -> 
+LAPSE: LINE 371
+list : {4:2} -> {1:1} -> 
+LAPSE: LINE 372
+list : {1:1} -> {4:1} -> {8:1} -> 
+LAPSE: LINE 373
+list : {0:1} -> {2:1} -> {4:1} -> 
+LAPSE: LINE 374
+list : {0:1} -> {2:1} -> {5:1} -> 
+LAPSE: LINE 375
+list : {1:1} -> {6:1} -> {7:1} -> 
+LAPSE: LINE 376
+list : {0:1} -> {2:1} -> {6:1} -> 
+LAPSE: LINE 377
+list : {1:1} -> {4:1} -> {7:1} -> 
 CLEAVE 1 : LINE 378
-Heap : 13(len=3,index=7) 15(len=3,index=0) 9(len=5,index=8) 7(len=4,index=6) 5(len=4,index=4) 19(len=36,index=5) 17(len=12,index=2) 11(len=51,index=3) 3(len=36,index=9) 1(len=44,index=1) 
-Heap : 13 15 9 7 5 19 17 11 3 1 
-list LRU : 15 1 17 11 5 19 7 13 9 3 
-customers in the area ID = 13: 312 
-customers in the area ID = 15: 174 
-customers in the area ID = 7: 166 
-customers in the area ID = 11: 250 
-customers in the area ID = 3: 282 
-customers in the area ID = 5: 204 
-customers in the area ID = 1: 260 
-customers in the area ID = 9: 388 
-customers in the area ID = 19: 418 
-customers in the area ID = 17: 176 
 
 KEITEIKEN 10 : LINE 379
-remove customers in the area ID = 13: 372 452 312 
-remove customers in the area ID = 15: 294 94 174 
-remove customers in the area ID = 7: 6 66 446 166 
-remove customers in the area ID = 5: 464 204 144 204 
-remove customers in the area ID = 9: 208 188 428 428 388 
-remove customers in the area ID = 17: 216 396 316 216 376 436 176 396 216 136 
-remove customers in the area ID = 17: 396 176 
-remove customers in the area ID = 3: 342 162 342 282 322 362 82 242 442 202 
-remove customers in the area ID = 3: 422 102 442 122 42 62 382 382 262 362 
-remove customers in the area ID = 3: 222 262 142 282 362 282 162 422 162 482 
 
 CLEAVE 3 : LINE 380
-Heap : 3(len=6,index=3) 1(len=44,index=0) 19(len=36,index=2) 11(len=51,index=1) 
-Heap : 3 1 19 11 
-list LRU : 1 11 19 3 
-customers in the area ID = 3: 282 442 262 
-customers in the area ID = 1: 260 200 100 
-customers in the area ID = 11: 250 110 50 
-customers in the area ID = 19: 418 58 198 
 
+LAPSE: LINE 381
+LAPSE: LINE 382
+list : {1:1} -> {8:1} -> {9:1} -> 
+LAPSE: LINE 383
+list : {4:2} -> {2:1} -> 
+LAPSE: LINE 384
+list : {1:1} -> {3:1} -> {6:1} -> 
+LAPSE: LINE 385
+LAPSE: LINE 386
+list : {3:2} -> {4:1} -> 
+LAPSE: LINE 387
+list : {4:2} -> {2:1} -> 
+LAPSE: LINE 388
+list : {2:1} -> {5:1} -> {8:1} -> 
+LAPSE: LINE 389
+list : {2:1} -> {4:1} -> {6:1} -> 
+LAPSE: LINE 390
+list : {1:1} -> {3:1} -> {8:1} -> 
+LAPSE: LINE 391
+list : {0:1} -> {1:1} -> {2:1} -> 
+LAPSE: LINE 392
+list : {2:2} -> {5:1} -> 
+LAPSE: LINE 393
+list : {2:1} -> {4:1} -> {9:1} -> 
+LAPSE: LINE 394
+LAPSE: LINE 395
+LAPSE: LINE 396
+LAPSE: LINE 397
+list : {2:1} -> {4:1} -> {8:1} -> 
+LAPSE: LINE 398
+list : {2:1} -> {3:1} -> {4:1} -> 
+LAPSE: LINE 399
+list : {1:1} -> {2:1} -> {4:1} -> 
+LAPSE: LINE 400
+LAPSE: LINE 401
+LAPSE: LINE 402
+LAPSE: LINE 403
+list : {3:1} -> {6:1} -> {7:1} -> 
+LAPSE: LINE 404
+list : {2:1} -> {3:1} -> {5:1} -> 
+LAPSE: LINE 405
+list : {0:1} -> {2:1} -> {6:1} -> 
+LAPSE: LINE 406
+list : {4:1} -> {5:1} -> {8:1} -> 
+LAPSE: LINE 407
+LAPSE: LINE 408
+list : {1:1} -> {2:1} -> {6:1} -> 
+LAPSE: LINE 409
+list : {0:1} -> {3:1} -> {6:1} -> 
+LAPSE: LINE 410
+list : {8:2} -> {2:1} -> 
+LAPSE: LINE 411
+LAPSE: LINE 412
+list : {6:2} -> {4:1} -> 
+LAPSE: LINE 413
+list : {4:2} -> {8:1} -> 
+LAPSE: LINE 414
+list : {0:1} -> {1:1} -> {3:1} -> 
+LAPSE: LINE 415
+list : {1:1} -> {6:1} -> {9:1} -> 
+LAPSE: LINE 416
+list : {1:2} -> {6:1} -> 
+LAPSE: LINE 417
+list : {2:1} -> {4:1} -> {6:1} -> 
+LAPSE: LINE 418
+LAPSE: LINE 419
+list : {0:1} -> {2:1} -> {4:1} -> 
+LAPSE: LINE 420
+list : {0:1} -> {2:1} -> {8:1} -> 
+LAPSE: LINE 421
+list : {1:1} -> {6:1} -> {7:1} -> 
+LAPSE: LINE 422
+list : {4:2} -> {2:1} -> 
+LAPSE: LINE 423
+list : {4:2} -> {2:1} -> 
+LAPSE: LINE 424
+LAPSE: LINE 425
+list : {1:1} -> {2:1} -> {4:1} -> 
+LAPSE: LINE 426
+list : {3:1} -> {6:1} -> {8:1} -> 
+LAPSE: LINE 427
+list : {8:2} -> {4:1} -> 
+LAPSE: LINE 428
+list : {0:1} -> {1:1} -> {3:1} -> 
+LAPSE: LINE 429
+LAPSE: LINE 430
+list : {1:1} -> {3:1} -> {6:1} -> 
+LAPSE: LINE 431
+list : {1:1} -> {2:1} -> {4:1} -> 
+LAPSE: LINE 432
+list : {8:2} -> {1:1} -> 
+LAPSE: LINE 433
+LAPSE: LINE 434
+list : {0:1} -> {2:1} -> {7:1} -> 
+LAPSE: LINE 435
+list : {4:1} -> {6:1} -> {8:1} -> 
+LAPSE: LINE 436
+list : {3:1} -> {4:1} -> {8:1} -> 
+LAPSE: LINE 437
+list : {0:1} -> {1:1} -> {8:1} -> 
+LAPSE: LINE 438
+list : {0:1} -> {1:1} -> {7:1} -> 
+LAPSE: LINE 439
+list : {2:1} -> {4:1} -> {7:1} -> 
+LAPSE: LINE 440
+LAPSE: LINE 441
+list : {1:2} -> {4:1} -> 
+LAPSE: LINE 442
+LAPSE: LINE 443
+list : {0:1} -> {4:1} -> {6:1} -> 
+LAPSE: LINE 444
+list : {3:1} -> {4:1} -> {6:1} -> 
+LAPSE: LINE 445
+LAPSE: LINE 446
+list : {0:1} -> {2:1} -> {4:1} -> 
+LAPSE: LINE 447
+LAPSE: LINE 448
+list : {2:2} -> {6:1} -> 
+LAPSE: LINE 449
+list : {0:1} -> {1:1} -> {6:1} -> 
+LAPSE: LINE 450
+list : {2:1} -> {4:1} -> {8:1} -> 
+LAPSE: LINE 451
+list : {1:1} -> {2:1} -> {4:1} -> 
+LAPSE: LINE 452
+list : {3:2} -> {2:1} -> 
+LAPSE: LINE 453
+list : {3:2} -> {0:1} -> 
+LAPSE: LINE 454
+list : {4:1} -> {6:1} -> {8:1} -> 
+LAPSE: LINE 455
+list : {4:1} -> {6:1} -> {8:1} -> 
+LAPSE: LINE 456
+list : {2:1} -> {3:1} -> {6:1} -> 
+LAPSE: LINE 457
+list : {3:1} -> {5:1} -> {6:1} -> 
+LAPSE: LINE 458
+list : {1:1} -> {4:1} -> {8:1} -> 
+LAPSE: LINE 459
+list : {4:2} -> {2:1} -> 
+LAPSE: LINE 460
+LAPSE: LINE 461
+list : {2:1} -> {7:1} -> {8:1} -> 
+LAPSE: LINE 462
+LAPSE: LINE 463
+list : {1:1} -> {5:1} -> {8:1} -> 
+LAPSE: LINE 464
+list : {6:2} -> {3:1} -> 
+LAPSE: LINE 465
+list : {2:2} -> {4:1} -> 
+LAPSE: LINE 466
+list : {1:1} -> {6:1} -> {8:1} -> 
+LAPSE: LINE 467
+LAPSE: LINE 468
+list : {2:1} -> {4:1} -> {8:1} -> 
+LAPSE: LINE 469
+list : {2:1} -> {4:1} -> {5:1} -> 
+LAPSE: LINE 470
+LAPSE: LINE 471
+list : {2:2} -> {4:1} -> 
+LAPSE: LINE 472
+list : {2:1} -> {3:1} -> {6:1} -> 
+LAPSE: LINE 473
+LAPSE: LINE 474
+list : {2:2} -> {6:1} -> 
+LAPSE: LINE 475
+LAPSE: LINE 476
+list : {0:1} -> {2:1} -> {7:1} -> 
+LAPSE: LINE 477
+LAPSE: LINE 478
+list : {1:1} -> {4:1} -> {8:1} -> 
+LAPSE: LINE 479
+list : {0:1} -> {2:1} -> {8:1} -> 
+LAPSE: LINE 480
+list : {0:1} -> {1:1} -> {8:1} -> 
+LAPSE: LINE 481
+list : {1:1} -> {4:1} -> {7:1} -> 
+LAPSE: LINE 482
+list : {0:1} -> {3:1} -> {4:1} -> 
+LAPSE: LINE 483
+LAPSE: LINE 484
+list : {1:1} -> {4:1} -> {7:1} -> 
+LAPSE: LINE 485
+LAPSE: LINE 486
+list : {1:1} -> {4:1} -> {8:1} -> 
+LAPSE: LINE 487
+list : {0:1} -> {3:1} -> {4:1} -> 
+LAPSE: LINE 488
+list : {2:1} -> {3:1} -> {8:1} -> 
+LAPSE: LINE 489
+list : {0:1} -> {2:1} -> {8:1} -> 
+LAPSE: LINE 490
+list : {4:1} -> {5:1} -> {6:1} -> 
+LAPSE: LINE 491
+list : {0:1} -> {1:1} -> {4:1} -> 
+LAPSE: LINE 492
+list : {3:2} -> {0:1} -> 
+LAPSE: LINE 493
+list : {1:1} -> {5:1} -> {8:1} -> 
+LAPSE: LINE 494
+list : {0:1} -> {1:1} -> {4:1} -> 
+LAPSE: LINE 495
+list : {2:2} -> {6:1} -> 
+LAPSE: LINE 496
+LAPSE: LINE 497
+list : {1:1} -> {6:1} -> {9:1} -> 
+LAPSE: LINE 498
+list : {2:2} -> {3:1} -> 
+LAPSE: LINE 499
+LAPSE: LINE 500
+LAPSE: LINE 501
+list : {4:2} -> {8:1} -> 
+LAPSE: LINE 502
+LAPSE: LINE 503
+list : {4:2} -> {9:1} -> 
+LAPSE: LINE 504
+LAPSE: LINE 505
+list : {2:1} -> {4:1} -> {6:1} -> 
+LAPSE: LINE 506
+list : {4:2} -> {7:1} -> 
+LAPSE: LINE 507
+list : {1:1} -> {3:1} -> {4:1} -> 
 CLEAVE 100 : LINE 508
-Heap : 15(len=10,index=0) 13(len=11,index=6) 5(len=12,index=4) 7(len=12,index=3) 17(len=16,index=2) 19(len=49,index=5) 9(len=16,index=7) 11(len=64,index=9) 3(len=20,index=1) 1(len=54,index=8) 
-Heap : 15 13 5 7 17 19 9 11 3 1 
-list LRU : 15 3 17 7 5 19 13 9 1 11 
-customers in the area ID = 15: 314 474 494 174 174 34 254 114 14 334 
-customers in the area ID = 13: 232 92 92 332 472 12 412 412 352 492 252 
-customers in the area ID = 7: 66 66 226 186 366 486 106 66 486 246 466 306 
-customers in the area ID = 11: 330 410 430 270 330 170 270 90 130 10 30 310 50 250 110 50 410 490 370 410 170 250 70 110 150 250 270 350 270 110 250 130 150 270 430 310 230 230 310 330 30 130 390 230 90 270 310 310 330 210 190 210 410 410 370 370 430 430 450 270 230 90 90 170 
-customers in the area ID = 3: 462 62 262 482 422 442 142 262 62 402 62 162 42 142 282 442 262 42 2 222 
-customers in the area ID = 17: 36 196 456 36 236 36 356 236 436 136 176 116 196 376 36 136 
-customers in the area ID = 1: 140 280 180 420 460 180 20 260 0 120 260 200 100 320 380 220 440 80 440 440 120 300 260 260 400 60 420 280 0 220 100 460 40 420 440 320 400 120 40 160 140 260 340 40 240 40 300 340 60 420 140 260 480 420 
-customers in the area ID = 5: 484 304 224 424 424 484 4 324 4 264 424 424 
-customers in the area ID = 19: 18 158 238 98 158 278 418 38 438 458 138 258 198 418 58 198 138 98 458 98 158 378 438 38 278 458 138 38 458 198 438 18 418 478 398 58 218 398 458 18 18 458 278 338 398 258 138 358 398 
-customers in the area ID = 9: 8 148 208 148 28 48 468 248 28 188 488 368 208 288 248 28 
 
 KEITEIKEN 2 : LINE 509
-remove customers in the area ID = 15: 334 14 
-remove customers in the area ID = 15: 114 254 
 
 CLEAVE 100 : LINE 510
-Heap : 15(len=6,index=0) 13(len=11,index=6) 5(len=12,index=4) 7(len=12,index=3) 17(len=16,index=2) 19(len=49,index=5) 9(len=16,index=7) 11(len=64,index=9) 3(len=20,index=1) 1(len=54,index=8) 
-Heap : 15 13 5 7 17 19 9 11 3 1 
-list LRU : 15 3 17 7 5 19 13 9 1 11 
-customers in the area ID = 15: 314 474 494 174 174 34 
-customers in the area ID = 13: 232 92 92 332 472 12 412 412 352 492 252 
-customers in the area ID = 7: 66 66 226 186 366 486 106 66 486 246 466 306 
-customers in the area ID = 11: 330 410 430 270 330 170 270 90 130 10 30 310 50 250 110 50 410 490 370 410 170 250 70 110 150 250 270 350 270 110 250 130 150 270 430 310 230 230 310 330 30 130 390 230 90 270 310 310 330 210 190 210 410 410 370 370 430 430 450 270 230 90 90 170 
-customers in the area ID = 3: 462 62 262 482 422 442 142 262 62 402 62 162 42 142 282 442 262 42 2 222 
-customers in the area ID = 17: 36 196 456 36 236 36 356 236 436 136 176 116 196 376 36 136 
-customers in the area ID = 1: 140 280 180 420 460 180 20 260 0 120 260 200 100 320 380 220 440 80 440 440 120 300 260 260 400 60 420 280 0 220 100 460 40 420 440 320 400 120 40 160 140 260 340 40 240 40 300 340 60 420 140 260 480 420 
-customers in the area ID = 5: 484 304 224 424 424 484 4 324 4 264 424 424 
-customers in the area ID = 19: 18 158 238 98 158 278 418 38 438 458 138 258 198 418 58 198 138 98 458 98 158 378 438 38 278 458 138 38 458 198 438 18 418 478 398 58 218 398 458 18 18 458 278 338 398 258 138 358 398 
-customers in the area ID = 9: 8 148 208 148 28 48 468 248 28 188 488 368 208 288 248 28 
 

@@ -1,157 +1,80 @@
+LAPSE: LINE 1
+LAPSE: LINE 2
+LAPSE: LINE 3
+LAPSE: LINE 4
+LAPSE: LINE 5
+LAPSE: LINE 6
+LAPSE: LINE 7
+LAPSE: LINE 8
 CLEAVE 12 : LINE 9
-Heap : 1(len=1,index=7) 3(len=1,index=6) 5(len=1,index=5) 7(len=1,index=4) 9(len=1,index=3) 2(len=1,index=2) 4(len=1,index=1) 6(len=1,index=0) 
-Heap : 1 3 5 7 9 2 4 6 
-list LRU : 6 4 2 9 7 5 3 1 
-customers in the area ID = 1: 0 
-customers in the area ID = 3: 2 
-customers in the area ID = 7: 6 
-customers in the area ID = 6: 14 
-customers in the area ID = 9: 8 
-customers in the area ID = 5: 4 
-customers in the area ID = 2: 10 
-customers in the area ID = 4: 12 
 
+LAPSE: LINE 10
 CLEAVE 12 : LINE 11
-Heap : 3(len=1,index=7) 7(len=1,index=5) 5(len=1,index=6) 6(len=1,index=1) 9(len=1,index=4) 2(len=1,index=3) 4(len=1,index=2) 1(len=2,index=0) 
-Heap : 3 7 5 6 9 2 4 1 
-list LRU : 1 6 4 2 9 7 5 3 
-customers in the area ID = 3: 2 
-customers in the area ID = 7: 6 
-customers in the area ID = 6: 14 
-customers in the area ID = 1: 0 0 
-customers in the area ID = 9: 8 
-customers in the area ID = 5: 4 
-customers in the area ID = 2: 10 
-customers in the area ID = 4: 12 
 
+LAPSE: LINE 12
 CLEAVE 12 : LINE 13
-Heap : 5(len=1,index=7) 7(len=1,index=6) 2(len=1,index=4) 6(len=1,index=2) 9(len=1,index=5) 3(len=2,index=0) 4(len=1,index=3) 1(len=2,index=1) 
-Heap : 5 7 2 6 9 3 4 1 
-list LRU : 3 1 6 4 2 9 7 5 
-customers in the area ID = 5: 4 
-customers in the area ID = 7: 6 
-customers in the area ID = 6: 14 
-customers in the area ID = 1: 0 0 
-customers in the area ID = 9: 8 
-customers in the area ID = 2: 10 
-customers in the area ID = 3: 2 2 
-customers in the area ID = 4: 12 
 
+LAPSE: LINE 14
 CLEAVE 12 : LINE 15
-Heap : 7(len=1,index=7) 9(len=1,index=6) 2(len=1,index=5) 6(len=1,index=3) 5(len=2,index=0) 3(len=2,index=1) 4(len=1,index=4) 1(len=2,index=2) 
-Heap : 7 9 2 6 5 3 4 1 
-list LRU : 5 3 1 6 4 2 9 7 
-customers in the area ID = 7: 6 
-customers in the area ID = 9: 8 
-customers in the area ID = 6: 14 
-customers in the area ID = 1: 0 0 
-customers in the area ID = 5: 4 4 
-customers in the area ID = 2: 10 
-customers in the area ID = 3: 2 2 
-customers in the area ID = 4: 12 
 
+LAPSE: LINE 16
 CLEAVE 12 : LINE 17
-Heap : 9(len=1,index=7) 6(len=1,index=4) 2(len=1,index=6) 1(len=2,index=3) 5(len=2,index=1) 3(len=2,index=2) 4(len=1,index=5) 7(len=2,index=0) 
-Heap : 9 6 2 1 5 3 4 7 
-list LRU : 7 5 3 1 6 4 2 9 
-customers in the area ID = 9: 8 
-customers in the area ID = 6: 14 
-customers in the area ID = 1: 0 0 
-customers in the area ID = 7: 6 6 
-customers in the area ID = 5: 4 4 
-customers in the area ID = 2: 10 
-customers in the area ID = 3: 2 2 
-customers in the area ID = 4: 12 
 
+LAPSE: LINE 18
+LAPSE: LINE 19
+LAPSE: LINE 20
 CLEAVE 12 : LINE 21
-Heap : 6(len=1,index=7) 1(len=2,index=6) 3(len=2,index=5) 7(len=2,index=3) 5(len=2,index=4) 2(len=2,index=1) 9(len=2,index=2) 4(len=2,index=0) 
-Heap : 6 1 3 7 5 2 9 4 
-list LRU : 4 2 9 7 5 3 1 6 
-customers in the area ID = 6: 14 
-customers in the area ID = 1: 0 0 
-customers in the area ID = 7: 6 6 
-customers in the area ID = 4: 12 12 
-customers in the area ID = 5: 4 4 
-customers in the area ID = 3: 2 2 
-customers in the area ID = 2: 10 10 
-customers in the area ID = 9: 8 8 
 
+LAPSE: LINE 22
 CLEAVE 12 : LINE 23
-Heap : 1(len=2,index=7) 5(len=2,index=5) 3(len=2,index=6) 7(len=2,index=4) 6(len=2,index=0) 2(len=2,index=2) 9(len=2,index=3) 4(len=2,index=1) 
-Heap : 1 5 3 7 6 2 9 4 
-list LRU : 6 4 2 9 7 5 3 1 
-customers in the area ID = 1: 0 0 
-customers in the area ID = 5: 4 4 
-customers in the area ID = 7: 6 6 
-customers in the area ID = 4: 12 12 
-customers in the area ID = 6: 14 14 
-customers in the area ID = 3: 2 2 
-customers in the area ID = 2: 10 10 
-customers in the area ID = 9: 8 8 
 
+LAPSE: LINE 24
+LAPSE: LINE 25
+LAPSE: LINE 26
+LAPSE: LINE 27
+LAPSE: LINE 28
+LAPSE: LINE 29
+LAPSE: LINE 30
+LAPSE: LINE 31
+LAPSE: LINE 32
+LAPSE: LINE 33
+LAPSE: LINE 34
+LAPSE: LINE 35
+LAPSE: LINE 36
+LAPSE: LINE 37
+LAPSE: LINE 38
+LAPSE: LINE 39
+LAPSE: LINE 40
+LAPSE: LINE 41
+LAPSE: LINE 42
+LAPSE: LINE 43
+LAPSE: LINE 44
+LAPSE: LINE 45
+LAPSE: LINE 46
+LAPSE: LINE 47
+LAPSE: LINE 48
+LAPSE: LINE 49
+LAPSE: LINE 50
+LAPSE: LINE 51
+LAPSE: LINE 52
+LAPSE: LINE 53
+LAPSE: LINE 54
+LAPSE: LINE 55
 CLEAVE 10 : LINE 56
-Heap : 1(len=6,index=7) 5(len=6,index=5) 3(len=6,index=6) 7(len=6,index=4) 4(len=6,index=1) 6(len=6,index=0) 9(len=6,index=3) 2(len=6,index=2) 
-Heap : 1 5 3 7 4 6 9 2 
-list LRU : 6 4 2 9 7 5 3 1 
-customers in the area ID = 1: 0 0 0 0 0 0 
-customers in the area ID = 5: 4 4 4 4 4 4 
-customers in the area ID = 7: 6 6 6 6 6 6 
-customers in the area ID = 2: 10 10 10 10 10 10 
-customers in the area ID = 4: 12 12 12 12 12 12 
-customers in the area ID = 3: 2 2 2 2 2 2 
-customers in the area ID = 6: 14 14 14 14 14 14 
-customers in the area ID = 9: 8 8 8 8 8 8 
 
 KEITEIKEN 6 : LINE 57
-remove customers in the area ID = 1: 0 0 0 0 0 0 
-remove customers in the area ID = 3: 2 2 2 2 2 2 
-remove customers in the area ID = 5: 4 4 4 4 4 4 
-remove customers in the area ID = 7: 6 6 6 6 6 6 
-remove customers in the area ID = 9: 8 8 8 8 8 8 
-remove customers in the area ID = 2: 10 10 10 10 10 10 
 
 CLEAVE 12 : LINE 58
-Heap : 4(len=6,index=1) 6(len=6,index=0) 
-Heap : 4 6 
-list LRU : 6 4 
-customers in the area ID = 4: 12 12 12 12 12 12 
-customers in the area ID = 6: 14 14 14 14 14 14 
 
+LAPSE: LINE 59
 CLEAVE 12 : LINE 60
-Heap : 1(len=1,index=0) 6(len=6,index=1) 4(len=6,index=2) 
-Heap : 1 6 4 
-list LRU : 1 6 4 
-customers in the area ID = 1: 0 
-customers in the area ID = 6: 14 14 14 14 14 14 
-customers in the area ID = 4: 12 12 12 12 12 12 
 
+LAPSE: LINE 61
 CLEAVE 12 : LINE 62
-Heap : 1(len=1,index=1) 3(len=1,index=0) 4(len=6,index=3) 6(len=6,index=2) 
-Heap : 1 3 4 6 
-list LRU : 3 1 6 4 
-customers in the area ID = 1: 0 
-customers in the area ID = 3: 2 
-customers in the area ID = 6: 14 14 14 14 14 14 
-customers in the area ID = 4: 12 12 12 12 12 12 
 
+LAPSE: LINE 63
 CLEAVE 12 : LINE 64
-Heap : 1(len=1,index=2) 3(len=1,index=1) 4(len=6,index=4) 6(len=6,index=3) 5(len=1,index=0) 
-Heap : 1 3 4 6 5 
-list LRU : 5 3 1 6 4 
-customers in the area ID = 1: 0 
-customers in the area ID = 3: 2 
-customers in the area ID = 6: 14 14 14 14 14 14 
-customers in the area ID = 5: 4 
-customers in the area ID = 4: 12 12 12 12 12 12 
 
+LAPSE: LINE 65
 CLEAVE 12 : LINE 66
-Heap : 1(len=1,index=3) 3(len=1,index=2) 7(len=1,index=0) 6(len=6,index=4) 5(len=1,index=1) 4(len=6,index=5) 
-Heap : 1 3 7 6 5 4 
-list LRU : 7 5 3 1 6 4 
-customers in the area ID = 1: 0 
-customers in the area ID = 3: 2 
-customers in the area ID = 6: 14 14 14 14 14 14 
-customers in the area ID = 5: 4 
-customers in the area ID = 7: 6 
-customers in the area ID = 4: 12 12 12 12 12 12 
 
