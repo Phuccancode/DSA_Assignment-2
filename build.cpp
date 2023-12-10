@@ -212,7 +212,7 @@ Node* buildHuff(vector<pair<char, int>> freq)
 int main()
 {
     //TODO nhập vector sai vào 
-    vector<pair<char, int>> v = {{'l',9},{'w',4},{'q',4},{'p',4},{'x',3},{'m',3},{'k',3},{'g',3},{'z',2},{'r',2},{'i',2},{'a',2},{'v',1},{'u',1},{'s',1},{'f',1},{'d',1},{'c',1},{'b',1}};
+    vector<pair<char, int>> v = {{'i',14},{'y',4},{'x',4},{'m',4},{'d',4},{'t',3},{'p',3},{'n',3},{'k',3},{'g',2},{'a',2},{'v',1},{'r',1},{'j',1}};
     
     //TODO test
     Node* result = buildHuff(v);
