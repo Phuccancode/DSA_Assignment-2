@@ -155,7 +155,7 @@ private:
 			// return C(CountNode(node->left),CountNode(node->right)+CountNode(node->left))*DFS(node->left)*DFS(node->right);
 			int nleft = CountNode(node->left);
 			int nRight = CountNode(node->right);
-			return (unsigned long long)dp[nleft + nRight][nleft] * DFS(node->left, dp) * DFS(node->right, dp);
+			return (unsigned long long) (dp[nleft + nRight][nleft]%MAXSIZE * (DFS(node->left, dp)%MAXSIZE * DFS(node->right, dp)%MAXSIZE)%MAXSIZE) % MAXSIZE;
 		}
 		void PascalTriangle(int n, vector<vector<long long>> &dp)
 		{
@@ -180,10 +180,6 @@ private:
 			vector<vector<long long>> dp(queueTime.size() + 1);
 			PascalTriangle(queueTime.size(), dp);
 			unsigned long long number = DFS(root, dp);
-			//*: trường hợp mà postoder cũng tạo ra một cây giống đó thì chỉ có 1 node -> nên không tính
-			if (this->size() == 1)
-				return;
-
 			//* bước 2: xóa node trong cây với số lượng đã tính trên
 			//* kiểm tra xem đã xóa đủ số lượng chưa hay cây đã hết node để xóa
 			while (number != 0 && !queueTime.empty())
@@ -388,22 +384,44 @@ public:
 
 	void remove_KEITEIKEN(int number)
 	{
-		if (areaTable.size() <= 0)
-			return;
+		if(areaTable.size() <= 0) return;
+
+		//* TẠO ra heap mới sao chép từ heap cũ
+		vector<Node* > areaTableNew(areaTable.begin(), areaTable.end());
+		queue<Node* > listDelete; //! danh sách các khu cấn xóa
+		for(int i = 0; i < areaTable.size() && i < number; i++)
+		{
+			//* lấy ra phần tử đầu tiên trong heap
+			Node* nodeDelete = areaTable[0];
+			swap(areaTable[0], areaTable[areaTable.size() - 1]);
+			areaTable.pop_back();
+			this->ReHeap_down(0);
+
+			//* đưa vào danh sách cần xóa
+			listDelete.push(nodeDelete);
+		}
+
+		//* trả lại heap
+		areaTable = areaTableNew;
 
 		//* đuổi num khách hàng tại num khu vực
-		int numberRemove = number;
-		while (areaTable.size() != 0 && number != 0)
-		{
+		while(listDelete.size()){
 			//* lấy ra khu đang ở đầu đầu heap xóa number khách hàng đầu linklist
-			solution << "remove customers in the area ID = " << areaTable[0]->ID << ": ";
-			areaTable[0]->remove(numberRemove);
+			Node* nodeDelete = listDelete.front();
+			listDelete.pop();
+
+			solution << "remove customers in the area ID = " << nodeDelete->ID <<"(len=" <<nodeDelete->head.size()<< ")" << ": ";
+			nodeDelete->remove(number);
 			solution << "\n";
 
+			//* tìm vị trí của nó trong heap
+			int index = 0;
+			while(areaTable[index] !=  nodeDelete) index++;
+
 			//* trường hợp xóa hết thì xóa nó trong heap sau đó reheap down khu xuống vì đang ở đầu hàng
-			if (areaTable[0]->size() == 0)
+			if(nodeDelete->size() == 0)
 			{
-				swap(areaTable[0], areaTable[areaTable.size() - 1]);
+				swap(areaTable[index], areaTable[areaTable.size() - 1]);
 				//! xóa nó khỏi danh sách liên kết
 				this->removeNode(areaTable[areaTable.size() - 1]);
 				delete areaTable[areaTable.size() - 1];
@@ -411,10 +429,9 @@ public:
 				//! xóa trong heap nữa
 				areaTable.pop_back();
 			}
-			this->ReHeap_down(0);
-			number--;
+			this->ReHeap_down(index);
 		}
-	}
+ 	}
 	//^hàm in ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 	void print_pre_order(int index, int number)
 	{
@@ -714,11 +731,7 @@ public:
 			node->left = leftRotate(node->left);
 			count += 1;
 			//* cây đã thành LEFT OF LEFT -> giống trên
-			if (count < 3)
-			{
-				count++;
 				return rightRotate(node);
-			}
 		}
 
 		//* RIGHT OF LEFT -> nghĩa là cây con bên trái đang thấp hơn cây con bên phải 2 đơn vị:  left - right = -2, với thêm bên trái của cây con bên phải
@@ -729,11 +742,7 @@ public:
 			node->right = rightRotate(node->right);
 			count += 1;
 			//* cây đã thành RIGHT OF RIGHT -> giống trên
-			if (count < 3)
-			{
-				count++;
 				return leftRotate(node);
-			}
 		}
 
 		//* không bị mất cân bằng thì thôi
@@ -744,8 +753,10 @@ public:
 	Node *balanceTree(Node *node, int &count)
 	{
 		// TODO
-		if (count >= 3)
+		if (!node || count >= 3)
 			return node;
+		node = balanceNode(node, count);
+		node = balanceNode(node, count);
 		node = balanceNode(node, count);
 		if (node)
 		{
@@ -851,17 +862,6 @@ public:
 		int result = 0;
 		// TODO
 		result = binaryStringToDecimal(res);
-		/*   * kiểm tra test thôi nếu bạn thầy mình bị sai*/
-		// cout << "nameCaesar = " << nameCaesar << endl;
-		// cout << "encoding : ";
-		// for(int i = 0; i < encoding.size(); i++)
-		//{
-		//     if(encoding[i] != "") cout << char(i) << "=" << encoding[i] << " - ";
-		// }
-		// cout << "\nbinary = " << binary << endl;
-		/* cout << "result = " << result << endl;*/
-		//********************
-
 		return result;
 	}
 

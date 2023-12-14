@@ -1,0 +1,1305 @@
+MAXSIZE : 51
+LAPSE : LINE 1
+result = 66
+LAPSE : LINE 2
+result = 136
+LAPSE : LINE 3
+result = 6
+LAPSE : LINE 4
+result = 190
+LAPSE : LINE 5
+result = 100
+LAPSE : LINE 6
+result = 164
+LAPSE : LINE 7
+result = 2
+LAPSE : LINE 8
+result = 130
+LAPSE : LINE 9
+result = 54
+LAPSE : LINE 10
+result = 72
+LAPSE : LINE 11
+result = 182
+LAPSE : LINE 12
+result = 12
+LAPSE : LINE 13
+result = 38
+LAPSE : LINE 14
+result = 190
+LAPSE : LINE 15
+result = 134
+LAPSE : LINE 16
+result = 174
+LAPSE : LINE 17
+result = 76
+LAPSE : LINE 18
+result = 190
+LAPSE : LINE 19
+result = 164
+LAPSE : LINE 20
+result = 100
+LAPSE : LINE 21
+result = 176
+LAPSE : LINE 22
+result = 74
+LAPSE : LINE 23
+result = 162
+LAPSE : LINE 24
+result = 16
+LAPSE : LINE 25
+result = 8
+LAPSE : LINE 26
+result = 52
+LAPSE : LINE 27
+result = 92
+LAPSE : LINE 28
+result = 50
+LAPSE : LINE 29
+result = 140
+LAPSE : LINE 30
+result = 26
+LAPSE : LINE 31
+result = 158
+LAPSE : LINE 32
+result = 138
+LAPSE : LINE 33
+result = 158
+LAPSE : LINE 34
+result = 186
+LAPSE : LINE 35
+result = 28
+LAPSE : LINE 36
+result = 130
+LAPSE : LINE 37
+result = 168
+LAPSE : LINE 38
+result = 132
+LAPSE : LINE 39
+result = 110
+LAPSE : LINE 40
+result = 158
+LAPSE : LINE 41
+result = 68
+LAPSE : LINE 42
+result = 28
+LAPSE : LINE 43
+result = 144
+LAPSE : LINE 44
+result = 16
+LAPSE : LINE 45
+result = 102
+LAPSE : LINE 46
+result = 150
+LAPSE : LINE 47
+result = 40
+LAPSE : LINE 48
+result = 24
+LAPSE : LINE 49
+result = 8
+LAPSE : LINE 50
+result = 142
+LAPSE : LINE 51
+result = 46
+LAPSE : LINE 52
+result = 146
+LAPSE : LINE 53
+result = 184
+LAPSE : LINE 54
+result = 152
+LAPSE : LINE 55
+result = 124
+LAPSE : LINE 56
+result = 168
+LAPSE : LINE 57
+result = 84
+LAPSE : LINE 58
+result = 12
+LAPSE : LINE 59
+result = 164
+LAPSE : LINE 60
+result = 56
+LAPSE : LINE 61
+result = 30
+LAPSE : LINE 62
+result = 64
+LAPSE : LINE 63
+result = 86
+LAPSE : LINE 64
+result = 90
+LAPSE : LINE 65
+result = 8
+LAPSE : LINE 66
+result = 194
+LAPSE : LINE 67
+result = 184
+LAPSE : LINE 68
+result = 48
+LAPSE : LINE 69
+result = 4
+LAPSE : LINE 70
+result = 90
+LAPSE : LINE 71
+result = 136
+LAPSE : LINE 72
+result = 124
+LAPSE : LINE 73
+result = 58
+LAPSE : LINE 74
+result = 186
+LAPSE : LINE 75
+result = 172
+LAPSE : LINE 76
+result = 150
+LAPSE : LINE 77
+result = 118
+LAPSE : LINE 78
+result = 132
+LAPSE : LINE 79
+result = 38
+LAPSE : LINE 80
+result = 190
+LAPSE : LINE 81
+result = 186
+LAPSE : LINE 82
+result = 182
+LAPSE : LINE 83
+result = 12
+LAPSE : LINE 84
+result = 166
+LAPSE : LINE 85
+result = 22
+LAPSE : LINE 86
+result = 142
+LAPSE : LINE 87
+result = 26
+LAPSE : LINE 88
+result = 138
+LAPSE : LINE 89
+result = 76
+LAPSE : LINE 90
+result = 124
+LAPSE : LINE 91
+result = 26
+LAPSE : LINE 92
+result = 64
+LAPSE : LINE 93
+result = 52
+LAPSE : LINE 94
+result = 192
+LAPSE : LINE 95
+result = 6
+LAPSE : LINE 96
+result = 136
+LAPSE : LINE 97
+result = 0
+LAPSE : LINE 98
+result = 4
+LAPSE : LINE 99
+result = 20
+LAPSE : LINE 100
+result = 74
+LAPSE : LINE 101
+result = 12
+LAPSE : LINE 102
+result = 154
+LAPSE : LINE 103
+result = 72
+CLEAVE : LINE 104
+Heap : 3 4 33 10 8 37 18 25 36 20 21 12 31 43 26 41 47 32 14 30 42 50 51 13 6 34 39 35 7 1 49 38 24 16 45 29 17 9 23 22 40 5 2 27 
+list LRU : 22 2 13 24 21 5 1 35 7 40 14 27 23 26 37 41 30 34 38 39 31 17 49 20 8 32 42 9 36 6 12 16 51 45 47 25 43 29 18 10 50 33 4 3 
+customers in the area ID = 3(len=1): 2 
+customers in the area ID = 4(len=1): 54 
+customers in the area ID = 10(len=1): 162 
+customers in the area ID = 25(len=1): 24 
+customers in the area ID = 41(len=3): 142 142 40 
+customers in the area ID = 38(len=4): 190 190 190 190 
+customers in the area ID = 24(len=3): 74 74 176 
+customers in the area ID = 47(len=1): 46 
+customers in the area ID = 16(len=3): 168 168 66 
+customers in the area ID = 45(len=1): 146 
+customers in the area ID = 36(len=1): 86 
+customers in the area ID = 32(len=2): 184 184 
+customers in the area ID = 29(len=4): 28 130 28 130 
+customers in the area ID = 17(len=3): 118 16 16 
+customers in the area ID = 14(len=3): 64 166 64 
+customers in the area ID = 9(len=4): 8 8 110 8 
+customers in the area ID = 23(len=4): 124 22 124 124 
+customers in the area ID = 8(len=1): 58 
+customers in the area ID = 20(len=1): 172 
+customers in the area ID = 30(len=2): 182 182 
+customers in the area ID = 22(len=3): 72 174 72 
+customers in the area ID = 40(len=3): 192 90 90 
+customers in the area ID = 42(len=2): 194 92 
+customers in the area ID = 5(len=2): 4 4 
+customers in the area ID = 2(len=3): 154 52 52 
+customers in the area ID = 21(len=1): 20 
+customers in the area ID = 50(len=2): 100 100 
+customers in the area ID = 27(len=3): 26 26 26 
+customers in the area ID = 51(len=2): 152 50 
+customers in the area ID = 33(len=1): 134 
+customers in the area ID = 37(len=2): 138 138 
+customers in the area ID = 12(len=3): 164 164 164 
+customers in the area ID = 13(len=4): 12 12 12 12 
+customers in the area ID = 6(len=4): 56 158 158 158 
+customers in the area ID = 31(len=3): 132 30 132 
+customers in the area ID = 34(len=4): 186 186 84 186 
+customers in the area ID = 39(len=3): 38 140 38 
+customers in the area ID = 18(len=1): 68 
+customers in the area ID = 43(len=1): 144 
+customers in the area ID = 35(len=3): 136 136 136 
+customers in the area ID = 7(len=2): 6 6 
+customers in the area ID = 26(len=2): 76 76 
+customers in the area ID = 1(len=2): 0 102 
+customers in the area ID = 49(len=3): 150 48 150 
+KEITEIKEN : LINE 105
+remove customers in the area ID = 3(len=1): 2 
+remove customers in the area ID = 4(len=1): 54 
+remove customers in the area ID = 33(len=1): 134 
+remove customers in the area ID = 10(len=1): 162 
+remove customers in the area ID = 18(len=1): 68 
+remove customers in the area ID = 43(len=1): 144 
+remove customers in the area ID = 25(len=1): 24 
+remove customers in the area ID = 47(len=1): 46 
+remove customers in the area ID = 45(len=1): 146 
+remove customers in the area ID = 36(len=1): 86 
+remove customers in the area ID = 8(len=1): 58 
+remove customers in the area ID = 20(len=1): 172 
+remove customers in the area ID = 21(len=1): 20 
+remove customers in the area ID = 50(len=2): 100 100 
+remove customers in the area ID = 51(len=2): 50 152 
+remove customers in the area ID = 42(len=2): 92 194 
+remove customers in the area ID = 32(len=2): 184 184 
+remove customers in the area ID = 30(len=2): 182 182 
+CLEAVE : LINE 106
+Heap : 37 5 26 16 49 12 7 41 17 2 27 22 31 39 1 35 40 29 14 38 9 24 23 13 6 34 
+list LRU : 22 2 13 24 5 1 35 7 40 14 27 23 26 37 41 34 38 39 31 17 49 9 6 12 16 29 
+customers in the area ID = 37(len=2): 138 138 
+customers in the area ID = 5(len=2): 4 4 
+customers in the area ID = 16(len=3): 168 168 66 
+customers in the area ID = 41(len=3): 142 142 40 
+customers in the area ID = 35(len=3): 136 136 136 
+customers in the area ID = 40(len=3): 192 90 90 
+customers in the area ID = 17(len=3): 118 16 16 
+customers in the area ID = 29(len=4): 28 130 28 130 
+customers in the area ID = 14(len=3): 64 166 64 
+customers in the area ID = 49(len=3): 150 48 150 
+customers in the area ID = 2(len=3): 154 52 52 
+customers in the area ID = 38(len=4): 190 190 190 190 
+customers in the area ID = 9(len=4): 8 8 110 8 
+customers in the area ID = 27(len=3): 26 26 26 
+customers in the area ID = 24(len=3): 74 74 176 
+customers in the area ID = 23(len=4): 124 22 124 124 
+customers in the area ID = 26(len=2): 76 76 
+customers in the area ID = 12(len=3): 164 164 164 
+customers in the area ID = 22(len=3): 72 174 72 
+customers in the area ID = 13(len=4): 12 12 12 12 
+customers in the area ID = 6(len=4): 56 158 158 158 
+customers in the area ID = 31(len=3): 132 30 132 
+customers in the area ID = 34(len=4): 186 186 84 186 
+customers in the area ID = 7(len=2): 6 6 
+customers in the area ID = 39(len=3): 38 140 38 
+customers in the area ID = 1(len=2): 0 102 
+LAPSE : LINE 107
+result = 64
+LAPSE : LINE 108
+result = 170
+LAPSE : LINE 109
+result = 100
+LAPSE : LINE 110
+result = 172
+LAPSE : LINE 111
+result = 150
+LAPSE : LINE 112
+result = 22
+LAPSE : LINE 113
+result = 184
+LAPSE : LINE 114
+result = 70
+LAPSE : LINE 115
+result = 94
+LAPSE : LINE 116
+result = 198
+LAPSE : LINE 117
+result = 184
+LAPSE : LINE 118
+result = 82
+LAPSE : LINE 119
+result = 22
+LAPSE : LINE 120
+result = 86
+LAPSE : LINE 121
+result = 110
+LAPSE : LINE 122
+result = 178
+LAPSE : LINE 123
+result = 146
+LAPSE : LINE 124
+result = 44
+LAPSE : LINE 125
+result = 24
+LAPSE : LINE 126
+result = 152
+LAPSE : LINE 127
+result = 48
+LAPSE : LINE 128
+result = 64
+LAPSE : LINE 129
+result = 70
+LAPSE : LINE 130
+result = 128
+LAPSE : LINE 131
+result = 56
+LAPSE : LINE 132
+result = 24
+LAPSE : LINE 133
+result = 94
+LAPSE : LINE 134
+result = 174
+LAPSE : LINE 135
+result = 150
+LAPSE : LINE 136
+result = 88
+LAPSE : LINE 137
+result = 98
+LAPSE : LINE 138
+result = 104
+LAPSE : LINE 139
+result = 20
+LAPSE : LINE 140
+result = 32
+LAPSE : LINE 141
+result = 154
+LAPSE : LINE 142
+result = 154
+LAPSE : LINE 143
+result = 92
+LAPSE : LINE 144
+result = 82
+LAPSE : LINE 145
+result = 8
+LAPSE : LINE 146
+result = 10
+LAPSE : LINE 147
+result = 44
+LAPSE : LINE 148
+result = 112
+LAPSE : LINE 149
+result = 24
+LAPSE : LINE 150
+result = 32
+LAPSE : LINE 151
+result = 152
+LAPSE : LINE 152
+result = 184
+LAPSE : LINE 153
+result = 22
+LAPSE : LINE 154
+result = 162
+LAPSE : LINE 155
+result = 66
+LAPSE : LINE 156
+result = 42
+LAPSE : LINE 157
+result = 146
+LAPSE : LINE 158
+result = 6
+LAPSE : LINE 159
+result = 182
+LAPSE : LINE 160
+result = 170
+LAPSE : LINE 161
+result = 80
+LAPSE : LINE 162
+result = 156
+LAPSE : LINE 163
+result = 38
+LAPSE : LINE 164
+result = 22
+LAPSE : LINE 165
+result = 110
+LAPSE : LINE 166
+result = 20
+LAPSE : LINE 167
+result = 132
+LAPSE : LINE 168
+result = 0
+LAPSE : LINE 169
+result = 28
+LAPSE : LINE 170
+result = 108
+LAPSE : LINE 171
+result = 194
+LAPSE : LINE 172
+result = 138
+LAPSE : LINE 173
+result = 64
+LAPSE : LINE 174
+result = 36
+LAPSE : LINE 175
+result = 8
+LAPSE : LINE 176
+result = 40
+LAPSE : LINE 177
+result = 180
+LAPSE : LINE 178
+result = 98
+LAPSE : LINE 179
+result = 150
+LAPSE : LINE 180
+result = 130
+LAPSE : LINE 181
+result = 68
+LAPSE : LINE 182
+result = 98
+LAPSE : LINE 183
+result = 0
+LAPSE : LINE 184
+result = 116
+LAPSE : LINE 185
+result = 120
+LAPSE : LINE 186
+result = 84
+LAPSE : LINE 187
+result = 110
+LAPSE : LINE 188
+result = 76
+LAPSE : LINE 189
+result = 158
+LAPSE : LINE 190
+result = 180
+LAPSE : LINE 191
+result = 176
+LAPSE : LINE 192
+result = 90
+LAPSE : LINE 193
+result = 128
+LAPSE : LINE 194
+result = 100
+LAPSE : LINE 195
+result = 168
+LAPSE : LINE 196
+result = 26
+LAPSE : LINE 197
+result = 10
+LAPSE : LINE 198
+result = 186
+LAPSE : LINE 199
+result = 4
+LAPSE : LINE 200
+result = 186
+LAPSE : LINE 201
+result = 172
+LAPSE : LINE 202
+result = 188
+LAPSE : LINE 203
+result = 170
+LAPSE : LINE 204
+result = 36
+LAPSE : LINE 205
+result = 136
+LAPSE : LINE 206
+result = 130
+LAPSE : LINE 207
+result = 12
+LAPSE : LINE 208
+result = 158
+LAPSE : LINE 209
+result = 146
+LAPSE : LINE 210
+result = 180
+LAPSE : LINE 211
+result = 18
+LAPSE : LINE 212
+result = 152
+LAPSE : LINE 213
+result = 126
+LAPSE : LINE 214
+result = 46
+LAPSE : LINE 215
+result = 164
+LAPSE : LINE 216
+result = 56
+LAPSE : LINE 217
+result = 54
+LAPSE : LINE 218
+result = 174
+LAPSE : LINE 219
+result = 170
+LAPSE : LINE 220
+result = 40
+LAPSE : LINE 221
+result = 100
+LAPSE : LINE 222
+result = 104
+LAPSE : LINE 223
+result = 144
+LAPSE : LINE 224
+result = 100
+LAPSE : LINE 225
+result = 142
+LAPSE : LINE 226
+result = 124
+LAPSE : LINE 227
+result = 112
+LAPSE : LINE 228
+result = 40
+LAPSE : LINE 229
+result = 88
+LAPSE : LINE 230
+result = 138
+LAPSE : LINE 231
+result = 174
+LAPSE : LINE 232
+result = 174
+LAPSE : LINE 233
+result = 100
+LAPSE : LINE 234
+result = 90
+LAPSE : LINE 235
+result = 142
+LAPSE : LINE 236
+result = 66
+LAPSE : LINE 237
+result = 166
+LAPSE : LINE 238
+result = 146
+LAPSE : LINE 239
+result = 152
+LAPSE : LINE 240
+result = 104
+LAPSE : LINE 241
+result = 168
+LAPSE : LINE 242
+result = 48
+LAPSE : LINE 243
+result = 14
+LAPSE : LINE 244
+result = 168
+LAPSE : LINE 245
+result = 60
+LAPSE : LINE 246
+result = 60
+LAPSE : LINE 247
+result = 180
+LAPSE : LINE 248
+result = 34
+LAPSE : LINE 249
+result = 114
+LAPSE : LINE 250
+result = 42
+LAPSE : LINE 251
+result = 52
+CLEAVE : LINE 252
+Heap : 46 33 47 21 30 44 39 5 36 42 4 19 31 7 20 25 40 17 48 24 43 3 10 12 15 34 26 1 18 37 32 41 16 45 35 29 51 14 50 2 38 9 11 49 27 23 28 22 13 6 
+list LRU : 2 43 13 35 28 10 16 15 49 3 51 45 14 41 40 50 22 37 38 11 23 18 4 6 12 47 25 19 29 36 20 34 5 27 24 26 9 1 48 42 7 31 21 39 30 32 33 44 46 17 
+customers in the area ID = 46(len=1): 198 
+customers in the area ID = 33(len=2): 32 32 
+customers in the area ID = 21(len=2): 20 20 
+customers in the area ID = 5(len=3): 4 4 4 
+customers in the area ID = 25(len=4): 126 24 24 24 
+customers in the area ID = 41(len=8): 142 40 142 40 40 142 142 40 
+customers in the area ID = 16(len=8): 168 168 66 168 66 168 168 66 
+customers in the area ID = 40(len=5): 90 90 192 90 90 
+customers in the area ID = 45(len=6): 146 146 146 44 44 146 
+customers in the area ID = 35(len=5): 34 136 136 136 136 
+customers in the area ID = 36(len=2): 188 86 
+customers in the area ID = 17(len=3): 118 16 16 
+customers in the area ID = 29(len=7): 130 130 28 28 130 28 130 
+customers in the area ID = 51(len=4): 152 152 152 152 
+customers in the area ID = 48(len=3): 98 98 98 
+customers in the area ID = 14(len=7): 166 64 64 64 64 166 64 
+customers in the area ID = 50(len=5): 100 100 100 100 100 
+customers in the area ID = 30(len=2): 80 182 
+customers in the area ID = 42(len=2): 194 92 
+customers in the area ID = 24(len=4): 176 74 74 176 
+customers in the area ID = 2(len=6): 52 154 154 154 52 52 
+customers in the area ID = 38(len=6): 88 88 190 190 190 190 
+customers in the area ID = 43(len=3): 42 144 42 
+customers in the area ID = 9(len=9): 110 8 110 8 110 8 8 110 8 
+customers in the area ID = 11(len=4): 112 10 112 10 
+customers in the area ID = 4(len=2): 54 156 
+customers in the area ID = 3(len=3): 104 104 104 
+customers in the area ID = 49(len=8): 48 150 150 48 150 150 48 150 
+customers in the area ID = 27(len=6): 26 128 128 26 26 26 
+customers in the area ID = 10(len=3): 60 60 162 
+customers in the area ID = 23(len=9): 124 22 22 22 22 124 22 124 124 
+customers in the area ID = 28(len=4): 180 180 180 180 
+customers in the area ID = 47(len=1): 46 
+customers in the area ID = 44(len=2): 94 94 
+customers in the area ID = 19(len=2): 18 120 
+customers in the area ID = 12(len=4): 164 164 164 164 
+customers in the area ID = 22(len=7): 174 174 174 174 72 174 72 
+customers in the area ID = 13(len=6): 114 12 12 12 12 12 
+customers in the area ID = 15(len=2): 14 116 
+customers in the area ID = 6(len=8): 56 158 158 56 56 158 158 158 
+customers in the area ID = 31(len=4): 132 132 30 132 
+customers in the area ID = 34(len=7): 186 186 84 186 186 84 186 
+customers in the area ID = 26(len=4): 76 178 76 76 
+customers in the area ID = 39(len=4): 38 38 140 38 
+customers in the area ID = 7(len=4): 108 6 6 6 
+customers in the area ID = 1(len=4): 0 0 0 102 
+customers in the area ID = 18(len=5): 170 170 68 170 170 
+customers in the area ID = 20(len=4): 172 70 70 172 
+customers in the area ID = 37(len=6): 138 36 36 138 138 138 
+customers in the area ID = 32(len=5): 184 82 82 184 184 
+LAPSE : LINE 253
+result = 190
+LAPSE : LINE 254
+result = 166
+LAPSE : LINE 255
+result = 34
+LAPSE : LINE 256
+result = 114
+LAPSE : LINE 257
+result = 186
+LAPSE : LINE 258
+result = 2
+LAPSE : LINE 259
+result = 30
+LAPSE : LINE 260
+result = 40
+LAPSE : LINE 261
+result = 62
+LAPSE : LINE 262
+result = 80
+LAPSE : LINE 263
+result = 192
+LAPSE : LINE 264
+result = 178
+LAPSE : LINE 265
+result = 130
+LAPSE : LINE 266
+result = 92
+LAPSE : LINE 267
+result = 108
+LAPSE : LINE 268
+result = 178
+LAPSE : LINE 269
+result = 0
+LAPSE : LINE 270
+result = 62
+LAPSE : LINE 271
+result = 150
+LAPSE : LINE 272
+result = 72
+LAPSE : LINE 273
+result = 10
+LAPSE : LINE 274
+result = 52
+LAPSE : LINE 275
+result = 148
+LAPSE : LINE 276
+result = 52
+LAPSE : LINE 277
+result = 20
+LAPSE : LINE 278
+result = 82
+LAPSE : LINE 279
+result = 154
+LAPSE : LINE 280
+result = 152
+LAPSE : LINE 281
+result = 2
+LAPSE : LINE 282
+result = 2
+LAPSE : LINE 283
+result = 84
+LAPSE : LINE 284
+result = 82
+LAPSE : LINE 285
+result = 126
+LAPSE : LINE 286
+result = 54
+LAPSE : LINE 287
+result = 134
+LAPSE : LINE 288
+result = 134
+LAPSE : LINE 289
+result = 104
+LAPSE : LINE 290
+result = 98
+LAPSE : LINE 291
+result = 14
+LAPSE : LINE 292
+result = 50
+LAPSE : LINE 293
+result = 4
+LAPSE : LINE 294
+result = 166
+LAPSE : LINE 295
+result = 104
+LAPSE : LINE 296
+result = 56
+LAPSE : LINE 297
+result = 72
+LAPSE : LINE 298
+result = 154
+LAPSE : LINE 299
+result = 136
+CLEAVE : LINE 300
+Heap : 46 36 44 17 10 19 39 5 21 43 42 47 31 18 20 25 45 48 33 24 30 27 4 12 15 34 26 7 1 37 32 41 16 40 35 29 51 14 50 2 38 9 11 49 3 23 28 22 13 6 
+list LRU : 35 2 22 6 3 14 5 51 15 48 33 4 25 32 34 21 47 11 49 12 1 26 7 42 29 40 30 41 31 13 38 43 28 10 16 45 50 37 23 18 19 36 20 27 24 9 39 44 46 17 
+customers in the area ID = 46(len=1): 198 
+customers in the area ID = 36(len=2): 188 86 
+customers in the area ID = 17(len=3): 118 16 16 
+customers in the area ID = 5(len=4): 4 4 4 4 
+customers in the area ID = 25(len=5): 126 126 24 24 24 
+customers in the area ID = 41(len=9): 40 142 40 142 40 40 142 142 40 
+customers in the area ID = 16(len=8): 168 168 66 168 66 168 168 66 
+customers in the area ID = 45(len=6): 146 146 146 44 44 146 
+customers in the area ID = 40(len=6): 192 90 90 192 90 90 
+customers in the area ID = 35(len=7): 136 34 34 136 136 136 136 
+customers in the area ID = 21(len=3): 20 20 20 
+customers in the area ID = 48(len=4): 98 98 98 98 
+customers in the area ID = 29(len=8): 130 130 130 28 28 130 28 130 
+customers in the area ID = 51(len=6): 50 152 152 152 152 152 
+customers in the area ID = 33(len=4): 134 134 32 32 
+customers in the area ID = 14(len=9): 166 166 166 64 64 64 64 166 64 
+customers in the area ID = 50(len=5): 100 100 100 100 100 
+customers in the area ID = 10(len=3): 60 60 162 
+customers in the area ID = 43(len=3): 42 144 42 
+customers in the area ID = 24(len=4): 176 74 74 176 
+customers in the area ID = 2(len=10): 154 154 52 52 52 154 154 154 52 52 
+customers in the area ID = 38(len=7): 190 88 88 190 190 190 190 
+customers in the area ID = 30(len=3): 80 80 182 
+customers in the area ID = 9(len=9): 110 8 110 8 110 8 8 110 8 
+customers in the area ID = 11(len=5): 10 112 10 112 10 
+customers in the area ID = 42(len=3): 92 194 92 
+customers in the area ID = 27(len=6): 26 128 128 26 26 26 
+customers in the area ID = 49(len=9): 150 48 150 150 48 150 150 48 150 
+customers in the area ID = 3(len=8): 104 104 2 2 2 104 104 104 
+customers in the area ID = 4(len=3): 54 54 156 
+customers in the area ID = 23(len=9): 124 22 22 22 22 124 22 124 124 
+customers in the area ID = 28(len=4): 180 180 180 180 
+customers in the area ID = 44(len=2): 94 94 
+customers in the area ID = 19(len=2): 18 120 
+customers in the area ID = 47(len=2): 148 46 
+customers in the area ID = 12(len=6): 62 62 164 164 164 164 
+customers in the area ID = 22(len=9): 72 72 174 174 174 174 72 174 72 
+customers in the area ID = 13(len=7): 114 114 12 12 12 12 12 
+customers in the area ID = 15(len=3): 14 14 116 
+customers in the area ID = 6(len=9): 56 56 158 158 56 56 158 158 158 
+customers in the area ID = 31(len=5): 30 132 132 30 132 
+customers in the area ID = 34(len=9): 84 186 186 186 84 186 186 84 186 
+customers in the area ID = 26(len=6): 178 178 76 178 76 76 
+customers in the area ID = 39(len=4): 38 38 140 38 
+customers in the area ID = 18(len=5): 170 170 68 170 170 
+customers in the area ID = 7(len=5): 108 108 6 6 6 
+customers in the area ID = 1(len=5): 0 0 0 0 102 
+customers in the area ID = 20(len=4): 172 70 70 172 
+customers in the area ID = 37(len=6): 138 36 36 138 138 138 
+customers in the area ID = 32(len=7): 82 82 184 82 82 184 184 
+LAPSE : LINE 301
+result = 198
+LAPSE : LINE 302
+result = 118
+LAPSE : LINE 303
+result = 78
+LAPSE : LINE 304
+result = 170
+LAPSE : LINE 305
+result = 24
+LAPSE : LINE 306
+result = 188
+LAPSE : LINE 307
+result = 46
+LAPSE : LINE 308
+result = 152
+LAPSE : LINE 309
+result = 100
+LAPSE : LINE 310
+result = 72
+LAPSE : LINE 311
+result = 106
+LAPSE : LINE 312
+result = 82
+LAPSE : LINE 313
+result = 50
+LAPSE : LINE 314
+result = 6
+LAPSE : LINE 315
+result = 128
+LAPSE : LINE 316
+result = 78
+LAPSE : LINE 317
+result = 74
+LAPSE : LINE 318
+result = 186
+LAPSE : LINE 319
+result = 40
+LAPSE : LINE 320
+result = 74
+LAPSE : LINE 321
+result = 194
+LAPSE : LINE 322
+result = 56
+LAPSE : LINE 323
+result = 196
+LAPSE : LINE 324
+result = 134
+LAPSE : LINE 325
+result = 32
+LAPSE : LINE 326
+result = 140
+LAPSE : LINE 327
+result = 108
+LAPSE : LINE 328
+result = 40
+LAPSE : LINE 329
+result = 32
+LAPSE : LINE 330
+result = 126
+LAPSE : LINE 331
+result = 184
+LAPSE : LINE 332
+result = 102
+LAPSE : LINE 333
+result = 44
+LAPSE : LINE 334
+result = 16
+LAPSE : LINE 335
+result = 130
+LAPSE : LINE 336
+result = 114
+LAPSE : LINE 337
+result = 168
+LAPSE : LINE 338
+result = 90
+LAPSE : LINE 339
+result = 4
+LAPSE : LINE 340
+result = 170
+LAPSE : LINE 341
+result = 154
+LAPSE : LINE 342
+result = 4
+LAPSE : LINE 343
+result = 184
+LAPSE : LINE 344
+result = 138
+LAPSE : LINE 345
+result = 172
+LAPSE : LINE 346
+result = 166
+LAPSE : LINE 347
+result = 102
+LAPSE : LINE 348
+result = 162
+LAPSE : LINE 349
+result = 174
+LAPSE : LINE 350
+result = 178
+LAPSE : LINE 351
+result = 82
+LAPSE : LINE 352
+result = 134
+LAPSE : LINE 353
+result = 70
+LAPSE : LINE 354
+result = 50
+LAPSE : LINE 355
+result = 56
+LAPSE : LINE 356
+result = 64
+LAPSE : LINE 357
+result = 186
+LAPSE : LINE 358
+result = 60
+LAPSE : LINE 359
+result = 62
+LAPSE : LINE 360
+result = 116
+LAPSE : LINE 361
+result = 80
+LAPSE : LINE 362
+result = 80
+LAPSE : LINE 363
+result = 194
+LAPSE : LINE 364
+result = 176
+LAPSE : LINE 365
+result = 186
+LAPSE : LINE 366
+result = 198
+LAPSE : LINE 367
+result = 30
+LAPSE : LINE 368
+result = 114
+LAPSE : LINE 369
+result = 130
+LAPSE : LINE 370
+result = 128
+LAPSE : LINE 371
+result = 116
+LAPSE : LINE 372
+result = 38
+LAPSE : LINE 373
+result = 190
+LAPSE : LINE 374
+result = 56
+LAPSE : LINE 375
+result = 26
+LAPSE : LINE 376
+result = 110
+LAPSE : LINE 377
+result = 10
+LAPSE : LINE 378
+result = 134
+LAPSE : LINE 379
+result = 96
+LAPSE : LINE 380
+result = 190
+LAPSE : LINE 381
+result = 4
+LAPSE : LINE 382
+result = 48
+LAPSE : LINE 383
+result = 58
+LAPSE : LINE 384
+result = 48
+LAPSE : LINE 385
+result = 58
+LAPSE : LINE 386
+result = 162
+LAPSE : LINE 387
+result = 112
+LAPSE : LINE 388
+result = 22
+LAPSE : LINE 389
+result = 168
+LAPSE : LINE 390
+result = 136
+LAPSE : LINE 391
+result = 78
+LAPSE : LINE 392
+result = 88
+LAPSE : LINE 393
+result = 10
+LAPSE : LINE 394
+result = 144
+LAPSE : LINE 395
+result = 182
+LAPSE : LINE 396
+result = 52
+LAPSE : LINE 397
+result = 158
+LAPSE : LINE 398
+result = 18
+LAPSE : LINE 399
+result = 120
+LAPSE : LINE 400
+result = 102
+LAPSE : LINE 401
+result = 90
+LAPSE : LINE 402
+result = 44
+LAPSE : LINE 403
+result = 158
+LAPSE : LINE 404
+result = 4
+LAPSE : LINE 405
+result = 158
+LAPSE : LINE 406
+result = 192
+LAPSE : LINE 407
+result = 30
+LAPSE : LINE 408
+result = 80
+LAPSE : LINE 409
+result = 66
+LAPSE : LINE 410
+result = 144
+LAPSE : LINE 411
+result = 96
+LAPSE : LINE 412
+result = 32
+LAPSE : LINE 413
+result = 14
+LAPSE : LINE 414
+result = 158
+LAPSE : LINE 415
+result = 20
+LAPSE : LINE 416
+result = 136
+LAPSE : LINE 417
+result = 180
+LAPSE : LINE 418
+result = 58
+LAPSE : LINE 419
+result = 152
+LAPSE : LINE 420
+result = 44
+LAPSE : LINE 421
+result = 176
+LAPSE : LINE 422
+result = 0
+LAPSE : LINE 423
+result = 144
+LAPSE : LINE 424
+result = 0
+LAPSE : LINE 425
+result = 86
+LAPSE : LINE 426
+result = 36
+LAPSE : LINE 427
+result = 106
+LAPSE : LINE 428
+result = 54
+LAPSE : LINE 429
+result = 126
+LAPSE : LINE 430
+result = 112
+LAPSE : LINE 431
+result = 92
+LAPSE : LINE 432
+result = 122
+LAPSE : LINE 433
+result = 116
+LAPSE : LINE 434
+result = 4
+LAPSE : LINE 435
+result = 32
+LAPSE : LINE 436
+result = 170
+LAPSE : LINE 437
+result = 0
+LAPSE : LINE 438
+result = 174
+LAPSE : LINE 439
+result = 92
+LAPSE : LINE 440
+result = 36
+LAPSE : LINE 441
+result = 54
+LAPSE : LINE 442
+result = 140
+LAPSE : LINE 443
+result = 22
+LAPSE : LINE 444
+result = 106
+LAPSE : LINE 445
+result = 48
+LAPSE : LINE 446
+result = 176
+LAPSE : LINE 447
+result = 134
+LAPSE : LINE 448
+result = 60
+LAPSE : LINE 449
+result = 60
+LAPSE : LINE 450
+result = 60
+LAPSE : LINE 451
+result = 18
+LAPSE : LINE 452
+result = 188
+LAPSE : LINE 453
+result = 48
+LAPSE : LINE 454
+result = 66
+LAPSE : LINE 455
+result = 116
+LAPSE : LINE 456
+result = 108
+LAPSE : LINE 457
+result = 96
+LAPSE : LINE 458
+result = 30
+LAPSE : LINE 459
+result = 186
+LAPSE : LINE 460
+result = 44
+LAPSE : LINE 461
+result = 198
+LAPSE : LINE 462
+result = 18
+LAPSE : LINE 463
+result = 60
+LAPSE : LINE 464
+result = 176
+LAPSE : LINE 465
+result = 122
+LAPSE : LINE 466
+result = 46
+LAPSE : LINE 467
+result = 100
+LAPSE : LINE 468
+result = 84
+LAPSE : LINE 469
+result = 70
+LAPSE : LINE 470
+result = 94
+LAPSE : LINE 471
+result = 168
+LAPSE : LINE 472
+result = 96
+LAPSE : LINE 473
+result = 68
+LAPSE : LINE 474
+result = 4
+LAPSE : LINE 475
+result = 128
+LAPSE : LINE 476
+result = 38
+LAPSE : LINE 477
+result = 102
+LAPSE : LINE 478
+result = 164
+LAPSE : LINE 479
+result = 48
+LAPSE : LINE 480
+result = 52
+LAPSE : LINE 481
+result = 114
+LAPSE : LINE 482
+result = 134
+LAPSE : LINE 483
+result = 180
+LAPSE : LINE 484
+result = 188
+LAPSE : LINE 485
+result = 8
+LAPSE : LINE 486
+result = 26
+LAPSE : LINE 487
+result = 150
+LAPSE : LINE 488
+result = 80
+LAPSE : LINE 489
+result = 98
+LAPSE : LINE 490
+result = 28
+LAPSE : LINE 491
+result = 152
+LAPSE : LINE 492
+result = 116
+LAPSE : LINE 493
+result = 114
+LAPSE : LINE 494
+result = 96
+LAPSE : LINE 495
+result = 24
+LAPSE : LINE 496
+result = 158
+LAPSE : LINE 497
+result = 22
+LAPSE : LINE 498
+result = 46
+LAPSE : LINE 499
+result = 164
+LAPSE : LINE 500
+result = 34
+LAPSE : LINE 501
+result = 0
+LAPSE : LINE 502
+result = 36
+CLEAVE : LINE 503
+Heap : 8 44 4 17 21 47 20 40 48 36 42 19 26 7 39 35 25 29 43 38 11 3 30 12 15 34 31 18 1 37 32 41 16 5 45 51 33 14 50 2 24 9 10 49 27 23 28 22 13 6 46 
+list LRU : 37 1 35 12 47 23 6 25 46 13 15 51 29 48 30 49 27 9 36 28 33 2 39 5 18 16 44 20 34 50 21 24 10 19 45 31 7 4 42 22 11 43 8 40 38 14 32 26 17 41 3 
+customers in the area ID = 8(len=3): 58 58 58 
+customers in the area ID = 44(len=4): 94 196 94 94 
+customers in the area ID = 17(len=5): 16 118 118 16 16 
+customers in the area ID = 40(len=9): 192 90 90 192 90 90 192 90 90 
+customers in the area ID = 35(len=10): 34 136 136 136 34 34 136 136 136 136 
+customers in the area ID = 41(len=11): 40 40 40 142 40 142 40 40 142 142 40 
+customers in the area ID = 16(len=13): 168 66 66 168 168 168 168 66 168 66 168 168 66 
+customers in the area ID = 25(len=9): 24 126 126 24 126 126 24 24 24 
+customers in the area ID = 5(len=13): 4 106 4 106 4 4 4 4 106 4 4 4 4 
+customers in the area ID = 45(len=10): 44 44 44 44 146 146 146 44 44 146 
+customers in the area ID = 48(len=5): 98 98 98 98 98 
+customers in the area ID = 29(len=11): 28 130 130 130 130 130 28 28 130 28 130 
+customers in the area ID = 51(len=11): 152 152 50 50 152 50 152 152 152 152 152 
+customers in the area ID = 33(len=13): 134 134 32 32 134 134 32 32 134 134 134 32 32 
+customers in the area ID = 43(len=6): 144 144 144 42 144 42 
+customers in the area ID = 14(len=11): 64 166 166 166 166 64 64 64 64 166 64 
+customers in the area ID = 50(len=7): 100 100 100 100 100 100 100 
+customers in the area ID = 21(len=6): 122 122 20 20 20 20 
+customers in the area ID = 36(len=6): 188 188 86 188 188 86 
+customers in the area ID = 38(len=10): 88 190 190 190 88 88 190 190 190 190 
+customers in the area ID = 2(len=13): 52 52 154 154 154 52 52 52 154 154 154 52 52 
+customers in the area ID = 24(len=10): 176 176 176 176 74 74 176 74 74 176 
+customers in the area ID = 11(len=9): 112 10 112 10 10 112 10 112 10 
+customers in the area ID = 9(len=11): 8 110 110 8 110 8 110 8 8 110 8 
+customers in the area ID = 10(len=10): 60 60 60 60 162 60 162 60 60 162 
+customers in the area ID = 42(len=7): 92 92 194 194 92 194 92 
+customers in the area ID = 3(len=8): 104 104 2 2 2 104 104 104 
+customers in the area ID = 49(len=15): 150 48 48 48 48 48 150 48 150 150 48 150 150 48 150 
+customers in the area ID = 27(len=11): 26 128 26 128 128 26 128 128 26 26 26 
+customers in the area ID = 30(len=8): 80 80 182 80 80 80 80 182 
+customers in the area ID = 23(len=12): 22 22 22 124 22 22 22 22 124 22 124 124 
+customers in the area ID = 28(len=9): 180 180 78 78 78 180 180 180 180 
+customers in the area ID = 4(len=5): 54 54 54 54 156 
+customers in the area ID = 47(len=5): 46 46 46 148 46 
+customers in the area ID = 19(len=6): 18 18 120 18 18 120 
+customers in the area ID = 12(len=9): 164 164 62 62 62 164 164 164 164 
+customers in the area ID = 22(len=12): 174 174 72 72 72 174 174 174 174 72 174 72 
+customers in the area ID = 13(len=11): 114 114 114 114 114 114 12 12 12 12 12 
+customers in the area ID = 15(len=9): 116 116 116 14 116 116 14 14 116 
+customers in the area ID = 6(len=17): 158 158 158 158 158 56 56 56 56 56 158 158 56 56 158 158 158 
+customers in the area ID = 46(len=9): 96 96 198 96 96 96 198 198 198 
+customers in the area ID = 26(len=7): 178 178 178 76 178 76 76 
+customers in the area ID = 34(len=14): 84 186 186 186 186 84 186 186 186 84 186 186 84 186 
+customers in the area ID = 31(len=8): 30 30 30 30 132 132 30 132 
+customers in the area ID = 20(len=7): 70 70 172 172 70 70 172 
+customers in the area ID = 7(len=8): 108 108 6 108 108 6 6 6 
+customers in the area ID = 18(len=9): 68 170 170 170 170 170 68 170 170 
+customers in the area ID = 1(len=13): 0 102 0 0 0 102 102 102 0 0 0 0 102 
+customers in the area ID = 39(len=8): 38 140 38 140 38 38 140 38 
+customers in the area ID = 37(len=10): 36 36 36 138 138 36 36 138 138 138 
+customers in the area ID = 32(len=11): 82 184 184 82 82 82 184 82 82 184 184 
+KEITEIKEN : LINE 504
+remove customers in the area ID = 8(len=3): 58 58 58 
+remove customers in the area ID = 44(len=4): 94 94 196 94 
+remove customers in the area ID = 17(len=5): 16 16 118 118 16 
+remove customers in the area ID = 4(len=5): 156 54 54 54 54 
+remove customers in the area ID = 48(len=5): 98 98 98 98 98 
+remove customers in the area ID = 47(len=5): 46 148 46 46 46 
+remove customers in the area ID = 43(len=6): 42 144 42 144 144 144 
+remove customers in the area ID = 19(len=6): 120 18 18 120 18 18 
+remove customers in the area ID = 21(len=6): 20 20 20 20 122 122 
+remove customers in the area ID = 36(len=6): 86 188 188 86 188 188 
+remove customers in the area ID = 26(len=7): 76 76 178 76 178 178 178 
+remove customers in the area ID = 42(len=7): 92 194 92 194 194 92 92 
+remove customers in the area ID = 50(len=7): 100 100 100 100 100 100 100 
+remove customers in the area ID = 20(len=7): 172 70 70 172 172 70 70 
+remove customers in the area ID = 3(len=8): 104 104 104 2 2 2 104 104 
+remove customers in the area ID = 7(len=8): 6 6 6 108 108 6 108 108 
+remove customers in the area ID = 31(len=8): 132 30 132 132 30 30 30 30 
+remove customers in the area ID = 39(len=8): 38 140 38 38 140 38 140 38 
+remove customers in the area ID = 30(len=8): 182 80 80 80 80 182 80 80 
+remove customers in the area ID = 40(len=9): 90 90 192 90 90 192 90 90 192 
+remove customers in the area ID = 11(len=9): 10 112 10 112 10 10 112 10 112 
+remove customers in the area ID = 18(len=9): 170 170 68 170 170 170 170 170 68 
+remove customers in the area ID = 28(len=9): 180 180 180 180 78 78 78 180 180 
+remove customers in the area ID = 15(len=9): 116 14 14 116 116 14 116 116 116 
+remove customers in the area ID = 46(len=9): 198 198 198 96 96 96 198 96 96 
+remove customers in the area ID = 25(len=9): 24 24 24 126 126 24 126 126 24 
+remove customers in the area ID = 12(len=9): 164 164 164 164 62 62 62 164 164 
+remove customers in the area ID = 38(len=10): 190 190 190 190 88 88 190 190 190 88 
+remove customers in the area ID = 45(len=10): 146 44 44 146 146 146 44 44 44 44 
+remove customers in the area ID = 10(len=10): 162 60 60 162 60 162 60 60 60 60 
+remove customers in the area ID = 24(len=10): 176 74 74 176 74 74 176 176 176 176 
+remove customers in the area ID = 35(len=10): 136 136 136 136 34 34 136 136 136 34 
+remove customers in the area ID = 37(len=10): 138 138 138 36 36 138 138 36 36 36 
+remove customers in the area ID = 41(len=11): 40 142 142 40 40 142 40 142 40 40 40 
+remove customers in the area ID = 32(len=11): 184 184 82 82 184 82 82 82 184 184 82 
+remove customers in the area ID = 14(len=11): 64 166 64 64 64 64 166 166 166 166 64 
+remove customers in the area ID = 9(len=11): 8 110 8 8 110 8 110 8 110 110 8 
+remove customers in the area ID = 27(len=11): 26 26 26 128 128 26 128 128 26 128 26 
+remove customers in the area ID = 29(len=11): 130 28 130 28 28 130 130 130 130 130 28 
+remove customers in the area ID = 51(len=11): 152 152 152 152 152 50 152 50 50 152 152 
+remove customers in the area ID = 13(len=11): 12 12 12 12 12 114 114 114 114 114 114 
+remove customers in the area ID = 22(len=12): 72 174 72 174 174 174 174 72 72 72 174 174 
+remove customers in the area ID = 23(len=12): 124 124 22 124 22 22 22 22 124 22 22 22 
+remove customers in the area ID = 16(len=13): 66 168 168 66 168 66 168 168 168 168 66 66 168 
+remove customers in the area ID = 5(len=13): 4 4 4 4 106 4 4 4 4 106 4 106 4 
+remove customers in the area ID = 2(len=13): 52 52 154 154 154 52 52 52 154 154 154 52 52 
+remove customers in the area ID = 33(len=13): 32 32 134 134 134 32 32 134 134 32 32 134 134 
+remove customers in the area ID = 1(len=13): 102 0 0 0 0 102 102 102 0 0 0 102 0 
+remove customers in the area ID = 34(len=14): 186 84 186 186 84 186 186 186 84 186 186 186 186 84 
+remove customers in the area ID = 49(len=15): 150 48 150 150 48 150 150 48 150 48 48 48 48 48 150 
+remove customers in the area ID = 6(len=17): 158 158 158 56 56 158 158 56 56 56 56 56 158 158 158 158 158 
+CLEAVE : LINE 505
+Heap : 
+list LRU : 
