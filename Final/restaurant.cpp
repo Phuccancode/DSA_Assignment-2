@@ -140,7 +140,7 @@ private:
 				dp[i] = vector<long long>(i + 1, 1); // initially all 1
 				for (int j = 1; j < i; j++)
 				{
-					dp[i][j] = (dp[i - 1][j - 1] + dp[i - 1][j]);
+					dp[i][j] = (dp[i - 1][j - 1]%MAXSIZE + dp[i - 1][j]%MAXSIZE);
 				}
 			}
 		}
@@ -469,7 +469,7 @@ public:
 			delete node;
 		}
 	}
-	char encode(char s, int k)
+	char encodeCaeser(char s, int k)
 	{
 		if (s >= 65 && s <= 90)
 		{
@@ -510,11 +510,11 @@ public:
 		{
 			freq_prev.push_back(x);
 		}
-
+		if(freq_prev.size() < 3) return {};
 		for (char &x : name)
-			x = encode(x, mp[x]);
+			x = encodeCaeser(x, mp[x]);
 		for (pair<char, int> &x : freq_prev)
-			x.first = encode(x.first, x.second);
+			x.first = encodeCaeser(x.first, x.second);
 
 		mp.clear();
 		for (pair<char, int> x : freq_prev)
