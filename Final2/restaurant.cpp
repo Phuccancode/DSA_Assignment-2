@@ -3,7 +3,7 @@
 #include "main.h"
 
 int MAXSIZE = 0;
-
+//*----------------------------Start Prototype--------------------------//
 class JJK_RESTAURANT_OPERATIONS;
 class RESTAURANT_Gojo;
 class RESTAURANT_Sukuna;
@@ -16,7 +16,7 @@ private:
 	vector<BST> area;
 
 public:
-	Gojo_Restaurant() : area(MAXSIZE + 1) {}
+	Gojo_Restaurant() : area((unsigned int)(MAXSIZE+1)) {}
 	void insertArea(int result);
 	void kokusenRemove();
 	void print_LIMITLESS(int number);
@@ -65,7 +65,6 @@ class Sukana_Restaurant
 private:
 	vector<Node *> area;
 	list<Node *> LRU;
-
 private:
 	Node *whoFirst(Node *a, Node *b);
 	void reHeapDown(int index);
@@ -220,7 +219,10 @@ void simulate(string filename)
 	}
 	delete operation;
 }
+//*---------------------------End Prototype------------------------//
 
+
+//*-------------------Start Gojo_Restaurant Implementation---------------------//
 void Gojo_Restaurant::insertArea(int result)
 {
 	int ID = result % MAXSIZE + 1;
@@ -370,9 +372,10 @@ void Gojo_Restaurant::BST::print_rec(Node *node)
 }
 
 void Gojo_Restaurant::BST::print() { print_rec(root); }
+//*---------------------End Gojo_Restaurant Implementation---------------------//
 
 
-//* Sukana
+//*------------------------Start Sukana Implementation----------------------------//
 Sukana_Restaurant::Node *Sukana_Restaurant::whoFirst(Node *a, Node *b)
 {
 	for (Node *it : LRU)
@@ -391,7 +394,7 @@ void Sukana_Restaurant::reHeapDown(int index)
 	int rightChild = 2 * index + 2;
 	int smallest = index;
 
-	if (leftChild < area.size())
+	if (leftChild < (int)area.size())
 	{
 		if (area[leftChild]->size() < area[smallest]->size())
 		{
@@ -405,7 +408,7 @@ void Sukana_Restaurant::reHeapDown(int index)
 			}
 		}
 	}
-	if (rightChild < area.size())
+	if (rightChild < (int)area.size())
 	{
 		if (area[rightChild]->size() < area[smallest]->size())
 		{
@@ -460,7 +463,7 @@ void Sukana_Restaurant::removeNode(Node *node)
 
 Sukana_Restaurant::~Sukana_Restaurant()
 {
-	for (int i = 0; i < area.size(); i++)
+	for (int i = 0; i < (int)area.size(); i++)
 	{
 		delete area[i];
 	}
@@ -470,7 +473,7 @@ void Sukana_Restaurant::insertArea(int result)
 {
 	int ID = result % MAXSIZE + 1;
 	int index = -1;
-	for (int i = 0; i < area.size(); i++)
+	for (int i = 0; i < (int)area.size(); i++)
 	{
 		if (ID == area[i]->ID)
 			index = i;
@@ -528,15 +531,16 @@ void Sukana_Restaurant::keiteikenRemove(int number)
 
 void Sukana_Restaurant::traversal_preOrder(int index, int number)
 {
-	if (index >= this->area.size() || number <= 0)
+	if (index >= (int)this->area.size() || number <= 0)
 		return;
 	this->area[index]->print(number);
 	traversal_preOrder(index * 2 + 1, number);
 	traversal_preOrder(index * 2 + 2, number);
 }
+//*---------------------------End Sukana Implementation---------------------------//
 
 
-//* HuffTree
+//*--------------------------Start HuffTree Implementation---------------------------//
 void HuffTree::clear(Node *node)
 {
 	if (node)
@@ -573,7 +577,6 @@ vector<pair<char, int>> HuffTree::string_Processing(string &name)
 	unordered_map<char, int> mp;
 	for (char &x : name)
 		mp[x]++;
-	int numPair = mp.size();
 	vector<pair<char, int>> frequency_1;
 	for (pair<char, int> x : mp)
 	{
@@ -624,13 +627,12 @@ int HuffTree::treeHeight(Node *node)
 HuffTree::Node *HuffTree::rightRotate(Node *Node_A)
 {
 
-	Node *Node_B = Node_A->left;  //! này là B
-	Node *Node_E = Node_B->right; //! này là E
+	Node *Node_B = Node_A->left;  
+	Node *Node_E = Node_B->right; 
 
-	Node_A->left = Node_E;	//! CẬP NHẬT NODE E
-	Node_B->right = Node_A; //! CẬP NHẬT NODE A
-
-	return Node_B; //! NODE B đang là root
+	Node_A->left = Node_E;	
+	Node_B->right = Node_A; 
+	return Node_B; 
 }
 
 HuffTree::Node *HuffTree::leftRotate(Node *Node_A)
@@ -718,7 +720,7 @@ HuffTree::Node *HuffTree::buildHuff(vector<pair<char, int>> frequency_2)
 		Node *x = new Node(frequency_2[i].second, frequency_2[i].first);
 		build.push_back(x);
 	}
-	Node *res = nullptr;
+
 	while (build.size() > 1)
 	{
 		int count = 0;
@@ -818,9 +820,13 @@ void HuffTree::print_rec(Node *node)
 		solution << node->x << "\n";
 	print_rec(node->right);
 }
+//*-------------------------End HuffTree Implementation---------------------------//
+
+
+//* ---------------------Start Headquarters Implimentation-------------------------//
 void Restaurant_Headquarters::LAPSE(string name)
 {
-	if(name[0] >= '0' && name[0] <= '9') //! BỎ lúc nộp
+	if(name[0] >= '0' && name[0] <= '9')
 	{
 		int result = stoi(name);
 		if(result % 2 == 1) hash.insertArea(result);
@@ -836,3 +842,4 @@ void Restaurant_Headquarters::LAPSE(string name)
 	else
 		heap.insertArea(result);
 }
+//* ---------------------End Headquarters Implimentation--------------------------//
