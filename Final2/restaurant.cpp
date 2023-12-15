@@ -8,830 +8,831 @@ class JJK_RESTAURANT_OPERATIONS;
 class RESTAURANT_Gojo;
 class RESTAURANT_Sukuna;
 class HuffTree_AVL;
+class Gojo_Restaurant
+{
+	class BST;
 
-//* nhà hàng của sư phụ GOJO
-class RESTAURANT_Gojo{
-	class Tree_BST;
 private:
-	vector<Tree_BST> areaTable;
+	vector<BST> area;
+
 public:
-	RESTAURANT_Gojo():areaTable(MAXSIZE + 1){}
-	void insertAreaTable(int result)
-	{
-		int ID = result % MAXSIZE + 1;
-		areaTable[ID].insert(result);
-	}
-	void remove_KOKUSEN()
-	{
+	Gojo_Restaurant() : area(MAXSIZE + 1) {}
+	void insertArea(int result);
+	void kokusenRemove();
+	void print_LIMITLESS(int number);
 
-		for(int i = 1; i < MAXSIZE + 1; i++) areaTable[i].remove();
-
- 	}
-
-	void print_LIMITLESS(int number)
-	{
-		if(number <= 0 || number > MAXSIZE) return;
-		areaTable[number].print();
-	}
 private:
-	class Tree_BST{
+	class BST
+	{
 		class Node;
+
 	private:
-		Node* root;	
-		queue<int> queueTime; 
+		Node *root;
+		queue<int> timeGetIn;
+
 	public:
-		Tree_BST():root(nullptr){}
-		~Tree_BST()
-		{
-			while(!queueTime.empty())
-			{
-				int temp = queueTime.front();		
-				queueTime.pop(); 						
-				root = remove_recursive(root ,temp);
-			}
-		}
-		int size(){
-			return queueTime.size();
-		}
-		Node *insert_recursive(Node *node, int result)
-		{
-			if (!node)
-				return new Node(result);
-			if (result < node->result)
-			{
-				node->left = insert_recursive(node->left, result);
-			}
-			else
-			{
-				node->right = insert_recursive(node->right, result);
-			}
-			return node;
-		}
-		void insert(int result)
-		{
-			root = insert_recursive(root, result);
-			queueTime.push(result);
-		}
-		Node *remove_recursive(Node *node, int result)
-		{
-			if (!node)
-				return nullptr;
-			if (result < node->result)
-			{
-				node->left = remove_recursive(node->left, result);
-			}
-			else if (result > node->result)
-			{
-				node->right = remove_recursive(node->right, result);
-			}
-			if (node->result == result)
-			{
-				Node *nodeDel = node;
-				if (!node->left && !node->right)
-				{
-					node = nullptr;
-				}
-				else if (!node->left)
-				{
-					node = node->right;
-				}
-				else if (!node->right)
-				{
-					node = node->left;
-				}
-				else
-				{
-					Node *tmp = node->right;
-					while (tmp->left != nullptr)
-					{
-						tmp = tmp->left;
-					}
-					swap(tmp->result, node->result);
-					node->right = remove_recursive(node->right, result);
-					return node;
-				}
-				delete nodeDel;
-			}
-			return node;
-		}
-		int CountNode(Node *node)
-		{
-			return node == NULL ? 0 : 1 + CountNode(node->left) + CountNode(node->right);
-		}
-		unsigned long long DFS(Node *node, const vector<vector<long long>> &dp)
-		{
-			if (node == NULL)
-				return 1;
-			int nleft = CountNode(node->left);
-			int nRight = CountNode(node->right);
-			return (unsigned long long)(dp[nleft + nRight][nleft] % MAXSIZE * (DFS(node->left, dp) % MAXSIZE * DFS(node->right, dp) % MAXSIZE) % MAXSIZE) % MAXSIZE;
-		}
-		void PascalTriangle(int n, vector<vector<long long>> &dp)
-		{
-			for (int i = 0; i <= n; i++)
-			{
-				dp[i] = vector<long long>(i + 1, 1); // initially all 1
-				for (int j = 1; j < i; j++)
-				{
-					dp[i][j] = (dp[i - 1][j - 1]%MAXSIZE + dp[i - 1][j]%MAXSIZE);
-				}
-			}
-		}
-		void remove(){
-			if(queueTime.empty()) return;
-			vector<vector<long long>> dp(queueTime.size() + 1);
-			PascalTriangle(queueTime.size(), dp);
-			unsigned long long number = DFS(root, dp);
-			
-			while(number != 0 && !queueTime.empty())
-			{
-				int temp = queueTime.front();		
-				queueTime.pop(); 					
-				root = remove_recursive(root ,temp);
-				number --;
-			}
-		}
-		void print_recursive(Node* node)
-		{
-			if(node != NULL){
-				print_recursive(node->left);
-				solution << node->result << "\n";
-				print_recursive(node->right);
-			}
-		}
-		void print(){print_recursive(root);}
+		BST() : root(nullptr) {}
+		~BST();
+		int size();
+		Node *insert_rec(Node *node, int result);
+		void insert(int result);
+		Node *remove_rec(Node *node, int result);
+		int numOfNodeInTree(Node *node);
+		unsigned long long DFS(Node *node, const vector<vector<long long>> &dp);
+		void PascalTriangle(int n, vector<vector<long long>> &dp);
+		void remove();
+		void print_rec(Node *node);
+		void print();
+
 	private:
-		class Node{
+		class Node
+		{
 		private:
 			int result;
-			Node* left;
-			Node* right;
-			friend class Tree_BST;
+			Node *left;
+			Node *right;
+			friend class BST;
+
 		public:
 			Node(int result) : result(result), left(NULL), right(NULL) {}
 		};
-	public:
-		string test_print_recursive(Node* node) //! BỎ hết khối luôn
-		{
-			if(node == nullptr) return "NULL"; 
-			if(node->left == nullptr && node->right == nullptr) return to_string(node->result); 
-			return to_string(node->result)+"("+test_print_recursive(node->left) +","+test_print_recursive(node->right)+")";
-		}
-		string test_print(){ //! BỎ hết khối luôn
-			if(this->size() == 0) return "Empty";
-			return test_print_recursive(root);
-		}
 	};
-
 };
-
-//* nhà hàng su cờ na
-class RESTAURANT_Sukuna{
+class Sukana_Restaurant
+{
 	class Node;
+
 private:
-	vector<Node* > areaTable;
-	list<Node* > LRU; 
+	vector<Node *> area;
+	list<Node *> LRU;
+
 private:
-	Node *whoFirst(Node *a, Node *b)
-	{
-		for (Node *it : LRU)
-		{
-			if (it == a)
-				return b;
-			if (it == b)
-				return a;
-		}
-		return nullptr;
-	}
-	void ReHeap_down(int index)
-	{
-		int leftChild = 2 * index + 1;
-		int rightChild = 2 * index + 2;
-		int smallest = index;
+	Node *whoFirst(Node *a, Node *b);
+	void reHeapDown(int index);
+	void reHeapUp(int index);
+	void moveToFront(Node *node);
+	void removeNode(Node *node);
 
-		if (leftChild < areaTable.size())
-		{
-			if (areaTable[leftChild]->size() < areaTable[smallest]->size())
-			{
-				smallest = leftChild;
-			}
-			else if (areaTable[leftChild]->size() == areaTable[smallest]->size())
-			{
-				if (whoFirst(areaTable[leftChild], areaTable[smallest]) == areaTable[leftChild])
-				{
-					smallest = leftChild;
-				}
-			}
-		}
-		if (rightChild < areaTable.size())
-		{
-			if (areaTable[rightChild]->size() < areaTable[smallest]->size())
-			{
-				smallest = rightChild;
-			}
-			else if (areaTable[rightChild]->size() == areaTable[smallest]->size())
-			{
-				if (whoFirst(areaTable[rightChild], areaTable[smallest]) == areaTable[rightChild])
-				{
-					smallest = rightChild;
-				}
-			}
-		}
-		if (smallest != index)
-		{
-			swap(areaTable[index], areaTable[smallest]);
-			ReHeap_down(smallest);
-		}
-	}
-
-	void ReHeap_up(int index)
-	{
-		while (index > 0)
-		{
-			int parent = (index - 1) / 2;
-			if (areaTable[index]->size() < areaTable[parent]->size() || (areaTable[index]->size() == areaTable[parent]->size() && whoFirst(areaTable[index], areaTable[parent]) == areaTable[index]))
-			{
-
-				swap(areaTable[index], areaTable[parent]);
-				index = parent;
-			}
-			else
-				break;
-		}
-	}
-
-	void moveTop(Node *node)
-	{
-		list<Node *>::iterator it = std::find(LRU.begin(), LRU.end(), node);
-		if (it != LRU.end())
-		{
-			LRU.erase(it);
-		}
-		LRU.push_front(node);
-	}
-
-	void removeNode(Node *node)
-	{
-		list<Node *>::iterator it = find(LRU.begin(), LRU.end(), node);
-		LRU.erase(it);
-	}
 public:
-	RESTAURANT_Sukuna(){}
-	~RESTAURANT_Sukuna(){
-		for(int i = 0; i < areaTable.size(); i++){
-			delete areaTable[i];
-			COUNTDELETE ++;
-		}
-	}
+	Sukana_Restaurant() {}
+	~Sukana_Restaurant();
+	void insertArea(int result);
+	void keiteikenRemove(int number);
+	void traversal_preOrder(int index, int number);
 
-	void insertAreaTable(int result)
-	{
-		int ID = result % MAXSIZE + 1;
-		int index = -1;
-		for (int i = 0; i < areaTable.size(); i++)
-		{
-			if (ID == areaTable[i]->ID)
-				index = i;
-		}
-		if (index == -1)
-		{
-			areaTable.push_back(new Node(ID));
-			index = areaTable.size() - 1;
-			areaTable[index]->insert(result);
-			this->moveTop(areaTable[index]);
-			this->ReHeap_up(index);
-		}
-		else
-		{
-			areaTable[index]->insert(result);
-			this->moveTop(areaTable[index]);
-			this->ReHeap_down(index);
-		}
-	}
-
-	void remove_KEITEIKEN(int number)
-	{
-		if(areaTable.size() <= 0) return;
-
-		
-
-		//* TẠO ra heap mới sao chép từ heap cũ
-		vector<Node* > areaTableNew(areaTable.begin(), areaTable.end());
-		queue<Node* > listDelete; //! danh sách các khu cấn xóa
-		for(int i = 0;  areaTable.size() && i < number; i++)
-		{
-			//* lấy ra phần tử đầu tiên trong heap
-			Node* nodeDelete = areaTable[0];
-			swap(areaTable[0], areaTable[areaTable.size() - 1]);
-			areaTable.pop_back();
-			this->ReHeap_down(0);
-
-
-			//* đưa vào danh sách cần xóa
-			listDelete.push(nodeDelete);
-		}
-
-		//* trả lại heap
-		areaTable = areaTableNew;
-
-		//* đuổi num khách hàng tại num khu vực
-		while(listDelete.size()){
-			//* lấy ra khu đang ở đầu đầu heap xóa number khách hàng đầu linklist
-			Node* nodeDelete = listDelete.front();
-			listDelete.pop();
-
-			nodeDelete->remove(number);
-
-			//* tìm vị trí của nó trong heap
-			int index = 0;
-			while(areaTable[index] !=  nodeDelete) index++;
-
-			//* trường hợp xóa hết thì xóa nó trong heap sau đó reheap down khu xuống vì đang ở đầu hàng
-			if(nodeDelete->size() == 0)
-			{
-				swap(areaTable[index], areaTable[areaTable.size() - 1]);
-				//! xóa nó khỏi danh sách liên kết
-				this->removeNode(areaTable[areaTable.size() - 1]);
-				delete areaTable[areaTable.size() - 1];
-				COUNTDELETE ++;
-
-				//! xóa trong heap nữa
-				areaTable.pop_back();
-			}
-			this->ReHeap_down(index);
-		}
- 	
-
-	}
-
-	void print_pre_order(int index, int number)
-	{	
-		if(index >= this->areaTable.size() || number <= 0) return;
-		this->areaTable[index]->print(number);
-		print_pre_order(index * 2 + 1, number);
-		print_pre_order(index * 2 + 2, number);
-	}
-	void print_LIMITLESS(int number){print_pre_order(0, number);}
 private:
-	class Node{
+	class Node
+	{
 	private:
-		int ID;					
-		list<int> head; 	
-		friend class RESTAURANT_Sukuna;
+		int ID;
+		list<int> head;
+		friend class Sukana_Restaurant;
+
 	public:
 		Node(int ID) : ID(ID) {}
 		int size() const { return head.size(); }
-		void insert(int result){head.push_front(result);}
+		void insert(int result) { head.push_front(result); }
 		void remove(int number)
 		{
-			while(number != 0 && !head.empty())
+			while (number != 0 && !head.empty())
 			{
-				solution << head.back() << "-" <<ID << "\n";
+				solution << head.back() << "-" << ID << "\n";
 				head.pop_back();
 				number--;
 			}
 		}
 		void print(int number)
 		{
-			for(list<int>::iterator it = head.begin(); number > 0 && it != head.end(); ++it, --number)
+			for (list<int>::iterator it = head.begin(); number > 0 && it != head.end(); ++it, --number)
 			{
-				solution << ID << "-" << *it  << "\n";
+				solution << ID << "-" << *it << "\n";
 			}
 		}
 	};
 };
 
-
-
-class HuffTree_AVL{
+class HuffTree
+{
 	class Node;
+
 private:
-	Node* root = nullptr;
+	Node *root = nullptr;
+
 public:
-	~HuffTree_AVL(){clear(root);}
-	void clear(Node* node)
-	{
-		if(node)
-		{
-			clear(node->left);
-			clear(node->right);
-			delete node;
-		}
-	}
-	char encodeCaeser(char s, int k)
-	{
-		if (s >= 65 && s <= 90)
-		{
-			return ((s - 65) + k) % 26 + 65;
-		}
-		else if (s >= 97 && s <= 122)
-		{
-			return ((s - 97) + k) % 26 + 97;
-		}
-		else
-		{
-			return s;
-		}
-	}
-	int lastVal(const vector<int> &v, int start)
-	{
-		while (start < v.size() - 1)
-		{
-			if (v[start] != v[start + 1])
-				return start;
-			start++;
-		}
-		return (int)v.size() - 1;
-	}
-
-	bool sameType(char a, char b)
-	{
-		return (a >= 65 && a <= 90 && b >= 65 && b <= 90) || (a >= 97 && a <= 122 && b >= 97 && b <= 122);
-	}
-	vector<pair<char, int>> string_Processing(string &name)
-	{
-		unordered_map<char, int> mp;
-		for (char &x : name)
-			mp[x]++;
-		int numPair = mp.size();
-		vector<pair<char, int>> freq_prev;
-		for (pair<char, int> x : mp)
-		{
-			freq_prev.push_back(x);
-		}
-		if(freq_prev.size() < 3) return {};
-		for (char &x : name)
-			x = encodeCaeser(x, mp[x]);
-		for (pair<char, int> &x : freq_prev)
-			x.first = encodeCaeser(x.first, x.second);
-
-		mp.clear();
-		for (pair<char, int> x : freq_prev)
-		{
-			mp[x.first] += x.second;
-		}
-		vector<pair<char, int>> freq;
-
-		unordered_map<char, int>::iterator mapIt = mp.begin();
-		for (; mapIt != mp.end(); mapIt++)
-		{
-			freq.push_back({mapIt->first, mapIt->second});
-		}
-
-		stable_sort(freq.begin(), freq.end(),
-					[=](const pair<char, int> &a, const pair<char, int> &b) -> bool
-					{
-						if (a.second > b.second)
-							return true;
-						if (a.second == b.second)
-						{
-							if (sameType(a.first, b.first))
-								return a.first > b.first;
-							else
-								return a.first < b.first;
-						}
-						return false;
-					});
-		return freq;
-	}
-
-	int height(Node *node)
-	{
-		if (node == nullptr)
-		{
-			return 0;
-		}
-		return 1 + max(height(node->left), height(node->right));
-	}
-	Node *rightRotate(Node *Node_A)
-	{
-
-		Node *Node_B = Node_A->left;  //! này là B
-		Node *Node_E = Node_B->right; //! này là E
-
-		Node_A->left = Node_E;	//! CẬP NHẬT NODE E
-		Node_B->right = Node_A; //! CẬP NHẬT NODE A
-
-		return Node_B; //! NODE B đang là root
-	}
-
-	Node *leftRotate(Node *Node_A)
-	{
-		Node *Node_C = Node_A->right;
-		Node *Node_D = Node_C->left;
-
-		Node_A->right = Node_D;
-		Node_C->left = Node_A;
-
-		return Node_C;
-	}
+	~HuffTree() { clear(root); }
+	void clear(Node *node);
+	char encode(char s, int k);
+	bool sameType(char a, char b);
+	vector<pair<char, int>> string_Processing(string &name);
+	int treeHeight(Node *node);
+	Node *rightRotate(Node *Node_A);
+	Node *leftRotate(Node *Node_A);
 	enum class BalanceState
 	{
-		LEFT_HEAVY,
-		BALANCED,
-		RIGHT_HEAVY
+		LH,
+		EH,
+		RH
 	};
-	BalanceState getBalanceState(Node *node)
-	{
-		if (node == nullptr)
-			return BalanceState::BALANCED;
-
-		int leftHeight = height(node->left);
-		int rightHeight = height(node->right);
-
-		int balance = leftHeight - rightHeight;
-		if (balance > 1)
-			return BalanceState::LEFT_HEAVY;
-
-		else if (balance < -1)
-			return BalanceState::RIGHT_HEAVY;
-		return BalanceState::BALANCED;
-	}
-
-	Node *balanceNode(Node *node, int &count)
-	{
-		// TODO
-		if (!node)
-			return nullptr;
-		BalanceState rootState = getBalanceState(node);
-		Node *leftNode = node->left;
-		Node *rightNode = node->right;
-		int balanceLeft = 0, balanceRight = 0;
-		if (leftNode)
-			balanceLeft = height(leftNode->left) - height(leftNode->right);
-		if (rightNode)
-			balanceRight = height(rightNode->left) - height(rightNode->right);
-
-		if (rootState == BalanceState::LEFT_HEAVY && balanceLeft >= 0)
-		{
-			count += 1;
-			return rightRotate(node);
-		}
-		if (rootState == BalanceState::RIGHT_HEAVY && balanceRight <= 0)
-		{
-			count += 1;
-			return leftRotate(node);
-		}
-		if (rootState == BalanceState::LEFT_HEAVY && balanceLeft <= -1)
-		{
-			node->left = leftRotate(node->left);
-			count += 1;
-			return rightRotate(node);
-		}
-		if (rootState == BalanceState::RIGHT_HEAVY && balanceRight >= 1)
-		{
-			node->right = rightRotate(node->right);
-			count += 1;
-			return leftRotate(node);
-		}
-
-		return node;
-	}
-
-	Node *balanceTree(Node *node, int count=0)
-	{
-		if (!node || count == 1)
-			return node;
-		node = balanceNode(node, count);
-		if (node)
-		{
-			node->left = balanceTree(node->left, count);
-			node->right = balanceTree(node->right, count);
-		}
-		return node;
-	}
-	Node *buildHuff(vector<pair<char, int>> freq)
-	{
-		vector<Node *> build;
-		for (int i = 0; i < (int)freq.size(); i++)
-		{
-			Node *x = new Node(freq[i].second, freq[i].first);
-			build.push_back(x);
-		}
-		Node *res = nullptr;
-		while (build.size() > 1)
-		{
-			int count = 0;
-			Node *newNode = nullptr;
-			Node *left = build.back();
-			build.pop_back();
-			Node *right = build.back();
-			build.pop_back();
-			newNode = new Node(left->weight + right->weight, '\0', left, right);
-
-			newNode = balanceTree(newNode, count);
-			newNode = balanceTree(newNode, count);
-			newNode = balanceTree(newNode, count);
-
-			build.push_back(newNode);
-			if (build.back() != newNode)
-			{
-				build.pop_back();
-				build.push_back(newNode);
-			}
-
-			int newNodeIdx = build.size() - 1;
-			while (newNodeIdx - 1 >= 0 && build[newNodeIdx]->weight >= build[newNodeIdx - 1]->weight)
-			{
-				swap(build[newNodeIdx], build[newNodeIdx - 1]);
-				newNodeIdx--;
-			}
-		}
-		return build[0];
-	}
-	void encodingHuffman_rec(vector<string> &encoding, Node *node, string s = "")
-	{
-		if (node == nullptr)
-			return;
-		encoding[node->c] = s;
-		encodingHuffman_rec(encoding, node->left, s + "0");
-		encodingHuffman_rec(encoding, node->right, s + "1");
-	}
-
-	int binaryStringToDecimal(const std::string &binaryString)
-	{
-		std::bitset<16> binaryNumber(binaryString);
-		return static_cast<int>(binaryNumber.to_ulong());
-	}
-
-	int encodingHuffman(Node *root, string nameCaesar)
-	{
-		if (root->left == nullptr && root->right == nullptr)
-			return 0;
-		vector<string> encoding(256, "");
-		encodingHuffman_rec(encoding, root);
-
-		string binary = "";
-		for (int i = (int)nameCaesar.length() - 1; i >= 0; i--)
-		{
-			binary = encoding[(int)nameCaesar[i]] + binary;
-			if (binary.length() >= 10)
-				break;
-		}
-		string res = "";
-		for (int i = (int)binary.length() - 1; i >= 0; i--)
-		{
-			res += binary[i];
-		}
-
-		res = res.substr(0, 10);
-		int result = 0;
-		// TODO
-		result = binaryStringToDecimal(res);
-		return result;
-	}
-
-
-	int encode(string name){
-
-		//* bước 1 xử lí chuỗi thu được list để tới phần sau
-		vector<pair<char, int>> freq  = this->string_Processing(name);
-		if(freq.size() == 0) return -1;
-
-
-		this->clear(root);
-		root = this->buildHuff(freq);
-		if(root->left == nullptr && root->right == nullptr) return 0; 
-		
-		int result = this->encodingHuffman(root ,name);
-
-
-
-		return result;
-	}
-
-	string rec_print(const Node* tree) { //! BỎ hết khối luôn
-		if (tree == nullptr) {
-			return "NULL";
-		}
-		string temp = "";
-		if(tree->c) temp = "[" + to_string(tree->weight) + "," + tree->c + "]";
-		else temp = "[" + to_string(tree->weight) + "]";
-		
-		if (tree->left != nullptr || tree->right != nullptr) {
-			return temp + "(" + rec_print(tree->left) + "," + rec_print(tree->right)  + ")";
-		}
-		return temp;
-	}
-
-
-	void print_recursive(Node* node){
-		if(node == nullptr) return;
-		print_recursive(node->left);
-		if(node->c == '\0') solution << node->weight << "\n";
-		else solution << node->c << "\n";
-		print_recursive(node->right);
-	}
-	void print_HAND(){print_recursive(root);}
+	BalanceState getBalanceState(Node *node);
+	Node *balanceNode(Node *node, int &count);
+	Node *balanceTree(Node *node, int count = 0);
+	Node *buildHuff(vector<pair<char, int>> frequency_2);
+	void encodeHuff_rec(vector<string> &encodeList, Node *node, string s = "");
+	int binaryStringToDecimal(const std::string &binaryString);
+	int encodeHuff(Node *root, string name);
+	int encode(string name);
+	void print_rec(Node *node);
+	void print_HAND() { print_rec(root); }
 
 private:
-	class Node{
+	class Node
+	{
 	public:
 		int weight;
-		char c;
-		Node* left;
-		Node* right;
-		friend class HuffTree_AVL;
+		char x;
+		Node *left;
+		Node *right;
+		friend class HuffTree;
+
 	public:
-		Node(int weight, char c = '\0',Node* left = nullptr, Node* right = nullptr ):  weight(weight), c(c), left(left), right(right) {}
+		Node(int weight, char x = '\0', Node *left = nullptr, Node *right = nullptr) : weight(weight), x(x), left(left), right(right) {}
 	};
 };
 
 
-
-class JJK_RESTAURANT_OPERATIONS
+class Restaurant_Headquarters
 {
 private:
-	HuffTree_AVL New_customers_arrive;
-	RESTAURANT_Gojo hash;
-	RESTAURANT_Sukuna heap;
-	
+	HuffTree newCus;
+	Gojo_Restaurant hash;
+	Sukana_Restaurant heap;
+
 public:
-
-	void LAPSE(string name)
-	{
-
-		if(name[0] >= '0' && name[0] <= '9') //! BỎ lúc nộp
-		{
-			int result = stoi(name);
-			if(result % 2 == 1) hash.insertAreaTable(result);
-			else heap.insertAreaTable(result);
-			return;
-		}
-
-		int result = New_customers_arrive.encode(name);
-		if(result == -1) return;
-
-		if(result % 2 == 1) hash.insertAreaTable(result);
-		else heap.insertAreaTable(result);
-	}	
-
-	//* xử lí nhà hàng gojo
-	void KOKUSEN(){
-		hash.remove_KOKUSEN();
-	}
-	void LIMITLESS(int num){
-		hash.print_LIMITLESS(num);
-	}
-	
-	//* xử lí nhà hàng Sukuna
-	void KEITEIKEN(int num){
-		heap.remove_KEITEIKEN(num);
-	}
-	void CLEAVE(int num){
-		heap.print_LIMITLESS(num);
-	}
-
-	//* in ra HuffTree_AVL
-	void HAND(){
-		New_customers_arrive.print_HAND();
-	}
+	void LAPSE(string name);
+	void KOKUSEN() { hash.kokusenRemove(); }
+	void LIMITLESS(int num) { hash.print_LIMITLESS(num); }
+	void KEITEIKEN(int num) { heap.keiteikenRemove(num); }
+	void CLEAVE(int num) { heap.traversal_preOrder(0, num); }
+	void HAND() { newCus.print_HAND(); }
 };
-
 
 void simulate(string filename)
 {
-
 
 	ifstream ss(filename);
 	string str, name;
 	int num;
 
-	ss >> str; ss >> MAXSIZE; //* nhập maxsize đầu tiên
+	ss >> str;
+	ss >> MAXSIZE;
 
-	JJK_RESTAURANT_OPERATIONS* NOT_LIKE_CODE = new JJK_RESTAURANT_OPERATIONS();
-	// //* xử lí file
+	Restaurant_Headquarters *operation = new Restaurant_Headquarters();
 	while (ss >> str)
 	{
-		if (str == "LAPSE") // LAPSE <NAME>
+		if (str == "LAPSE")
 		{
 			ss >> name;
-			NOT_LIKE_CODE->LAPSE(name);
+			operation->LAPSE(name);
 		}
-		else if (str == "KOKUSEN") // KOKUSEN
+		else if (str == "KOKUSEN")
 		{
-			NOT_LIKE_CODE->KOKUSEN();
+			operation->KOKUSEN();
 		}
-		else if (str == "KEITEIKEN") // KEITEIKEN <NUM>
+		else if (str == "KEITEIKEN")
 		{
 			ss >> num;
-			NOT_LIKE_CODE->KEITEIKEN(num);
+			operation->KEITEIKEN(num);
 		}
-		else if (str == "HAND") // HAND
+		else if (str == "HAND")
 		{
-			NOT_LIKE_CODE->HAND();
-		}		
-		else if (str == "LIMITLESS") // LIMITLESS <NUM>
-		{
-			ss >> num;
-			NOT_LIKE_CODE->LIMITLESS(num);
-		}		
-		else if (str == "CLEAVE") // CLEAVE <NUM>
+			operation->HAND();
+		}
+		else if (str == "LIMITLESS")
 		{
 			ss >> num;
-			NOT_LIKE_CODE->CLEAVE(num);
-		}				
+			operation->LIMITLESS(num);
+		}
+		else if (str == "CLEAVE")
+		{
+			ss >> num;
+			operation->CLEAVE(num);
+		}
 	}
-	delete NOT_LIKE_CODE;
+	delete operation;
 }
 
+void Gojo_Restaurant::insertArea(int result)
+{
+	int ID = result % MAXSIZE + 1;
+	area[ID].insert(result);
+}
+
+void Gojo_Restaurant::kokusenRemove()
+{
+	for (int i = 1; i < MAXSIZE + 1; i++)
+		area[i].remove();
+}
+
+void Gojo_Restaurant::print_LIMITLESS(int number)
+{
+	if (number <= 0 || number > MAXSIZE)
+		return;
+	area[number].print();
+}
+
+Gojo_Restaurant::BST::~BST()
+{
+	while (!timeGetIn.empty())
+	{
+		int temp = timeGetIn.front();
+		timeGetIn.pop();
+		root = remove_rec(root, temp);
+	}
+}
+
+int Gojo_Restaurant::BST::size() { return timeGetIn.size(); }
+
+Gojo_Restaurant::BST::Node *Gojo_Restaurant::BST::insert_rec(Node *node, int result)
+{
+	if (!node)
+		return new Node(result);
+	if (result < node->result)
+	{
+		node->left = insert_rec(node->left, result);
+	}
+	else
+	{
+		node->right = insert_rec(node->right, result);
+	}
+	return node;
+}
+
+void Gojo_Restaurant::BST::insert(int result)
+{
+	root = insert_rec(root, result);
+	timeGetIn.push(result);
+}
+
+Gojo_Restaurant::BST::Node *Gojo_Restaurant::BST::remove_rec(Node *node, int result)
+{
+	if (!node)
+		return nullptr;
+	if (result < node->result)
+	{
+		node->left = remove_rec(node->left, result);
+	}
+	else if (result > node->result)
+	{
+		node->right = remove_rec(node->right, result);
+	}
+	if (node->result == result)
+	{
+		Node *nodeDel = node;
+		if (!node->left && !node->right)
+		{
+			node = nullptr;
+		}
+		else if (!node->left)
+		{
+			node = node->right;
+		}
+		else if (!node->right)
+		{
+			node = node->left;
+		}
+		else
+		{
+			Node *tmp = node->right;
+			while (tmp->left != nullptr)
+			{
+				tmp = tmp->left;
+			}
+			swap(tmp->result, node->result);
+			node->right = remove_rec(node->right, result);
+			return node;
+		}
+		delete nodeDel;
+	}
+	return node;
+}
+
+int Gojo_Restaurant::BST::numOfNodeInTree(Node *node)
+{
+	return !node ? 0 : 1 + numOfNodeInTree(node->left) + numOfNodeInTree(node->right);
+}
+
+unsigned long long Gojo_Restaurant::BST::DFS(Node *node, const vector<vector<long long>> &dp)
+{
+	if (node == NULL)
+		return 1;
+	int nleft = numOfNodeInTree(node->left);
+	int nRight = numOfNodeInTree(node->right);
+	return (unsigned long long)(dp[nleft + nRight][nleft] % MAXSIZE * (DFS(node->left, dp) % MAXSIZE * DFS(node->right, dp) % MAXSIZE) % MAXSIZE) % MAXSIZE;
+}
+
+void Gojo_Restaurant::BST::PascalTriangle(int n, vector<vector<long long>> &dp)
+{
+	for (int i = 0; i <= n; i++)
+	{
+		dp[i] = vector<long long>(i + 1, 1); // initially all 1
+		for (int j = 1; j < i; j++)
+		{
+			dp[i][j] = (dp[i - 1][j - 1] % MAXSIZE + dp[i - 1][j] % MAXSIZE);
+		}
+	}
+}
+
+void Gojo_Restaurant::BST::remove()
+{
+	if (timeGetIn.empty())
+		return;
+	vector<vector<long long>> dp(timeGetIn.size() + 1);
+	PascalTriangle(timeGetIn.size(), dp);
+	unsigned long long number = DFS(root, dp) % MAXSIZE;
+
+	while (number != 0 && !timeGetIn.empty())
+	{
+		int temp = timeGetIn.front();
+		timeGetIn.pop();
+		root = remove_rec(root, temp);
+		number--;
+	}
+}
+
+void Gojo_Restaurant::BST::print_rec(Node *node)
+{
+	if (node != NULL)
+	{
+		print_rec(node->left);
+		solution << node->result << "\n";
+		print_rec(node->right);
+	}
+}
+
+void Gojo_Restaurant::BST::print() { print_rec(root); }
+
+
+//* Sukana
+Sukana_Restaurant::Node *Sukana_Restaurant::whoFirst(Node *a, Node *b)
+{
+	for (Node *it : LRU)
+	{
+		if (it == a)
+			return b;
+		if (it == b)
+			return a;
+	}
+	return nullptr;
+}
+
+void Sukana_Restaurant::reHeapDown(int index)
+{
+	int leftChild = 2 * index + 1;
+	int rightChild = 2 * index + 2;
+	int smallest = index;
+
+	if (leftChild < area.size())
+	{
+		if (area[leftChild]->size() < area[smallest]->size())
+		{
+			smallest = leftChild;
+		}
+		else if (area[leftChild]->size() == area[smallest]->size())
+		{
+			if (whoFirst(area[leftChild], area[smallest]) == area[leftChild])
+			{
+				smallest = leftChild;
+			}
+		}
+	}
+	if (rightChild < area.size())
+	{
+		if (area[rightChild]->size() < area[smallest]->size())
+		{
+			smallest = rightChild;
+		}
+		else if (area[rightChild]->size() == area[smallest]->size())
+		{
+			if (whoFirst(area[rightChild], area[smallest]) == area[rightChild])
+			{
+				smallest = rightChild;
+			}
+		}
+	}
+	if (smallest != index)
+	{
+		swap(area[index], area[smallest]);
+		reHeapDown(smallest);
+	}
+}
+
+void Sukana_Restaurant::reHeapUp(int index)
+{
+	while (index > 0)
+	{
+		int parent = (index - 1) / 2;
+		if (area[index]->size() < area[parent]->size() || (area[index]->size() == area[parent]->size() && whoFirst(area[index], area[parent]) == area[index]))
+		{
+
+			swap(area[index], area[parent]);
+			index = parent;
+		}
+		else
+			break;
+	}
+}
+
+void Sukana_Restaurant::moveToFront(Node *node)
+{
+	list<Node *>::iterator it = std::find(LRU.begin(), LRU.end(), node);
+	if (it != LRU.end())
+	{
+		LRU.erase(it);
+	}
+	LRU.push_front(node);
+}
+
+void Sukana_Restaurant::removeNode(Node *node)
+{
+	list<Node *>::iterator it = find(LRU.begin(), LRU.end(), node);
+	LRU.erase(it);
+}
+
+Sukana_Restaurant::~Sukana_Restaurant()
+{
+	for (int i = 0; i < area.size(); i++)
+	{
+		delete area[i];
+	}
+}
+
+void Sukana_Restaurant::insertArea(int result)
+{
+	int ID = result % MAXSIZE + 1;
+	int index = -1;
+	for (int i = 0; i < area.size(); i++)
+	{
+		if (ID == area[i]->ID)
+			index = i;
+	}
+	if (index == -1)
+	{
+		area.push_back(new Node(ID));
+		index = area.size() - 1;
+		area[index]->insert(result);
+		this->moveToFront(area[index]);
+		this->reHeapUp(index);
+	}
+	else
+	{
+		area[index]->insert(result);
+		this->moveToFront(area[index]);
+		this->reHeapDown(index);
+	}
+}
+
+void Sukana_Restaurant::keiteikenRemove(int number)
+{
+	if (area.size() <= 0)
+		return;
+	vector<Node *> newArea(area.begin(), area.end());
+	queue<Node *> removeList; //! danh sách các khu cấn xóa
+	for (int i = 0; area.size() && i < number; i++)
+	{
+		Node *removeNode = area[0];
+		swap(area[0], area[area.size() - 1]);
+		area.pop_back();
+		this->reHeapDown(0);
+		removeList.push(removeNode);
+	}
+	area = newArea;
+	while (removeList.size())
+	{
+		Node *removeNode = removeList.front();
+		removeList.pop();
+
+		removeNode->remove(number);
+		int index = 0;
+		while (area[index] != removeNode)
+			index++;
+		if (removeNode->size() == 0)
+		{
+			swap(area[index], area[area.size() - 1]);
+			this->removeNode(area[area.size() - 1]);
+			delete area[area.size() - 1];
+			area.pop_back();
+		}
+		this->reHeapDown(index);
+	}
+}
+
+void Sukana_Restaurant::traversal_preOrder(int index, int number)
+{
+	if (index >= this->area.size() || number <= 0)
+		return;
+	this->area[index]->print(number);
+	traversal_preOrder(index * 2 + 1, number);
+	traversal_preOrder(index * 2 + 2, number);
+}
+
+
+//* HuffTree
+void HuffTree::clear(Node *node)
+{
+	if (node)
+	{
+		clear(node->left);
+		clear(node->right);
+		delete node;
+	}
+}
+
+char HuffTree::encode(char s, int k)
+{
+	if (s >= 65 && s <= 90)
+	{
+		return ((s - 65) + k) % 26 + 65;
+	}
+	else if (s >= 97 && s <= 122)
+	{
+		return ((s - 97) + k) % 26 + 97;
+	}
+	else
+	{
+		return s;
+	}
+}
+
+bool HuffTree::sameType(char a, char b)
+{
+	return (a >= 65 && a <= 90 && b >= 65 && b <= 90) || (a >= 97 && a <= 122 && b >= 97 && b <= 122);
+}
+
+vector<pair<char, int>> HuffTree::string_Processing(string &name)
+{
+	unordered_map<char, int> mp;
+	for (char &x : name)
+		mp[x]++;
+	int numPair = mp.size();
+	vector<pair<char, int>> frequency_1;
+	for (pair<char, int> x : mp)
+	{
+		frequency_1.push_back(x);
+	}
+	if (frequency_1.size() < 3)
+		return {};
+	for (char &x : name)
+		x = encode(x, mp[x]);
+	for (pair<char, int> &x : frequency_1)
+		x.first = encode(x.first, x.second);
+
+	mp.clear();
+	for (pair<char, int> x : frequency_1)
+	{
+		mp[x.first] += x.second;
+	}
+	vector<pair<char, int>> frequency_2;
+
+	unordered_map<char, int>::iterator mapIt = mp.begin();
+	for (; mapIt != mp.end(); mapIt++)
+	{
+		frequency_2.push_back({mapIt->first, mapIt->second});
+	}
+
+	stable_sort(frequency_2.begin(), frequency_2.end(),
+				[=](const pair<char, int> &a, const pair<char, int> &b) -> bool
+				{
+					if (a.second > b.second)
+						return true;
+					if (a.second == b.second)
+					{
+						if (sameType(a.first, b.first))
+							return a.first > b.first;
+						else
+							return a.first < b.first;
+					}
+					return false;
+				});
+	return frequency_2;
+}
+
+int HuffTree::treeHeight(Node *node)
+{
+	return node ? 1 + max(treeHeight(node->left), treeHeight(node->right)) : 0;
+}
+
+HuffTree::Node *HuffTree::rightRotate(Node *Node_A)
+{
+
+	Node *Node_B = Node_A->left;  //! này là B
+	Node *Node_E = Node_B->right; //! này là E
+
+	Node_A->left = Node_E;	//! CẬP NHẬT NODE E
+	Node_B->right = Node_A; //! CẬP NHẬT NODE A
+
+	return Node_B; //! NODE B đang là root
+}
+
+HuffTree::Node *HuffTree::leftRotate(Node *Node_A)
+{
+	Node *Node_C = Node_A->right;
+	Node *Node_D = Node_C->left;
+
+	Node_A->right = Node_D;
+	Node_C->left = Node_A;
+
+	return Node_C;
+}
+
+HuffTree::BalanceState HuffTree::getBalanceState(Node *node)
+{
+	if (!node)
+		return BalanceState::EH;
+
+	int leftHeight = treeHeight(node->left);
+	int rightHeight = treeHeight(node->right);
+
+	int balance = leftHeight - rightHeight;
+	if (balance > 1)
+		return BalanceState::LH;
+
+	else if (balance < -1)
+		return BalanceState::RH;
+	return BalanceState::EH;
+}
+
+HuffTree::Node *HuffTree::balanceNode(Node *node, int &count)
+{
+	if (!node)
+		return nullptr;
+	BalanceState rootState = getBalanceState(node);
+	Node *leftNode = node->left;
+	Node *rightNode = node->right;
+	int balanceLeft = 0, balanceRight = 0;
+	if (leftNode)
+		balanceLeft = treeHeight(leftNode->left) - treeHeight(leftNode->right);
+	if (rightNode)
+		balanceRight = treeHeight(rightNode->left) - treeHeight(rightNode->right);
+
+	if (rootState == BalanceState::LH && balanceLeft >= 0)
+	{
+		count += 1;
+		return rightRotate(node);
+	}
+	if (rootState == BalanceState::RH && balanceRight <= 0)
+	{
+		count += 1;
+		return leftRotate(node);
+	}
+	if (rootState == BalanceState::LH && balanceLeft <= -1)
+	{
+		node->left = leftRotate(node->left);
+		count += 1;
+		return rightRotate(node);
+	}
+	if (rootState == BalanceState::RH && balanceRight >= 1)
+	{
+		node->right = rightRotate(node->right);
+		count += 1;
+		return leftRotate(node);
+	}
+
+	return node;
+}
+
+HuffTree::Node *HuffTree::balanceTree(Node *node, int count)
+{
+	if (!node || count == 1)
+		return node;
+	node = balanceNode(node, count);
+	node->left = balanceTree(node->left, count);
+	node->right = balanceTree(node->right, count);
+	return node;
+}
+
+HuffTree::Node *HuffTree::buildHuff(vector<pair<char, int>> frequency_2)
+{
+	vector<Node *> build;
+	for (int i = 0; i < (int)frequency_2.size(); i++)
+	{
+		Node *x = new Node(frequency_2[i].second, frequency_2[i].first);
+		build.push_back(x);
+	}
+	Node *res = nullptr;
+	while (build.size() > 1)
+	{
+		int count = 0;
+		Node *newNode = nullptr;
+		Node *left = build.back();
+		build.pop_back();
+		Node *right = build.back();
+		build.pop_back();
+		newNode = new Node(left->weight + right->weight, '\0', left, right);
+
+		newNode = balanceTree(newNode, count);
+		newNode = balanceTree(newNode, count);
+		newNode = balanceTree(newNode, count);
+
+		build.push_back(newNode);
+		if (build.back() != newNode)
+		{
+			build.pop_back();
+			build.push_back(newNode);
+		}
+
+		int newNodeIdx = build.size() - 1;
+		while (newNodeIdx - 1 >= 0 && build[newNodeIdx]->weight >= build[newNodeIdx - 1]->weight)
+		{
+			swap(build[newNodeIdx], build[newNodeIdx - 1]);
+			newNodeIdx--;
+		}
+	}
+	return build[0];
+}
+
+void HuffTree::encodeHuff_rec(vector<string> &encodeList, Node *node, string s)
+{
+	if (!node)
+		return;
+	encodeList[node->x] = s;
+	encodeHuff_rec(encodeList, node->left, s + "0");
+	encodeHuff_rec(encodeList, node->right, s + "1");
+}
+
+int HuffTree::binaryStringToDecimal(const std::string &binaryString)
+{
+	std::bitset<16> binaryNumber(binaryString);
+	return static_cast<int>(binaryNumber.to_ulong());
+}
+
+int HuffTree::encodeHuff(Node *root, string name)
+{
+	if (root->left == nullptr && root->right == nullptr)
+		return 0;
+	vector<string> encodeList(256, "");
+	encodeHuff_rec(encodeList, root);
+
+	string binary = "";
+	for (int i = (int)name.length() - 1; i >= 0; i--)
+	{
+		binary = encodeList[(int)name[i]] + binary;
+		if (binary.length() >= 10)
+			break;
+	}
+	string res = "";
+	for (int i = (int)binary.length() - 1; i >= 0; i--)
+	{
+		res += binary[i];
+	}
+
+	res = res.substr(0, 10);
+	int result = 0;
+
+	result = binaryStringToDecimal(res);
+	return result;
+}
+
+int HuffTree::encode(string name)
+{
+	vector<pair<char, int>> frequency_2 = this->string_Processing(name);
+	if (frequency_2.size() == 0)
+		return -1;
+	this->clear(root);
+	root = this->buildHuff(frequency_2);
+	if (root->left == nullptr && root->right == nullptr)
+		return 0;
+
+	int result = this->encodeHuff(root, name);
+
+	return result;
+}
+
+void HuffTree::print_rec(Node *node)
+{
+	if (!node)
+		return;
+	print_rec(node->left);
+	if (node->x == '\0')
+		solution << node->weight << "\n";
+	else
+		solution << node->x << "\n";
+	print_rec(node->right);
+}
+void Restaurant_Headquarters::LAPSE(string name)
+{
+	if(name[0] >= '0' && name[0] <= '9') //! BỎ lúc nộp
+	{
+		int result = stoi(name);
+		if(result % 2 == 1) hash.insertArea(result);
+		else heap.insertArea(result);
+		return;
+	}
+	int result = newCus.encode(name);
+	if (result == -1)
+		return;
+
+	if (result % 2 == 1)
+		hash.insertArea(result);
+	else
+		heap.insertArea(result);
+}
